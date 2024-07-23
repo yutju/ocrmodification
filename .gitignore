@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+# .gradle 디렉토리의 특정 파일만 추적
+!.gradle/your-required-file
