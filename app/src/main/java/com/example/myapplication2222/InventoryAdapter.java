@@ -1,7 +1,5 @@
 package com.example.myapplication2222;
 
-import android.graphics.Color;
-import com.google.android.material.snackbar.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,7 @@ import java.util.List;
 
 public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryViewHolder> {
 
-    private List<InventoryItem> inventoryList;
+    private final List<InventoryItem> inventoryList;
 
     public InventoryAdapter(List<InventoryItem> inventoryList) {
         this.inventoryList = inventoryList;
@@ -49,9 +47,9 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
     }
 
     static class InventoryViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameTextView;
-        private TextView priceTextView;
-        private TextView stockTextView;
+        private final TextView nameTextView;
+        private final TextView priceTextView;
+        private final TextView stockTextView;
 
         public InventoryViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -115,6 +113,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
             InventoryItem oldItem = oldList.get(oldItemPosition);
             InventoryItem newItem = newList.get(newItemPosition);
 
+            // null 체크 추가
             if (oldItem == null || newItem == null) {
                 return oldItem == newItem;
             }
@@ -122,6 +121,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
             String oldId = oldItem.getId();
             String newId = newItem.getId();
 
+            // null 체크 후 equals 호출
             return oldId != null && oldId.equals(newId);
         }
 
@@ -130,7 +130,8 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
             InventoryItem oldItem = oldList.get(oldItemPosition);
             InventoryItem newItem = newList.get(newItemPosition);
 
-            return oldItem != null && newItem != null && oldItem.equals(newItem);
+            // null 체크 후 equals 호출
+            return oldItem != null && oldItem.equals(newItem);
         }
     }
 }

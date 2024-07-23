@@ -1,5 +1,7 @@
 package com.example.myapplication2222;
 
+import java.util.Objects;
+
 public class InventoryItem {
     private String id; // 상품 ID
     private String name; // 상품 이름
@@ -56,7 +58,7 @@ public class InventoryItem {
 
         InventoryItem that = (InventoryItem) o;
 
-        return id != null ? id.equals(that.id) : that.id == null;
+        return Objects.equals(id, that.id);
     }
 
     @Override
