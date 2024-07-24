@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderSummaryActivity">
+
+    <!-- 파란색 배경의 배너 -->
+    <LinearLayout
+        android:id="@+id/order_summary_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="35dp"
+        android:layout_alignParentTop="true"
+        android:background="#4169E1">
+    </LinearLayout>
+
+    <!-- 주문내역 텍스트 -->
+    <TextView
+        android:id="@+id/order_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="주문 내역"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <!-- 주문정보를 확인해주세요 텍스트 -->
+    <TextView
+        android:id="@+id/order_info_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_info_text"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="주문정보를 확인해주세요"
+        android:textColor="#FF0000"
+        android:textSize="25sp" />
+
+    <!-- 상품 정보 표시를 위한 박스 -->
+    <LinearLayout
+        android:id="@+id/product_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_info_confirmation"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:layout_above="@id/total_summary">
+
+        <!-- 상품 정보 제목 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#E0E0E0">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="상품명"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="수량"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="가격"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- 상품 정보 표시를 위한 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_order_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- 총 수량 및 총 결제금액 표시를 위한 LinearLayout -->
+    <LinearLayout
+        android:id="@+id/total_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FFC0CB"
+        android:gravity="center_vertical"
+        android:layout_above="@id/pay_button_summary"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="10dp">
+
+        <!-- 총 수량 박스 -->
+        <TextView
+            android:id="@+id/total_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 수량: 0개"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <!-- 총 결제금액 박스 -->
+        <TextView
+            android:id="@+id/total_amount_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 결제금액: 0원"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+
+    <!-- 결제하기 버튼 -->
+    <Button
+        android:id="@+id/pay_button_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_light"
+        android:text="결제하기"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+</RelativeLayout>
+
+
+
+
