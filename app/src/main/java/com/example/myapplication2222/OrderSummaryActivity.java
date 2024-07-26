@@ -3,6 +3,7 @@ package com.example.myapplication2222;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -10,16 +11,20 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class OrderSummaryActivity extends AppCompatActivity implements KartriderAdapter.OnProductClickListener {
 
@@ -28,6 +33,7 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
     private TextView totalQuantityTextView, totalPriceTextView;
     private FirebaseFirestore firestore;
     private CollectionReference cartCollectionRef;
+    private CollectionReference inventoryCollectionRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +51,7 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         int totalQuantity = intent.getIntExtra("TOTAL_QUANTITY", 0);
 
         // ProductAdapter 초기화
-        productAdapter = new KartriderAdapter(productList != null ? productList : new ArrayList<>(), this, this);
+        productAdapter = new KartriderAdapter(productList != null ? productList : new ArrayList<>(), this, this, true); // true 플래그 추가
         recyclerView.setAdapter(productAdapter);
 
         // 총 수량 및 총 금액 TextView 초기화
@@ -59,6 +65,7 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         // Firebase Firestore 초기화
         firestore = FirebaseFirestore.getInstance();
         cartCollectionRef = firestore.collection("kartrider");
+        inventoryCollectionRef = firestore.collection("inventory"); // Inventory 컬렉션 참조
 
         // 결제하기 버튼 설정
         Button payButton = findViewById(R.id.pay_button_summary);
@@ -105,25 +112,117 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
     }
 
     private void handlePayment() {
-        // kartrider 컬렉션의 모든 문서 삭제
+        // 장바구니의 모든 상품을 가져와서 재고 업데이트 후 삭제
         cartCollectionRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 QuerySnapshot querySnapshot = task.getResult();
                 if (querySnapshot != null) {
+                    ArrayList<Kartrider> cartProducts = new ArrayList<>();
                     for (DocumentSnapshot document : querySnapshot.getDocuments()) {
-                        cartCollectionRef.document(document.getId()).delete();
+                        Kartrider cartProduct = document.toObject(Kartrider.class);
+                        if (cartProduct != null) {
+                            cartProduct.setId(document.getId()); // ensure the ID is set
+                            cartProducts.add(cartProduct);
+                        }
                     }
 
-                    // 모든 문서 삭제 후, PaymentSuccessActivity로 이동
-                    Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
-                    startActivity(intent);
-                    finish(); // 현재 Activity 종료
+                    // 미성년자 구매 불가 상품 확인
+                    checkAgeRestrictedProducts(cartProducts);
                 }
             } else {
-                // 실패 처리
-                Toast.makeText(OrderSummaryActivity.this, "장바구니 초기화 실패", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OrderSummaryActivity.this, "장바구니 데이터 로드 실패", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void checkAgeRestrictedProducts(List<Kartrider> cartProducts) {
+        List<Task<Void>> checkTasks = new ArrayList<>();
+        boolean[] containsRestricted = {false}; // 배열로 변경하여 람다에서 수정 가능하게 함
+
+        for (Kartrider cartProduct : cartProducts) {
+            if (cartProduct != null && cartProduct.getId() != null) {
+                Task<Void> checkTask = inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(task -> {
+                    if (task.isSuccessful() && task.getResult() != null) {
+                        DocumentSnapshot inventoryDoc = task.getResult();
+                        if (inventoryDoc.exists() && "No".equals(inventoryDoc.getString("allow"))) {
+                            containsRestricted[0] = true;
+                        }
+                    }
+                    return null;
+                });
+                checkTasks.add(checkTask);
+            }
+        }
+
+        Tasks.whenAllComplete(checkTasks).addOnCompleteListener(allTasks -> {
+            if (containsRestricted[0]) {
+                showAgeRestrictionDialog();
+            } else {
+                updateInventoryAndClearCart(cartProducts);
+            }
+        });
+    }
+
+    private void showAgeRestrictionDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(R.layout.dialog_age_verification)
+                .setPositiveButton("확인", (dialog, which) -> dialog.dismiss())
+                .show();
+    }
+
+    private void updateInventoryAndClearCart(List<Kartrider> cartProducts) {
+        ArrayList<Task<Void>> updateTasks = new ArrayList<>();
+
+        for (Kartrider cartProduct : cartProducts) {
+            Task<Void> updateTask = updateInventory(cartProduct);
+            updateTasks.add(updateTask);
+        }
+
+        Tasks.whenAllComplete(updateTasks).addOnCompleteListener(allTasks -> {
+            if (allTasks.isSuccessful()) {
+                cartCollectionRef.get().addOnCompleteListener(deleteTask -> {
+                    if (deleteTask.isSuccessful()) {
+                        for (DocumentSnapshot document : deleteTask.getResult().getDocuments()) {
+                            cartCollectionRef.document(document.getId()).delete();
+                        }
+
+                        new Handler().postDelayed(() -> {
+                            Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }, 1000); // 1초 지연
+                    } else {
+                        Toast.makeText(OrderSummaryActivity.this, "장바구니 초기화 실패", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            } else {
+                Toast.makeText(OrderSummaryActivity.this, "재고 업데이트 실패", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private Task<Void> updateInventory(Kartrider cartProduct) {
+        if (cartProduct != null && cartProduct.getId() != null) {
+            return inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(task -> {
+                if (task.isSuccessful() && task.getResult() != null) {
+                    DocumentSnapshot inventoryDoc = task.getResult();
+                    if (inventoryDoc.exists()) {
+                        Long stockLong = inventoryDoc.getLong("stock");
+                        if (stockLong != null) {
+                            int currentStock = stockLong.intValue();
+                            int purchasedQuantity = cartProduct.getQuantity();
+                            int updatedStock = currentStock - purchasedQuantity;
+                            if (updatedStock < 0) {
+                                updatedStock = 0;
+                            }
+                            return inventoryCollectionRef.document(cartProduct.getId()).update("stock", updatedStock);
+                        }
+                    }
+                }
+                return Tasks.forException(new Exception("재고 업데이트 실패"));
+            });
+        }
+        return Tasks.forException(new Exception("상품 정보 오류"));
     }
 
     @Override
@@ -136,6 +235,3 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         // 수량 변경 처리 로직 추가
     }
 }
-
-
-

@@ -21,11 +21,14 @@ public class KartriderAdapter extends RecyclerView.Adapter<KartriderAdapter.Prod
     private OnProductClickListener onProductClickListener;
     private Context context;
     private FirebaseFirestore db;
+    private boolean isOrderSummary; // 플래그 추가
 
-    public KartriderAdapter(List<Kartrider> productList, OnProductClickListener listener, Context context) {
+    // boolean 인자를 사용하는 생성자
+    public KartriderAdapter(List<Kartrider> productList, OnProductClickListener listener, Context context, boolean isOrderSummary) {
         this.productList = productList;
         this.onProductClickListener = listener;
         this.context = context;
+        this.isOrderSummary = isOrderSummary; // 플래그 초기화
         db = FirebaseFirestore.getInstance(); // Firestore 인스턴스 초기화
     }
 
@@ -73,8 +76,19 @@ public class KartriderAdapter extends RecyclerView.Adapter<KartriderAdapter.Prod
 
         public void bind(Kartrider product) {
             nameTextView.setText(product.getName());
-            priceTextView.setText(String.valueOf(product.getPrice()));
             quantityTextView.setText(String.valueOf(product.getQuantity()));
+            updatePrice(product);
+
+            // 버튼 가시성 설정
+            if (isOrderSummary) {
+                deleteButton.setVisibility(View.GONE);
+                decreaseButton.setVisibility(View.GONE);
+                increaseButton.setVisibility(View.GONE);
+            } else {
+                deleteButton.setVisibility(View.VISIBLE);
+                decreaseButton.setVisibility(View.VISIBLE);
+                increaseButton.setVisibility(View.VISIBLE);
+            }
         }
 
         @Override
@@ -95,10 +109,10 @@ public class KartriderAdapter extends RecyclerView.Adapter<KartriderAdapter.Prod
                 int currentQuantity = product.getQuantity();
                 if (currentQuantity > 0) {
                     product.setQuantity(currentQuantity - 1);
-                    quantityTextView.setText(String.valueOf(currentQuantity - 1));
                     updatePrice(product);
-                    // Firestore에서 수량 업데이트
+                    // Firestore에서 수량 및 가격 업데이트
                     updateProductInFirestore(product);
+                    notifyItemChanged(position); // RecyclerView 업데이트
                     if (onProductClickListener != null) {
                         onProductClickListener.onProductQuantityChanged(); // 수량 변경 이벤트 전달
                     }
@@ -106,10 +120,10 @@ public class KartriderAdapter extends RecyclerView.Adapter<KartriderAdapter.Prod
             } else if (viewId == R.id.increaseButton) {
                 // 증가 버튼 클릭 시
                 product.setQuantity(product.getQuantity() + 1);
-                quantityTextView.setText(String.valueOf(product.getQuantity()));
                 updatePrice(product);
-                // Firestore에서 수량 업데이트
+                // Firestore에서 수량 및 가격 업데이트
                 updateProductInFirestore(product);
+                notifyItemChanged(position); // RecyclerView 업데이트
                 if (onProductClickListener != null) {
                     onProductClickListener.onProductQuantityChanged(); // 수량 변경 이벤트 전달
                 }

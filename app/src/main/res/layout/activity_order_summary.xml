@@ -61,7 +61,7 @@
             android:background="#E0E0E0">
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="상품명"
@@ -70,7 +70,7 @@
                 android:padding="8dp" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="수량"
@@ -149,6 +149,8 @@
         android:layout_marginBottom="16dp"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
+
+
 </RelativeLayout>
 
 

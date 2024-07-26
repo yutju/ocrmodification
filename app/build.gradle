@@ -3,12 +3,12 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     namespace = "com.example.myapplication2222"
-    compileSdk = 34
+    compileSdk = 34 // SDK 35로 변경
 
     defaultConfig {
         applicationId = "com.example.myapplication2222"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 34 // SDK 35로 변경
         versionCode = 1
         versionName = "1.0"
 

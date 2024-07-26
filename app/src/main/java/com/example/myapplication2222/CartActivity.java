@@ -41,7 +41,9 @@ public class CartActivity extends AppCompatActivity implements KartriderAdapter.
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         productList = new ArrayList<>();
-        productAdapter = new KartriderAdapter(productList, this, this);
+
+        // isOrderSummary 플래그는 false로 설정 (CartActivity에서는 결제 페이지가 아닌 장바구니 페이지이므로)
+        productAdapter = new KartriderAdapter(productList, this, this, false);
         recyclerView.setAdapter(productAdapter);
 
         // 총 결제액 TextView 초기화

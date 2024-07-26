@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/searchLabelTextView"
         android:layout_marginTop="8dp"
+        android:inputType="text"
         android:hint="상품명을 입력하세요" />
 
     <!-- 검색 버튼 -->
