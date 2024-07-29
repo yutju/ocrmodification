@@ -1,4 +1,4 @@
-# Android Studio
+# Android Studio 관련 파일
 *.iml
 .gradle
 /local.properties
@@ -18,6 +18,10 @@ local.properties
 # Gradle Wrapper 파일
 gradle/wrapper/gradle-wrapper.properties
 gradle/wrapper/gradle-wrapper.jar
+
+# JSON 파일을 포함시키기 위한 규칙 추가
+# 모든 JSON 파일 포함
+!*.json
 
 # src와 res 디렉토리는 포함
 !app/src/
