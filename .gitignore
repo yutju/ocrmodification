@@ -44,6 +44,9 @@ SendTo/
 Templates/
 시작 메뉴/
 
+# Android AVD 관련 파일 무시
+.android/avd/*.lock
+
 # 기타 무시할 수 있는 시스템 디렉토리
 # 임시 파일 및 캐시 디렉토리
 Temporary Internet Files/
