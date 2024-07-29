@@ -1,0 +1,59 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:55.733Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-22T05:26:04.7983525Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "test",
+    "times" : {
+      "scanningReason" : "changes in: \"JDK jbr-17 C:/Program Files/Android/Android Studio/jbr\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 4,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 14441533100,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 20124100,
+      "dumbModeStart" : "2024-04-22T05:25:50.3528275Z",
+      "dumbWallTimeWithPauses" : 14443532200,
+      "dumbWallTimeWithoutPauses" : 14443532200,
+      "updatingStart" : "2024-04-22T05:25:50.3528275Z",
+      "updatingEnd" : "2024-04-22T05:26:04.7963597Z",
+      "totalWallTimeWithPauses" : 14443286600,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 14443286600
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 26237,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 25902
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "JDK jbr-17 C:/Program Files/Android/Android Studio/jbr",
+      "numberOfScannedFiles" : 26237,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 25902,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 8349812100,
+      "scanningTime" : 9126935000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 5185975100,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 20124100,
+      "roots" : [ ]
+    } ]
+  }
+}

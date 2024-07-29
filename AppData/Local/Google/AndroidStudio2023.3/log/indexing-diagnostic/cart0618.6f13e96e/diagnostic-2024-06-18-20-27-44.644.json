@@ -1,0 +1,114 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-06-18T11:27:44.6460026Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningIds" : [ 20 ],
+      "contentLoadingVisibleTime" : 898317,
+      "retrievingChangedDuringIndexingFilesTime" : 23400,
+      "separateApplyingIndexesVisibleTime" : 2352,
+      "updatingStart" : "2024-06-18T11:27:43.9104747Z",
+      "updatingEnd" : "2024-06-18T11:27:43.9713057Z",
+      "totalWallTimeWithPauses" : 60083100,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-06-18T11:27:43.9104747Z",
+      "dumbWallTimeWithoutPauses" : 60083100,
+      "dumbWallTimeWithPauses" : 60083100,
+      "totalWallTimeWithoutPauses" : 60083100
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 0,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 1,
+      "numberOfNothingToWriteFiles" : 1
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 28310700,
+        "total" : 28310700
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 572700,
+        "total" : 572700
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 921,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 921,
+        "totalCpuTime" : 28310700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222.app.main' (processDebugGoogleServices)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 921,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 28310700,
+          "total" : 28310700
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ {
+      "language" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 28310700,
+        "total" : 28310700
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1145400,
+        "total" : 572700
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 921,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 921,
+        "totalCpuTime" : 28310700
+      }
+    } ],
+    "totalStatsPerIndexer" : [ ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 0,
+      "retrievingTime" : 23400
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Module 'My_Application2222.app.main' (processDebugGoogleServices)",
+      "totalNumberOfIndexedFiles" : 1,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 1,
+      "totalIndexingVisibleTime" : 44407200,
+      "contentLoadingVisibleTime" : 898317,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2352
+    }, {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 0,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 0,
+      "contentLoadingVisibleTime" : 0,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 0
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.0
+  }
+}

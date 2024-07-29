@@ -1,0 +1,12 @@
+{"reason":"Push on VFS changes","startTime":"2024-04-22T14:04:05.8286766+09:00[Asia/Seoul]","duration":393001400,"isCancelled":false}
+{"reason":"Rerun pushing tasks after process cancelled","startTime":"2024-04-29T14:48:12.3211581+09:00[Asia/Seoul]","duration":1251500,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:48:35.6998471+09:00[Asia/Seoul]","duration":181200,"isCancelled":false}
+{"reason":"Push all on [com.intellij.openapi.roots.impl.JavaLanguageLevelPusher@4397ac4f]","startTime":"2024-04-29T14:48:36.3665789+09:00[Asia/Seoul]","duration":15033900,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:48:38.3299809+09:00[Asia/Seoul]","duration":170200,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:51:00.2141241+09:00[Asia/Seoul]","duration":15972900,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:51:32.5170327+09:00[Asia/Seoul]","duration":176900,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:55:37.1032624+09:00[Asia/Seoul]","duration":84900,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T14:55:37.5251767+09:00[Asia/Seoul]","duration":195000,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-29T15:05:11.5828612+09:00[Asia/Seoul]","duration":165700,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-30T10:50:51.1677649+09:00[Asia/Seoul]","duration":63335000,"isCancelled":false}
+{"reason":"Push on VFS changes","startTime":"2024-04-30T10:52:23.3185424+09:00[Asia/Seoul]","duration":75800,"isCancelled":false}

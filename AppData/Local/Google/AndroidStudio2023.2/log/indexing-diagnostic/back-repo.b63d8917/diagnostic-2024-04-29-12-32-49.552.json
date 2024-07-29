@@ -1,0 +1,430 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:17.265Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-29T03:32:49.5531352Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "back-repo",
+    "times" : {
+      "scanningIds" : [ 8 ],
+      "contentLoadingVisibleTime" : 2556789,
+      "retrievingChangedDuringIndexingFilesTime" : 131600,
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 33497066,
+      "updatingStart" : "2024-04-29T03:32:49.1459622Z",
+      "updatingEnd" : "2024-04-29T03:32:49.5521373Z",
+      "totalWallTimeWithPauses" : 405760200,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-04-29T03:32:49.1459622Z",
+      "dumbWallTimeWithoutPauses" : 405760200,
+      "dumbWallTimeWithPauses" : 405760200,
+      "totalWallTimeWithoutPauses" : 405760200
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 0,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 10
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "Gradle",
+      "partOfTotalProcessingTime" : {
+        "part" : 518339400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 684600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 2580,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2580,
+        "totalCpuTime" : 518339400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 2580,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 518339400,
+          "total" : 518339400
+        }
+      } ]
+    }, {
+      "fileType" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 156020000,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 839100,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 2418,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2418,
+        "totalCpuTime" : 156020000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 2418,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 156020000,
+          "total" : 156020000
+        }
+      } ]
+    }, {
+      "fileType" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 72683200,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 2313700,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 9131,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 9131,
+        "totalCpuTime" : 72683200
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 9131,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 72683200,
+          "total" : 72683200
+        }
+      } ]
+    }, {
+      "fileType" : "GitIgnore file",
+      "partOfTotalProcessingTime" : {
+        "part" : 40731900,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 550600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3931,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3931,
+        "totalCpuTime" : 40731900
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3931,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 40731900,
+          "total" : 40731900
+        }
+      } ]
+    }, {
+      "fileType" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 7948400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 300100,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 2838,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2838,
+        "totalCpuTime" : 7948400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2838,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7948400,
+          "total" : 7948400
+        }
+      } ]
+    }, {
+      "fileType" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 4873400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 145300,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 368,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 368,
+        "totalCpuTime" : 4873400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 368,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4873400,
+          "total" : 4873400
+        }
+      } ]
+    }, {
+      "fileType" : "PLAIN_TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 2135900,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 325600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 187,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 187,
+        "totalCpuTime" : 2135900
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'back-repo' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 187,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2135900,
+          "total" : 2135900
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ {
+      "language" : "Groovy",
+      "partOfTotalProcessingTime" : {
+        "part" : 518339400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5843600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 2580,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2580,
+        "totalCpuTime" : 518339400
+      }
+    }, {
+      "language" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 156020000,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5998100,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 2418,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2418,
+        "totalCpuTime" : 156020000
+      }
+    }, {
+      "language" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 72683200,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 7472700,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 9131,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 9131,
+        "totalCpuTime" : 72683200
+      }
+    }, {
+      "language" : "GitIgnore",
+      "partOfTotalProcessingTime" : {
+        "part" : 40731900,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5709600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3931,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3931,
+        "totalCpuTime" : 40731900
+      }
+    }, {
+      "language" : "IgnoreLang",
+      "partOfTotalProcessingTime" : {
+        "part" : 40731900,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5709600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3931,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3931,
+        "totalCpuTime" : 40731900
+      }
+    }, {
+      "language" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 7948400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5459100,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 2838,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2838,
+        "totalCpuTime" : 7948400
+      }
+    }, {
+      "language" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 4873400,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5304300,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 368,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 368,
+        "totalCpuTime" : 4873400
+      }
+    }, {
+      "language" : "TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 2135900,
+        "total" : 802732200
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5484600,
+        "total" : 5159000
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 187,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 187,
+        "totalCpuTime" : 2135900
+      }
+    } ],
+    "totalStatsPerIndexer" : [ {
+      "indexId" : "Stubs",
+      "partOfTotalIndexingTime" : {
+        "part" : 619490900,
+        "total" : 710153700
+      },
+      "totalNumberOfFiles" : 5,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 5366,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 5366,
+        "totalCpuTime" : 619490900
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "IdIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 59007000,
+        "total" : 710153700
+      },
+      "totalNumberOfFiles" : 10,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 21453,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 21453,
+        "totalCpuTime" : 59007000
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "Trigram.Index",
+      "partOfTotalIndexingTime" : {
+        "part" : 31655800,
+        "total" : 710153700
+      },
+      "totalNumberOfFiles" : 10,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 21453,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 21453,
+        "totalCpuTime" : 31655800
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    } ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 0,
+      "retrievingTime" : 131600
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Module 'back-repo' (all roots)",
+      "totalNumberOfIndexedFiles" : 10,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 397832400,
+      "contentLoadingVisibleTime" : 2556789,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 33497066
+    }, {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 0,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 0,
+      "contentLoadingVisibleTime" : 0,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 0
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.0
+  }
+}

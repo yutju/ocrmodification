@@ -1,0 +1,25 @@
+{
+  "components": {
+    "subcenter.app": {
+      "displayName": "Your Subscription Benefits Center"
+    }
+  },
+  "runtime": {
+    "win32": {
+      "container": {
+        "type": "dialog",
+        "width": 850,
+        "height": 650
+      }
+    }
+  },
+  "assetsPath": "assets",
+  "bundle": {
+    "fileName": "subcenter.win32",
+    "extension": "bundle"
+  },
+  "packager": {
+    "host": "localhost:8081",
+    "fileName": "src/subcenter"
+  }
+}

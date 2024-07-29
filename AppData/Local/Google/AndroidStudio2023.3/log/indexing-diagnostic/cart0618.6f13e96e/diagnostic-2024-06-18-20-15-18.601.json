@@ -1,0 +1,79 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-06-18T11:15:18.6022567Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"Module 'My_Application2222.app.androidTest' (out)\", \"Module 'My_Application2222.app.unitTest' (out)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 10,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 995100,
+      "concurrentHandlingWallTimeWithPauses" : 995100,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 1118100,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 115900,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 536000,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 0,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-06-18T11:15:18.5972695Z",
+      "updatingEnd" : "2024-06-18T11:15:18.6002609Z",
+      "totalWallTimeWithPauses" : 3136300,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 3136300
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 2,
+      "numberOfScannedFiles" : 0,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 0
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'My_Application2222.app.unitTest' (out)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "totalOneThreadTimeWithPauses" : 677100,
+      "iterationAndScannersApplicationTime" : 51200,
+      "filesCheckTime" : 233900,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'My_Application2222.app.androidTest' (out)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "totalOneThreadTimeWithPauses" : 441000,
+      "iterationAndScannersApplicationTime" : 64700,
+      "filesCheckTime" : 302100,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    } ]
+  }
+}

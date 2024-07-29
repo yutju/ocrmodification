@@ -1,0 +1,37 @@
+{
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "css/papago_injection.css" ],
+      "matches": [ "*://papago.naver.com/*", "*://test-papago.naver.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "js/papago_injection.js" ],
+      "matches": [ "*://papago.naver.com/*", "*://test-papago.naver.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "exclude_globs": [ "*://papago.naver.com/*", "*://test-papago.naver.com/*" ],
+      "js": [ "js/translate_selection.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_APP_DESCRIPTION__",
+   "externally_connectable": {
+      "ids": [ "mdppnmkhoflepinhojdkmkanhhlkginn", "mliknopbojighdkjkjbpgpmlpckdjclf", "lckbhcagdfofbmndjcfhnbecneflbhhb" ],
+      "matches": [ "https://papago.naver.com/*", "https://test-papago.naver.com/*", "https://whale.naver.com/*", "https://*.whale.naver.com/*" ]
+   },
+   "icons": {
+      "128": "icons/icon128.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2tS6igC7XyEANSgqSy+QkbnEseSI/jW6n5aGjVo9rKhY0vOaWJgrjuHZvKN466S6vOHX5uNMEIFWyBf1IEKOCAKYuRBBvWF+E9rwPuNXJDPp2c9nNfIbj3ZVUXwih4oVTniMvkc7Ymb6l3HCUaYXpnULwhenynrlRPV+/WQrB8rEuN0+fgC3uesFZ42OUO7MpDMzm+ETbixHvQtZSmsca210wxdEGWzToXX8HKyyWZ+jBDT/APLRGTu6ujrh7W9N2cv/G3qLd4Zknzg0FM3cY+dLT41yB84cZux13ZO/3P6ttRboPcnowg5EPGcxGZZpAwh1EwnVZ55Olt0KOVIKzwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_APP_NAME__",
+   "permissions": [ "audioCapture", "storage", "sidebarsPrivate", "pwastorePrivate", "windows", "unlimitedStorage" ],
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "1.2.8",
+   "whale_extension": true
+}

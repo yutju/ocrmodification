@@ -1,0 +1,64 @@
+{
+  "appInfo" : {
+    "build" : "241.18034.62.2411.12071903",
+    "buildDate" : "2024-07-10T21:13:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-25T16:14:30.9587828Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.11 17.0.11+0--11852314"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"Android SDK Android API 34, extension level 7 Platform C:/Users/gsh56/AppData/Local/Android/Sdk\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 7,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 1712266500,
+      "concurrentHandlingWallTimeWithPauses" : 1712266500,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 1723272000,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 479015700,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 1244106300,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 0,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-07-25T16:14:29.2308957Z",
+      "updatingEnd" : "2024-07-25T16:14:30.9431622Z",
+      "totalWallTimeWithPauses" : 1725070500,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 1725070500
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 38697,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 0
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Android SDK Android API 34, extension level 7 Platform C:/Users/gsh56/AppData/Local/Android/Sdk",
+      "numberOfScannedFiles" : 38697,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 1186147800,
+      "totalOneThreadTimeWithPauses" : 1723272000,
+      "iterationAndScannersApplicationTime" : 479015700,
+      "filesCheckTime" : 1244106300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 25987200,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    } ]
+  }
+}

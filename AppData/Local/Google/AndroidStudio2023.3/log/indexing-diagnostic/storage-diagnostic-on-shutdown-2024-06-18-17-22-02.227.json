@@ -1,0 +1,51 @@
+{
+  "pageCacheStats" : {
+    "cachedChannelsStatistics" : {
+      "hit" : 5531,
+      "miss" : 0,
+      "load" : 192,
+      "capacity" : 400
+    },
+    "uncachedFileAccess" : 4175,
+    "maxRegisteredFiles" : 483,
+    "maxCacheSizeInBytes" : 454180864,
+    "totalCachedSizeInBytes" : 1048576,
+    "pageHits" : 1469100,
+    "pageFastCacheHits" : 14001752,
+    "pageLoadsAboveSizeThreshold" : 0,
+    "regularPageLoads" : 506,
+    "disposedBuffers" : 505,
+    "totalPageDisposalUs" : 15393,
+    "totalPageLoadUs" : 1530306,
+    "totalPagesLoaded" : 506,
+    "capacityInBytes" : 503316478
+  },
+  "indexStorageStats" : {
+    "indexStoragesStats" : { }
+  },
+  "otherStorageStats" : {
+    "statsPerPhm" : {
+      "C:\\Users\\gsh56\\AppData\\Local\\Google\\AndroidStudio2023.3\\persistent-markup\\MyApplication2222-6f13e96e" : {
+        "persistentEnumeratorStatistics" : {
+          "collisions" : 0,
+          "values" : 0,
+          "dataFileSizeInBytes" : -1,
+          "storageSizeInBytes" : 96,
+          "btreeStatistics" : {
+            "pages" : 0,
+            "elements" : 0,
+            "height" : 0,
+            "moves" : 0,
+            "leafPages" : 1,
+            "maxSearchStepsInRequest" : 0,
+            "searchRequests" : 0,
+            "searchSteps" : 0,
+            "pageCapacity" : 32768,
+            "sizeInBytes" : 0
+          }
+        },
+        "valueStorageSizeInBytes" : 0
+      }
+    }
+  }
+}

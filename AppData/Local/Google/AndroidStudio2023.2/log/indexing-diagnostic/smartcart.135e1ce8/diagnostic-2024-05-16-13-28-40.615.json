@@ -1,0 +1,59 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:41.071Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-05-16T04:28:40.6166823Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"External roots from entity (roots=classes, source roots=empty)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 1,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 446843500,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 120400,
+      "dumbModeStart" : "2024-05-16T04:28:35.9931354Z",
+      "dumbWallTimeWithPauses" : 455817300,
+      "dumbWallTimeWithoutPauses" : 455817300,
+      "updatingStart" : "2024-05-16T04:28:35.9921376Z",
+      "updatingEnd" : "2024-05-16T04:28:36.4489527Z",
+      "totalWallTimeWithPauses" : 456386500,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 456386500
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 25,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 25
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 25,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 25,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 322432200,
+      "scanningTime" : 327284400,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 298637800,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 120400,
+      "roots" : [ ]
+    } ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "appInfo" : {
+    "build" : "241.18034.62.2411.12071903",
+    "buildDate" : "2024-07-10T21:13:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-25T16:14:12.1310845Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.11 17.0.11+0--11852314"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "Merged changes in: \"Android SDK Android API 34, extension level 7 Platform C:/Users/gsh56/AppData/Local/Android/Sdk\" with changes in: \"Android SDK Android API 34, extension level 7 Platform C:/Users/gsh56/AppData/Local/Android/Sdk\" with changes in: \"JDK 17 C:/Program Files/Java/jdk-17/jdk-17.0.12\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 6,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 1045698800,
+      "concurrentHandlingWallTimeWithPauses" : 1045698800,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 2059045300,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 416404700,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 1642194300,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 0,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-07-25T16:14:11.0853857Z",
+      "updatingEnd" : "2024-07-25T16:14:12.1310845Z",
+      "totalWallTimeWithPauses" : 1043144300,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 1043144300
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 2,
+      "numberOfScannedFiles" : 79850,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 0
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Android SDK Android API 34, extension level 7 Platform C:/Users/gsh56/AppData/Local/Android/Sdk",
+      "numberOfScannedFiles" : 38697,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 763123400,
+      "totalOneThreadTimeWithPauses" : 1040286600,
+      "iterationAndScannersApplicationTime" : 211225600,
+      "filesCheckTime" : 828856000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 11263100,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "JDK 17 C:/Program Files/Java/jdk-17/jdk-17.0.12",
+      "numberOfScannedFiles" : 41153,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 764472400,
+      "totalOneThreadTimeWithPauses" : 1018758700,
+      "iterationAndScannersApplicationTime" : 205179100,
+      "filesCheckTime" : 813338300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 11100700,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    } ]
+  }
+}

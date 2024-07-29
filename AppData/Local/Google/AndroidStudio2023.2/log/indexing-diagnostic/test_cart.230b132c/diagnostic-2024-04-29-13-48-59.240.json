@@ -1,0 +1,58 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:28.751Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-29T04:48:59.2451535Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "test_cart",
+    "times" : {
+      "scanningReason" : "changes in: \"Module 'test_cart' (test_cart, test_cart)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 3,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 86167100,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 31200,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-04-29T04:48:59.1350153Z",
+      "updatingEnd" : "2024-04-29T04:48:59.2407852Z",
+      "totalWallTimeWithPauses" : 104237100,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 104237100
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 7,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 7
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'test_cart' (test_cart, test_cart)",
+      "numberOfScannedFiles" : 7,
+      "numberOfSkippedFiles" : 8,
+      "numberOfFilesForIndexing" : 7,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 27525900,
+      "scanningTime" : 29016000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 78300,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 31200,
+      "roots" : [ ]
+    } ]
+  }
+}

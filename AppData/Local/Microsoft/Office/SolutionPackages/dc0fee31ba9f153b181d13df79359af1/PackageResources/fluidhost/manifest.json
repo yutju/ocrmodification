@@ -1,0 +1,8 @@
+{
+  "short_name": "Fluid Host",
+  "name": "Fluid Host for Win32",
+  "start_url": "https://fluidhostwin32.azurewebsites.net/fluidhost/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

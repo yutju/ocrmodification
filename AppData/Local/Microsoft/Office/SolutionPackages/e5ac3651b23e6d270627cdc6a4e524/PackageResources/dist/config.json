@@ -1,0 +1,1 @@
+{"AssetID":"FA000000051","Version":"1.1.2308.31005","Titles":[{"Locale":"en-US","Title":"Transcribe"}],"Hosts":["Document"],"RequirementSets":[],"Platforms":["web","win32"],"DefaultLocale":"en-us","Locales":{"web":["en-us"],"win32":["en-us"]},"OnDemand":false,"ConfigSchemaVersion":"1.0.0"}

@@ -1,0 +1,14 @@
+{
+	"Torbjorn": {
+		"crc": 3484691976,
+		"url": "http://platform.nexon.com/NGM/Bin/torbjorn.dll.gz"
+	},
+	"Torbjorn64": {
+		"crc": 2681583887,
+		"url": "http://platform.nexon.com/NGM/Bin/torbjorn64.dll.gz"
+	},
+	"SIG": {
+		"crc": 743017031,
+		"url": "http://platform.nexon.com/NGM/Bin/SIG.exe.gz"
+	}
+}

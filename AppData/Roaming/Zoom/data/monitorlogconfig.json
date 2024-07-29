@@ -1,0 +1,1 @@
+{ "records":[ {"type": "Clips","location" : "Recorder","event" : "Clips_Record"},{"type": "Clips","location" : "Recorder","event" : "SendLogs"}, {"type": "Chat","location" : "ChatTelemetries","event" : "ChatTelemetries"} ]}

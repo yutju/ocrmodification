@@ -1,0 +1,12 @@
+{
+  "IS_MAXIMIZED": true,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 0,
+    "y": 0,
+    "width": 1280,
+    "height": 680
+  },
+  "OPEN_ON_STARTUP": false,
+  "chromiumSwitches": {}
+}

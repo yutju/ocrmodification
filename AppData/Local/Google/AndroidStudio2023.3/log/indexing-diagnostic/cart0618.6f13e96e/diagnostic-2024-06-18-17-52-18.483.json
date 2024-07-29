@@ -1,0 +1,65 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-06-18T08:52:18.4848848Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"Library Gradle: androidx.constraintlayout:constraintlayout:2.1.1@aar (#3 class roots, #1 source roots)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 4,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 1020861500,
+      "concurrentHandlingWallTimeWithPauses" : 1020861500,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 1017354900,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 801331400,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 214628600,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 154400,
+      "dumbModeStart" : "2024-06-18T08:52:17.4590543Z",
+      "dumbWallTimeWithPauses" : 1022320800,
+      "dumbWallTimeWithoutPauses" : 1022320800,
+      "updatingStart" : "2024-06-18T08:52:17.4580591Z",
+      "updatingEnd" : "2024-06-18T08:52:18.4813751Z",
+      "totalWallTimeWithPauses" : 1022893900,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 1022893900
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 224,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 224
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Library Gradle: androidx.constraintlayout:constraintlayout:2.1.1@aar (#3 class roots, #1 source roots)",
+      "numberOfScannedFiles" : 224,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 224,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 175642800,
+      "totalOneThreadTimeWithPauses" : 1017354900,
+      "iterationAndScannersApplicationTime" : 801331400,
+      "filesCheckTime" : 214628600,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 104462000,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 154400,
+      "roots" : [ ]
+    } ]
+  }
+}

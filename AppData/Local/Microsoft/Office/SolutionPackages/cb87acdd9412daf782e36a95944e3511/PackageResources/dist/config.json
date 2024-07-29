@@ -1,0 +1,1 @@
+{"AssetID":"FA000000064","Version":"1.0.2307.17003","Titles":[{"Locale":"en-US","Title":"Navigation"}],"Hosts":["Workbook"],"RequirementSets":[],"Platforms":["win32","macos","web"],"DefaultLocale":"en-us","Locales":{"win32":["en-us"],"macos":["en-us"],"web":["en-us"]},"OnDemand":false,"ConfigSchemaVersion":"1.0.0"}

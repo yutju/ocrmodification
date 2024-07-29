@@ -1,0 +1,124 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:41.071Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-05-16T04:57:46.0697853Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"External roots from entity (roots=gradle-core-api-8.8.jar, source roots=empty)\", \"External roots from entity (roots=gradle-kotlin-dsl-extensions-8.8.jar, source roots=empty)\", \"External roots from entity (roots=gradle-kotlin-dsl-8.8.jar, source roots=empty)\", \"External roots from entity (roots=gradle-kotlin-dsl-tooling-models-8.8.jar, source roots=empty)\", \"External roots from entity (roots=gradle-kotlin-dsl-shared-runtime-8.8.jar, source roots=empty)\", \"External roots from entity (roots=gradle-core-8.8.jar, source roots=empty)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 3,
+      "creatingIteratorsTime" : 31267000,
+      "collectingIndexableFilesTime" : 2092488600,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 4584600,
+      "dumbModeStart" : "2024-05-16T04:57:43.8911816Z",
+      "dumbWallTimeWithPauses" : 2173616800,
+      "dumbWallTimeWithoutPauses" : 2173616800,
+      "updatingStart" : "2024-05-16T04:57:43.8414865Z",
+      "updatingEnd" : "2024-05-16T04:57:46.0647984Z",
+      "totalWallTimeWithPauses" : 2223108100,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 2223108100
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 6,
+      "numberOfScannedFiles" : 4194,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 4194
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "External roots from entity (roots=gradle-core-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 2393,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 2393,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 673467400,
+      "scanningTime" : 722078600,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 482605900,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 2328700,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=gradle-kotlin-dsl-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 909,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 909,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 597787600,
+      "scanningTime" : 651169500,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 420167000,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 1061200,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=gradle-core-api-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 659,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 659,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 395338900,
+      "scanningTime" : 427148500,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 259369400,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 912600,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=gradle-kotlin-dsl-extensions-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 127,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 127,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 213840200,
+      "scanningTime" : 253236200,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 56662100,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 196400,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=gradle-kotlin-dsl-shared-runtime-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 99,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 99,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 33722400,
+      "scanningTime" : 43529800,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 23788800,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 78300,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=gradle-kotlin-dsl-tooling-models-8.8.jar, source roots=empty)",
+      "numberOfScannedFiles" : 7,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 7,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 6201000,
+      "scanningTime" : 8871700,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 4898100,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 7400,
+      "roots" : [ ]
+    } ]
+  }
+}

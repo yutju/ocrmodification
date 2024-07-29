@@ -1,0 +1,20 @@
+{
+	"NGMResource_info":{
+		"ko-KR": {
+			"url": "http://platform.nexon.com/NGM/Bin/NGMResource_ko-KR.dll.gz",
+			"crc": 3498451622
+		},
+		"en-US":{
+			"url": "http://platform.nexon.com/NGM/Bin/NGMResource_en-US.dll.gz",
+			"crc": 3951494166
+		},
+		"ja-JP":{
+			"url": "http://platform.nexon.com/NGM/Bin/NGMResource_ja-JP.dll.gz",
+			"crc": 1813153175
+		},
+		"zh-TW":{
+			"url": "http://platform.nexon.com/NGM/Bin/NGMResource_zh-TW.dll.gz",
+			"crc": 1850664724
+		}
+	}
+}

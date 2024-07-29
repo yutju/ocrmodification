@@ -1,0 +1,21 @@
+{
+  "components": {
+    "sdx_collabml.app": {
+      "displayName": "sdx_collabml"
+    }
+  },
+  "runtime": {
+    "win32": {
+      "container": {
+        "type": "dialog",
+        "width": 450,
+        "height": 400,
+        "showOkButton": true,
+        "showCancelButton": true
+      }
+    }
+  },
+  "bundle": {
+    "fileName": "index.win32"
+  }
+}

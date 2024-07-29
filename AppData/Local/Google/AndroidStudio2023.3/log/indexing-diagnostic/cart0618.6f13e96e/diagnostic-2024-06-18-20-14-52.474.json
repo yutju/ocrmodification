@@ -1,0 +1,87 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-06-18T11:14:52.4758322Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningIds" : [ ],
+      "contentLoadingVisibleTime" : 9546743,
+      "retrievingChangedDuringIndexingFilesTime" : 711600,
+      "separateApplyingIndexesVisibleTime" : 4319213,
+      "updatingStart" : "2024-06-18T11:14:52.1162375Z",
+      "updatingEnd" : "2024-06-18T11:14:52.1970212Z",
+      "totalWallTimeWithPauses" : 81086000,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-06-18T11:14:52.1162375Z",
+      "dumbWallTimeWithoutPauses" : 81086000,
+      "dumbWallTimeWithPauses" : 81086000,
+      "totalWallTimeWithoutPauses" : 81086000
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 605,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 605,
+      "numberOfNothingToWriteFiles" : 0
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "UNKNOWN",
+      "partOfTotalProcessingTime" : {
+        "part" : 152514600,
+        "total" : 152514600
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 18520300,
+        "total" : 18520300
+      },
+      "totalNumberOfFiles" : 605,
+      "totalFilesSize" : 0,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 0,
+        "totalCpuTime" : 152514600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Refreshed files",
+        "numberOfFiles" : 605,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 152514600,
+          "total" : 152514600
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ ],
+    "totalStatsPerIndexer" : [ ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 605,
+      "retrievingTime" : 711600
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 605,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 78617400,
+      "contentLoadingVisibleTime" : 9546743,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4319213
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.5154745840726068
+  }
+}

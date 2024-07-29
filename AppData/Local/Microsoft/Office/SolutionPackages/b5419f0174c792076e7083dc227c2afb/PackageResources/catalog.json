@@ -1,0 +1,13 @@
+{
+    "1.0": [
+        "Filter\\strings.resjson",
+        "index.win32.bundle",
+        "index.win32.bundle.LICENSE.txt",
+        "strings.resjson",
+        "tester.win32.bundle",
+        "tester.win32.bundle.LICENSE.txt",
+        "UserActivityUX\\strings.resjson",
+        "StoreLogo.png",
+        "manifest.xml"
+    ]
+}

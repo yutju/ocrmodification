@@ -1,0 +1,79 @@
+{
+  "appInfo" : {
+    "build" : "241.18034.62.2411.12071903",
+    "buildDate" : "2024-07-10T21:13:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-26T02:42:58.7566642Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.11 17.0.11+0--11852314"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"Module 'My_Application2222.app.androidTest' (debug)\", \"Module 'My_Application2222.app.main' (debug, debug)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 1,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 521894000,
+      "concurrentHandlingWallTimeWithPauses" : 521894000,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 172159300,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 72414900,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 75389700,
+      "delayedPushPropertiesStageTime" : 3991300,
+      "indexExtensionsTime" : 27800,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-07-26T02:42:57.067668Z",
+      "updatingEnd" : "2024-07-26T02:42:58.3086371Z",
+      "totalWallTimeWithPauses" : 1240213200,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 1240213200
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 2,
+      "numberOfScannedFiles" : 1,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 1
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'My_Application2222.app.androidTest' (debug)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "totalOneThreadTimeWithPauses" : 106391700,
+      "iterationAndScannersApplicationTime" : 69053900,
+      "filesCheckTime" : 25434600,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'My_Application2222.app.main' (debug, debug)",
+      "numberOfScannedFiles" : 1,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 1,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 8694600,
+      "totalOneThreadTimeWithPauses" : 65767600,
+      "iterationAndScannersApplicationTime" : 3361000,
+      "filesCheckTime" : 49955100,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 2632000,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 27800,
+      "roots" : [ ]
+    } ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:19.581Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-29T03:09:08.5530779Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "cart",
+    "times" : {
+      "scanningReason" : "Merged changes in: \"Module 'cart' (all roots)\" with changes in: \"Module 'cart' (all roots)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 12,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 10931700,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 1800,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-04-29T03:09:08.4967193Z",
+      "updatingEnd" : "2024-04-29T03:09:08.5521459Z",
+      "totalWallTimeWithPauses" : 47162600,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 47162600
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 7,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 7
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'cart' (all roots)",
+      "numberOfScannedFiles" : 7,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 7,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 508000,
+      "scanningTime" : 838900,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 7600,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 1800,
+      "roots" : [ ]
+    } ]
+  }
+}

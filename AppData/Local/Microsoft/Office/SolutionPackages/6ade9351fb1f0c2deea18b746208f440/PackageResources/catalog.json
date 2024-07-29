@@ -1,0 +1,21 @@
+{
+    "1.0": [
+        "app.json",
+        "assets\\assets\\images\\CloudCheckmarkDark.png",
+        "assets\\assets\\images\\CloudCheckmarkLight.png",
+        "assets\\assets\\images\\DocumentTestDark.png",
+        "assets\\assets\\images\\DocumentTestLight.png",
+        "assets\\assets\\images\\ExcelIllustration.png",
+        "assets\\assets\\images\\PPTIllustration.png",
+        "assets\\assets\\images\\SearchKeywordsDark.png",
+        "assets\\assets\\images\\SearchKeywordsLight.png",
+        "assets\\assets\\images\\WebWarningDark.png",
+        "assets\\assets\\images\\WebWarningLight.png",
+        "assets\\assets\\images\\WordIllustration.png",
+        "assets\\assets\\images\\WXP_Illustration.png",
+        "licensing.win32.bundle",
+        "strings.resjson",
+        "msft.png",
+        "manifest.xml"
+    ]
+}

@@ -1,0 +1,80 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-08T07:16:27.6127167Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : ".gradle",
+    "times" : {
+      "scanningReason" : "Merged changes in: \"JDK jbr-17 C:/Program Files/Android/Android Studio/jbr\" with changes in: \"Module '.gradle' (all roots)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 2,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 4666556600,
+      "concurrentHandlingWallTimeWithPauses" : 4666556600,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 4929602600,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 469570200,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 4459670600,
+      "delayedPushPropertiesStageTime" : 4192300,
+      "indexExtensionsTime" : 7791100,
+      "dumbModeStart" : "2024-07-08T07:16:22.935969Z",
+      "dumbWallTimeWithPauses" : 4673379700,
+      "dumbWallTimeWithoutPauses" : 4673379700,
+      "updatingStart" : "2024-07-08T07:16:22.9138835Z",
+      "updatingEnd" : "2024-07-08T07:16:27.6093487Z",
+      "totalWallTimeWithPauses" : 4695353200,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 4695353200
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 2,
+      "numberOfScannedFiles" : 26281,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 22
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "JDK jbr-17 C:/Program Files/Android/Android Studio/jbr",
+      "numberOfScannedFiles" : 26245,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 3948106100,
+      "totalOneThreadTimeWithPauses" : 4665359800,
+      "iterationAndScannersApplicationTime" : 445740200,
+      "filesCheckTime" : 4219422500,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 69626800,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module '.gradle' (all roots)",
+      "numberOfScannedFiles" : 36,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 22,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 119845300,
+      "totalOneThreadTimeWithPauses" : 264242800,
+      "iterationAndScannersApplicationTime" : 23830000,
+      "filesCheckTime" : 240248100,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 232300,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 7791100,
+      "roots" : [ ]
+    } ]
+  }
+}

@@ -1,0 +1,3481 @@
+{
+  "appInfo" : {
+    "build" : "241.18034.62.2411.12071903",
+    "buildDate" : "2024-07-10T21:13:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-25T15:18:40.8693846Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.11 17.0.11+0--11852314"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningIds" : [ 2 ],
+      "contentLoadingVisibleTime" : 35019215376,
+      "retrievingChangedDuringIndexingFilesTime" : 1920700,
+      "separateApplyingIndexesVisibleTime" : 16598281616,
+      "updatingStart" : "2024-07-25T15:17:25.4321026Z",
+      "updatingEnd" : "2024-07-25T15:18:40.8673879Z",
+      "totalWallTimeWithPauses" : 75434884500,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-07-25T15:17:25.4321026Z",
+      "dumbWallTimeWithoutPauses" : 75434884500,
+      "dumbWallTimeWithPauses" : 75434884500,
+      "totalWallTimeWithoutPauses" : 75434884500
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 17,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 29753,
+      "numberOfNothingToWriteFiles" : 0
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "CLASS",
+      "partOfTotalProcessingTime" : {
+        "part" : 98755753000,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 48252645500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 18888,
+      "totalFilesSize" : 58838803,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 58838803,
+        "totalCpuTime" : 98755753000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 949,
+        "totalFilesSize" : 4106104,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15340626400,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:protolite-well-known-types:18.0.0@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 598,
+        "totalFilesSize" : 2782640,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 14349535700,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 796,
+        "totalFilesSize" : 2354308,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8137464400,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.material:material:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 983,
+        "totalFilesSize" : 3820447,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5357933200,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 74,
+        "totalFilesSize" : 80636,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4615961800,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-firestore:25.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 876,
+        "totalFilesSize" : 3983020,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4105525900,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: junit:junit:4.13.2 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 350,
+        "totalFilesSize" : 716717,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3909815800,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:guava:31.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1941,
+        "totalFilesSize" : 6077162,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3870070100,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 55,
+        "totalFilesSize" : 200157,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3153174600,
+          "total" : 98755753000
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:guava:32.0.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1930,
+        "totalFilesSize" : 6257047,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2813326200,
+          "total" : 98755753000
+        }
+      } ]
+    }, {
+      "fileType" : "Kotlin",
+      "partOfTotalProcessingTime" : {
+        "part" : 34496413400,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 11533782100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 885,
+      "totalFilesSize" : 6169385,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6169385,
+        "totalCpuTime" : 34496413400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 164,
+        "totalFilesSize" : 953612,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 13541295300,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 159,
+        "totalFilesSize" : 2527594,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7801997600,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core-ktx:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 57,
+        "totalFilesSize" : 187938,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3348341200,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 168,
+        "totalFilesSize" : 1290208,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2818895300,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 68,
+        "totalFilesSize" : 110192,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2532360600,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 30,
+        "totalFilesSize" : 107342,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2033734700,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.credentials:credentials:1.2.0-rc01@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 128,
+        "totalFilesSize" : 484059,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 890456000,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core-ktx:1.3.2@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 53,
+        "totalFilesSize" : 157443,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 369304800,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.credentials:credentials-play-services-auth:1.2.0-rc01@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 11,
+        "totalFilesSize" : 103120,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 201450000,
+          "total" : 34496413400
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 5995,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 182595900,
+          "total" : 34496413400
+        }
+      } ]
+    }, {
+      "fileType" : "JAVA",
+      "partOfTotalProcessingTime" : {
+        "part" : 33854928700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 15596189200,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 4935,
+      "totalFilesSize" : 42210339,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 42210339,
+        "totalCpuTime" : 33854928700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.google.guava:guava:31.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 603,
+        "totalFilesSize" : 6055362,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4938444200,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 267,
+        "totalFilesSize" : 3621303,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4147371700,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.material:material:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 395,
+        "totalFilesSize" : 4072014,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3039121500,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:guava:32.0.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 607,
+        "totalFilesSize" : 6154485,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2838316200,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-firestore:25.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 371,
+        "totalFilesSize" : 4260337,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2710889300,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.protobuf:protobuf-javalite:3.22.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 155,
+        "totalFilesSize" : 2071464,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2596568000,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app.main' (all roots)",
+        "numberOfFiles" : 13,
+        "totalFilesSize" : 51502,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1284320300,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.appcompat:appcompat:1.5.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 125,
+        "totalFilesSize" : 2019860,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 867712500,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 32,
+        "totalFilesSize" : 84852,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 769967400,
+          "total" : 33854928700
+        }
+      }, {
+        "providerName" : "Library Gradle: junit:junit:4.13.2 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 219,
+        "totalFilesSize" : 666028,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 683841300,
+          "total" : 33854928700
+        }
+      } ]
+    }, {
+      "fileType" : "PLAIN_TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 23524153100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 13890933500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2167,
+      "totalFilesSize" : 13664379,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 13664379,
+        "totalCpuTime" : 23524153100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 2063,
+        "totalFilesSize" : 13360097,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 23043408700,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-firestore:25.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 13,
+        "totalFilesSize" : 92942,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 84508300,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 13,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 74041100,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.protobuf:protobuf-javalite:3.22.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 10,
+        "totalFilesSize" : 51951,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 62206600,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.protobuf:protobuf-javalite:3.14.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 20,
+        "totalFilesSize" : 103810,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 59197600,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.arch.core:core-runtime:2.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 34036800,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 197,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 19235600,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: junit:junit:4.12 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 23036,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15463100,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: junit:junit:4.13.2 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 23036,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 14108300,
+          "total" : 23524153100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-runtime:2.5.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7488000,
+          "total" : 23524153100
+        }
+      } ]
+    }, {
+      "fileType" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 21754654600,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 10694461700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalFilesSize" : 3065132,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 21754654600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.google.android.material:material:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 518,
+        "totalFilesSize" : 1685448,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9229095800,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 417,
+        "totalFilesSize" : 941770,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8512048900,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.core:core:1.9.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 106,
+        "totalFilesSize" : 57715,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 808692400,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:guava:31.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 21970,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 643890700,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app.main' (all roots)",
+        "numberOfFiles" : 24,
+        "totalFilesSize" : 37668,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 562057200,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.browser:browser:1.4.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 90,
+        "totalFilesSize" : 52791,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 476731800,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.gms:play-services-basement:18.3.0@aar (#3 class roots, #0 source roots)",
+        "numberOfFiles" : 82,
+        "totalFilesSize" : 32181,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 368100800,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.credentials:credentials:1.2.0-rc01@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 90,
+        "totalFilesSize" : 32309,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 287105400,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement:22.0.1@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1891,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 153498400,
+          "total" : 21754654600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1035,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 107813800,
+          "total" : 21754654600
+        }
+      } ]
+    }, {
+      "fileType" : "kotlin_builtins",
+      "partOfTotalProcessingTime" : {
+        "part" : 4690896200,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1598485300,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 361,
+      "totalFilesSize" : 405959,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 405959,
+        "totalCpuTime" : 4690896200
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 354,
+        "totalFilesSize" : 377019,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4333643000,
+          "total" : 4690896200
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 28940,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 357253200,
+          "total" : 4690896200
+        }
+      } ]
+    }, {
+      "fileType" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 1312152700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 373111800,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 91,
+      "totalFilesSize" : 8008,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8008,
+        "totalCpuTime" : 1312152700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: com.google.guava:guava:31.1-android (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 200,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 636316600,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 55,
+        "totalFilesSize" : 4712,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 386729000,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement:22.0.1@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 88,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 136720600,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-database-collection:18.0.1@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 94,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 30104700,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-analytics:22.0.1@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 74,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 16631300,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.errorprone:error_prone_annotations:2.11.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 160,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12935100,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:failureaccess:1.0.1 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 138,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 11348000,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.j2objc:j2objc-annotations:1.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 118,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9533400,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.code.findbugs:jsr305:3.0.2 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 121,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8922700,
+          "total" : 1312152700
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-annotations:16.2.0 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 78,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7486500,
+          "total" : 1312152700
+        }
+      } ]
+    }, {
+      "fileType" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 1002243100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 511360500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 32,
+      "totalFilesSize" : 33676,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 33676,
+        "totalCpuTime" : 1002243100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 30,
+        "totalFilesSize" : 30420,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 990908800,
+          "total" : 1002243100
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2272,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9666000,
+          "total" : 1002243100
+        }
+      }, {
+        "providerName" : "Library Gradle: org.altbeacon:android-beacon-library:2.19.5@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 984,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1668300,
+          "total" : 1002243100
+        }
+      } ]
+    }, {
+      "fileType" : "Manifest",
+      "partOfTotalProcessingTime" : {
+        "part" : 856880100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 601860700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 134,
+      "totalFilesSize" : 24901,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 24901,
+        "totalCpuTime" : 856880100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 247,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 165047500,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: org.hamcrest:hamcrest-library:1.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 520,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 66611400,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 25,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 52498600,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.appcompat:appcompat-resources:1.5.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 25,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 52044300,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 25,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 45991500,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-annotations:16.2.0 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 25,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 31012500,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.recaptcha:recaptcha:18.4.0@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 48,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 26121700,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.guava:failureaccess:1.0.1 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1199,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 21151500,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.documentfile:documentfile:1.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 25,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 20218200,
+          "total" : 856880100
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 50,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15334900,
+          "total" : 856880100
+        }
+      } ]
+    }, {
+      "fileType" : "kotlin_module",
+      "partOfTotalProcessingTime" : {
+        "part" : 732902600,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 167390200,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 45,
+      "totalFilesSize" : 17065,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 17065,
+        "totalCpuTime" : 732902600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-experimental:1.3.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 24,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 519870600,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 24,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 52782600,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.android.recaptcha:recaptcha:18.4.0@aar (#2 class roots, #0 source roots)",
+        "numberOfFiles" : 17,
+        "totalFilesSize" : 1054,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 42041900,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.activity:activity:1.5.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 83,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 32654300,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 7174,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 23575700,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: com.google.firebase:firebase-common-ktx:21.0.0@aar (#2 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 62,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 11001800,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.savedstate:savedstate:1.2.0@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 80,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10659600,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3187,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7741800,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 24,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 4183600,
+          "total" : 732902600
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices-java:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 100,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2509700,
+          "total" : 732902600
+        }
+      } ]
+    }, {
+      "fileType" : "AUTO_DETECTED",
+      "partOfTotalProcessingTime" : {
+        "part" : 521907400,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 38512200,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 756,
+      "totalFilesSize" : 0,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 0,
+        "totalCpuTime" : 521907400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 752,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 520665900,
+          "total" : 521907400
+        }
+      }, {
+        "providerName" : "Refreshed files",
+        "numberOfFiles" : 4,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1241500,
+          "total" : 521907400
+        }
+      } ]
+    }, {
+      "fileType" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 468380100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 142080700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 6,
+      "totalFilesSize" : 1314126,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1314126,
+        "totalCpuTime" : 468380100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 1314126,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 468053000,
+          "total" : 468380100
+        }
+      }, {
+        "providerName" : "Refreshed files",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 327100,
+          "total" : 468380100
+        }
+      } ]
+    }, {
+      "fileType" : "Gradle",
+      "partOfTotalProcessingTime" : {
+        "part" : 130129700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 14411600,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 2936,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2936,
+        "totalCpuTime" : 130129700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1041,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 106099800,
+          "total" : 130129700
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1895,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 24029900,
+          "total" : 130129700
+        }
+      } ]
+    }, {
+      "fileType" : "HTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 71668100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 49906200,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 8,
+      "totalFilesSize" : 962,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 962,
+        "totalCpuTime" : 71668100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.hamcrest:hamcrest-library:1.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 606,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 63195200,
+          "total" : 71668100
+        }
+      }, {
+        "providerName" : "Library Gradle: org.hamcrest:hamcrest-core:1.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 356,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8472900,
+          "total" : 71668100
+        }
+      } ]
+    }, {
+      "fileType" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 63954800,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 44196800,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 14708,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 14708,
+        "totalCpuTime" : 63954800
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 14708,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 63954800,
+          "total" : 63954800
+        }
+      } ]
+    }, {
+      "fileType" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 62841600,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1267000,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 6728,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6728,
+        "totalCpuTime" : 62841600
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6728,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 62841600,
+          "total" : 62841600
+        }
+      } ]
+    }, {
+      "fileType" : "JSP",
+      "partOfTotalProcessingTime" : {
+        "part" : 38093000,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 34597200,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 5,
+      "totalFilesSize" : 905,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 905,
+        "totalCpuTime" : 38093000
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 905,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 38093000,
+          "total" : 38093000
+        }
+      } ]
+    }, {
+      "fileType" : "GitIgnore file",
+      "partOfTotalProcessingTime" : {
+        "part" : 37947100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 34825600,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 246,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 246,
+        "totalCpuTime" : 37947100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 240,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 34872200,
+          "total" : 37947100
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3074900,
+          "total" : 37947100
+        }
+      } ]
+    }, {
+      "fileType" : "Shrinker Config File",
+      "partOfTotalProcessingTime" : {
+        "part" : 33321700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 17144100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 13,
+      "totalFilesSize" : 9453,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 9453,
+        "totalCpuTime" : 33321700
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 8,
+        "totalFilesSize" : 4352,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15765700,
+          "total" : 33321700
+        }
+      }, {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 3898,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7103900,
+          "total" : 33321700
+        }
+      }, {
+        "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 433,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 6454800,
+          "total" : 33321700
+        }
+      }, {
+        "providerName" : "Module 'My_Application2222.app' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 770,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3997300,
+          "total" : 33321700
+        }
+      } ]
+    }, {
+      "fileType" : "AIDL",
+      "partOfTotalProcessingTime" : {
+        "part" : 10884900,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 2690800,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 737,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 737,
+        "totalCpuTime" : 10884900
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 737,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10884900,
+          "total" : 10884900
+        }
+      } ]
+    }, {
+      "fileType" : "TOML",
+      "partOfTotalProcessingTime" : {
+        "part" : 7106200,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 5371100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 1367,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1367,
+        "totalCpuTime" : 7106200
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'My_Application2222' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1367,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7106200,
+          "total" : 7106200
+        }
+      } ]
+    }, {
+      "fileType" : "SPI",
+      "partOfTotalProcessingTime" : {
+        "part" : 6356400,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3795100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 4,
+      "totalFilesSize" : 212,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 212,
+        "totalCpuTime" : 6356400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 (#1 class roots, #1 source roots)",
+        "numberOfFiles" : 4,
+        "totalFilesSize" : 212,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 6356400,
+          "total" : 6356400
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ {
+      "language" : "kotlin",
+      "partOfTotalProcessingTime" : {
+        "part" : 34496413400,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 115142801000,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 885,
+      "totalFilesSize" : 6169385,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6169385,
+        "totalCpuTime" : 34496413400
+      }
+    }, {
+      "language" : "JAVA",
+      "partOfTotalProcessingTime" : {
+        "part" : 33854928700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 119205208100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 4935,
+      "totalFilesSize" : 42210339,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 42210339,
+        "totalCpuTime" : 33854928700
+      }
+    }, {
+      "language" : "TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 23524153100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 117499952400,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2167,
+      "totalFilesSize" : 13664379,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 13664379,
+        "totalCpuTime" : 23524153100
+      }
+    }, {
+      "language" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 21826322700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 114303480600,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1420,
+      "totalFilesSize" : 3066094,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3066094,
+        "totalCpuTime" : 21826322700
+      }
+    }, {
+      "language" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 1312152700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103982130700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 91,
+      "totalFilesSize" : 8008,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8008,
+        "totalCpuTime" : 1312152700
+      }
+    }, {
+      "language" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 1002243100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 104120379400,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 32,
+      "totalFilesSize" : 33676,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 33676,
+        "totalCpuTime" : 1002243100
+      }
+    }, {
+      "language" : "Manifest",
+      "partOfTotalProcessingTime" : {
+        "part" : 856880100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 104210879600,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 134,
+      "totalFilesSize" : 24901,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 24901,
+        "totalCpuTime" : 856880100
+      }
+    }, {
+      "language" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 468380100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103751099600,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 6,
+      "totalFilesSize" : 1314126,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1314126,
+        "totalCpuTime" : 468380100
+      }
+    }, {
+      "language" : "Groovy",
+      "partOfTotalProcessingTime" : {
+        "part" : 130129700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103623430500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 2936,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2936,
+        "totalCpuTime" : 130129700
+      }
+    }, {
+      "language" : "HTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 71668100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103658925100,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 8,
+      "totalFilesSize" : 962,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 962,
+        "totalCpuTime" : 71668100
+      }
+    }, {
+      "language" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 63954800,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103653215700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 14708,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 14708,
+        "totalCpuTime" : 63954800
+      }
+    }, {
+      "language" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 62841600,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103610285900,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 6728,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6728,
+        "totalCpuTime" : 62841600
+      }
+    }, {
+      "language" : "GitIgnore",
+      "partOfTotalProcessingTime" : {
+        "part" : 37947100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103643844500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 246,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 246,
+        "totalCpuTime" : 37947100
+      }
+    }, {
+      "language" : "IgnoreLang",
+      "partOfTotalProcessingTime" : {
+        "part" : 37947100,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103643844500,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 246,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 246,
+        "totalCpuTime" : 37947100
+      }
+    }, {
+      "language" : "SHRINKER_CONFIG",
+      "partOfTotalProcessingTime" : {
+        "part" : 33321700,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103626163000,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 13,
+      "totalFilesSize" : 9453,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 9453,
+        "totalCpuTime" : 33321700
+      }
+    }, {
+      "language" : "AIDL",
+      "partOfTotalProcessingTime" : {
+        "part" : 10884900,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103611709700,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 737,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 737,
+        "totalCpuTime" : 10884900
+      }
+    }, {
+      "language" : "TOML",
+      "partOfTotalProcessingTime" : {
+        "part" : 7106200,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103614390000,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 1367,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1367,
+        "totalCpuTime" : 7106200
+      }
+    }, {
+      "language" : "SPI",
+      "partOfTotalProcessingTime" : {
+        "part" : 6356400,
+        "total" : 222433568500
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 103612814000,
+        "total" : 103609018900
+      },
+      "totalNumberOfFiles" : 4,
+      "totalFilesSize" : 212,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 212,
+        "totalCpuTime" : 6356400
+      }
+    } ],
+    "totalStatsPerIndexer" : [ {
+      "indexId" : "Stubs",
+      "partOfTotalIndexingTime" : {
+        "part" : 33850078600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 21664,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 68550618,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 68550618,
+        "totalCpuTime" : 33850078600
+      }
+    }, {
+      "indexId" : "IdIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 7705651600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 9703,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 66528200,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 66528200,
+        "totalCpuTime" : 7705651600
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinShortClassNameFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 5805375700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 20134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 65414147,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 65414147,
+        "totalCpuTime" : 5805375700
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 3573613600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 20134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 65414147,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 65414147,
+        "totalCpuTime" : 3573613600
+      }
+    }, {
+      "indexId" : "Trigram.Index",
+      "partOfTotalIndexingTime" : {
+        "part" : 3178476000,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 10459,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 66528200,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 66528200,
+        "totalCpuTime" : 3178476000
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 948786600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 18888,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 58838803,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 58838803,
+        "totalCpuTime" : 948786600
+      }
+    }, {
+      "indexId" : "bytecodeAnalysis",
+      "partOfTotalIndexingTime" : {
+        "part" : 491098100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 18888,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 58838803,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 58838803,
+        "totalCpuTime" : 491098100
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 377564700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 18888,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 58838803,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 58838803,
+        "totalCpuTime" : 377564700
+      }
+    }, {
+      "indexId" : "KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 369755300,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 20134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 65414147,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 65414147,
+        "totalCpuTime" : 369755300
+      }
+    }, {
+      "indexId" : "DomFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 349781700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 349781700
+      }
+    }, {
+      "indexId" : "fileIncludes",
+      "partOfTotalIndexingTime" : {
+        "part" : 299724900,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1397,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 2977502,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 2977502,
+        "totalCpuTime" : 299724900
+      }
+    }, {
+      "indexId" : "KotlinTopLevelCallableByPackageShortNameIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 270641600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 20134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 65414147,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 65414147,
+        "totalCpuTime" : 270641600
+      }
+    }, {
+      "indexId" : "BindingXmlIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 207311400,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 207311400
+      }
+    }, {
+      "indexId" : "NavXmlIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 146307100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 146307100
+      }
+    }, {
+      "indexId" : "KotlinBinaryRootToPackageIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 121975000,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 19249,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 59244762,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 59244762,
+        "totalCpuTime" : 121975000
+      }
+    }, {
+      "indexId" : "RelaxSymbolIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 109274800,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1397,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 2977502,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 2977502,
+        "totalCpuTime" : 109274800
+      }
+    }, {
+      "indexId" : "xmlProperties",
+      "partOfTotalIndexingTime" : {
+        "part" : 96429100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 96429100
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 82881200,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 361,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 405959,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 405959,
+        "totalCpuTime" : 82881200
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 69558500,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 361,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 405959,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 405959,
+        "totalCpuTime" : 69558500
+      }
+    }, {
+      "indexId" : "java.null.method.argument",
+      "partOfTotalIndexingTime" : {
+        "part" : 59184700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 52705,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 52705,
+        "totalCpuTime" : 59184700
+      }
+    }, {
+      "indexId" : "java.fun.expression",
+      "partOfTotalIndexingTime" : {
+        "part" : 52674100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 52705,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 52705,
+        "totalCpuTime" : 52674100
+      }
+    }, {
+      "indexId" : "android.ndk.jni.nativemethodindex",
+      "partOfTotalIndexingTime" : {
+        "part" : 45329900,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 52705,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 52705,
+        "totalCpuTime" : 45329900
+      }
+    }, {
+      "indexId" : "KotlinPackageSourcesMemberNamesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 34471200,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 885,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 6169385,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 6169385,
+        "totalCpuTime" : 34471200
+      }
+    }, {
+      "indexId" : "com.android.tools.idea.model.AndroidManifestIndex.NAME",
+      "partOfTotalIndexingTime" : {
+        "part" : 18320700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 89,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 80435,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 80435,
+        "totalCpuTime" : 18320700
+      }
+    }, {
+      "indexId" : "IdeaPluginRegistrationIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 14918400,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 14918400
+      }
+    }, {
+      "indexId" : "com.android.tools.idea.dagger.index.DaggerIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 12269400,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 52705,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 52705,
+        "totalCpuTime" : 12269400
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 10780100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24901,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24901,
+        "totalCpuTime" : 10780100
+      }
+    }, {
+      "indexId" : "devkit.ExtensionPointIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 9843700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 9843700
+      }
+    }, {
+      "indexId" : "PluginIdModuleIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 9731600,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 9731600
+      }
+    }, {
+      "indexId" : "devkit.ExtensionPointClassIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 9528500,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 9528500
+      }
+    }, {
+      "indexId" : "PluginIdDependenciesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 9327100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 1412,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3065132,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3065132,
+        "totalCpuTime" : 9327100
+      }
+    }, {
+      "indexId" : "json.file.root.values",
+      "partOfTotalIndexingTime" : {
+        "part" : 9249100,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 32,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 33676,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 33676,
+        "totalCpuTime" : 9249100
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 8467400,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 45,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 17065,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 17065,
+        "totalCpuTime" : 8467400
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 6787300,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 45,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 17065,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 17065,
+        "totalCpuTime" : 6787300
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 5452700,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 361,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 405959,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 405959,
+        "totalCpuTime" : 5452700
+      }
+    }, {
+      "indexId" : "java.source.module.name",
+      "partOfTotalIndexingTime" : {
+        "part" : 3585000,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 134,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24901,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24901,
+        "totalCpuTime" : 3585000
+      }
+    }, {
+      "indexId" : "java.binary.plus.expression",
+      "partOfTotalIndexingTime" : {
+        "part" : 1752800,
+        "total" : 58375959200
+      },
+      "totalNumberOfFiles" : 15,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 52705,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 52705,
+        "totalCpuTime" : 1752800
+      }
+    } ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 17,
+      "retrievingTime" : 1920700
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Module 'My_Application2222' (all roots)",
+      "totalNumberOfIndexedFiles" : 3420,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 11677259395,
+      "contentLoadingVisibleTime" : 6882254899,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "values-ro.xml",
+        "processingTime" : 526572600,
+        "evaluationOfIndexValueChangerTime" : 2054000,
+        "contentLoadingTime" : 522237500
+      }, {
+        "fileName" : "results.bin",
+        "processingTime" : 842225200,
+        "evaluationOfIndexValueChangerTime" : 78000,
+        "contentLoadingTime" : 841797200
+      }, {
+        "fileName" : "results.bin",
+        "processingTime" : 1303399100,
+        "evaluationOfIndexValueChangerTime" : 111200,
+        "contentLoadingTime" : 66287800
+      }, {
+        "fileName" : "results.bin",
+        "processingTime" : 1303847700,
+        "evaluationOfIndexValueChangerTime" : 60600,
+        "contentLoadingTime" : 66790200
+      }, {
+        "fileName" : "results.bin",
+        "processingTime" : 1303063000,
+        "evaluationOfIndexValueChangerTime" : 1412700,
+        "contentLoadingTime" : 66464300
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2842265860
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.22 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 1157,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 10206547483,
+      "contentLoadingVisibleTime" : 4596815011,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "StringsKt.class",
+        "processingTime" : 536299600,
+        "evaluationOfIndexValueChangerTime" : 507177700,
+        "contentLoadingTime" : 10338000
+      }, {
+        "fileName" : "JDK7PlatformImplementations.kt",
+        "processingTime" : 650164000,
+        "evaluationOfIndexValueChangerTime" : 6764400,
+        "contentLoadingTime" : 32887300
+      }, {
+        "fileName" : "PathRecursiveFunctions.kt",
+        "processingTime" : 647967300,
+        "evaluationOfIndexValueChangerTime" : 50540700,
+        "contentLoadingTime" : 33890200
+      }, {
+        "fileName" : "_ArraysJvm.kt",
+        "processingTime" : 775780700,
+        "evaluationOfIndexValueChangerTime" : 702034700,
+        "contentLoadingTime" : 47644300
+      }, {
+        "fileName" : "AutoCloseableJVM.kt",
+        "processingTime" : 652103100,
+        "evaluationOfIndexValueChangerTime" : 4250900,
+        "contentLoadingTime" : 31108000
+      }, {
+        "fileName" : "KClass.kt",
+        "processingTime" : 976879600,
+        "evaluationOfIndexValueChangerTime" : 7380800,
+        "contentLoadingTime" : 34629300
+      }, {
+        "fileName" : "KCallable.kt",
+        "processingTime" : 947838400,
+        "evaluationOfIndexValueChangerTime" : 5557700,
+        "contentLoadingTime" : 15095600
+      }, {
+        "fileName" : "TypesJVM.kt",
+        "processingTime" : 974895900,
+        "evaluationOfIndexValueChangerTime" : 15546800,
+        "contentLoadingTime" : 33605200
+      }, {
+        "fileName" : "ArraysKt.class",
+        "processingTime" : 833425600,
+        "evaluationOfIndexValueChangerTime" : 823046300,
+        "contentLoadingTime" : 7302500
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1371471817
+    }, {
+      "providerName" : "Library Gradle: com.google.android.material:material:1.9.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 1898,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 5962689711,
+      "contentLoadingVisibleTime" : 2578201046,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "material_slider_inactive_track_color.xml",
+        "processingTime" : 1173667500,
+        "evaluationOfIndexValueChangerTime" : 1239200,
+        "contentLoadingTime" : 109595100
+      }, {
+        "fileName" : "m3_calendar_item_disabled_text.xml",
+        "processingTime" : 1307078400,
+        "evaluationOfIndexValueChangerTime" : 1165200,
+        "contentLoadingTime" : 249720300
+      }, {
+        "fileName" : "material_timepicker_modebutton_tint.xml",
+        "processingTime" : 1241441500,
+        "evaluationOfIndexValueChangerTime" : 1130500,
+        "contentLoadingTime" : 187965900
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1977339857
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:protolite-well-known-types:18.0.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 599,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4850625508,
+      "contentLoadingVisibleTime" : 2567108344,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "Quota.class",
+        "processingTime" : 1000528000,
+        "evaluationOfIndexValueChangerTime" : 11993500,
+        "contentLoadingTime" : 198165300
+      }, {
+        "fileName" : "Http.class",
+        "processingTime" : 1088735300,
+        "evaluationOfIndexValueChangerTime" : 231609000,
+        "contentLoadingTime" : 117276700
+      }, {
+        "fileName" : "Page.class",
+        "processingTime" : 1007182000,
+        "evaluationOfIndexValueChangerTime" : 175772400,
+        "contentLoadingTime" : 123200400
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1075828345
+    }, {
+      "providerName" : "Library Gradle: androidx.core:core:1.9.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 1177,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4435303981,
+      "contentLoadingVisibleTime" : 1703774308,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "ResultReceiver$1.class",
+        "processingTime" : 1553142400,
+        "evaluationOfIndexValueChangerTime" : 127500,
+        "contentLoadingTime" : 3033500
+      }, {
+        "fileName" : "ResultReceiver.class",
+        "processingTime" : 1557644400,
+        "evaluationOfIndexValueChangerTime" : 4310200,
+        "contentLoadingTime" : 5668100
+      }, {
+        "fileName" : "IResultReceiver.class",
+        "processingTime" : 1555385700,
+        "evaluationOfIndexValueChangerTime" : 4497900,
+        "contentLoadingTime" : 2875500
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2008694899
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 517,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4124426956,
+      "contentLoadingVisibleTime" : 807987539,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "_ArraysKt.kotlin_metadata",
+        "processingTime" : 692003100,
+        "evaluationOfIndexValueChangerTime" : 685810800,
+        "contentLoadingTime" : 1813800
+      }, {
+        "fileName" : "_UArrays.kt",
+        "processingTime" : 840358000,
+        "evaluationOfIndexValueChangerTime" : 830542400,
+        "contentLoadingTime" : 4521000
+      }, {
+        "fileName" : "_Arrays.kt",
+        "processingTime" : 1967547500,
+        "evaluationOfIndexValueChangerTime" : 1924932600,
+        "contentLoadingTime" : 33288600
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 440751939
+    }, {
+      "providerName" : "Library Gradle: com.google.guava:guava:31.1-android (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 2550,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3411078417,
+      "contentLoadingVisibleTime" : 1091450656,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "pom.properties",
+        "processingTime" : 635017200,
+        "evaluationOfIndexValueChangerTime" : 445600,
+        "contentLoadingTime" : 1710700
+      }, {
+        "fileName" : "pom.xml",
+        "processingTime" : 636593400,
+        "evaluationOfIndexValueChangerTime" : 8434500,
+        "contentLoadingTime" : 2733000
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1287387741
+    }, {
+      "providerName" : "Library Gradle: androidx.annotation:annotation-jvm:1.6.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 146,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2424841325,
+      "contentLoadingVisibleTime" : 1713997530,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "InspectableProperty.class",
+        "processingTime" : 604040100,
+        "evaluationOfIndexValueChangerTime" : 602263800,
+        "contentLoadingTime" : 1201900
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 39474884
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-firestore:25.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 1264,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2358919691,
+      "contentLoadingVisibleTime" : 854277860,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 602945033
+    }, {
+      "providerName" : "Library Gradle: androidx.core:core-ktx:1.9.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 191,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2021314370,
+      "contentLoadingVisibleTime" : 1274553917,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 369582231
+    }, {
+      "providerName" : "Library Gradle: com.google.guava:guava:32.0.1-android (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 2543,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1917929569,
+      "contentLoadingVisibleTime" : 538246789,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 577645118
+    }, {
+      "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 92,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1895392994,
+      "contentLoadingVisibleTime" : 991717231,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "CustomAudience.class",
+        "processingTime" : 500690000,
+        "evaluationOfIndexValueChangerTime" : 464186500,
+        "contentLoadingTime" : 35937200
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 250912603
+    }, {
+      "providerName" : "Library Gradle: com.google.protobuf:protobuf-javalite:3.22.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 527,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1728877243,
+      "contentLoadingVisibleTime" : 1092888770,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 175098605
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 1044,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1673833281,
+      "contentLoadingVisibleTime" : 274335321,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 253004424
+    }, {
+      "providerName" : "Library Gradle: junit:junit:4.13.2 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 574,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1558448850,
+      "contentLoadingVisibleTime" : 1073470898,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 101841132
+    }, {
+      "providerName" : "Library Gradle: androidx.test.espresso:espresso-core:3.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 745,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 712052176,
+      "contentLoadingVisibleTime" : 326197341,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 135592964
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement-base:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 187,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 683866806,
+      "contentLoadingVisibleTime" : 540630430,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 44078242
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 267,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 628185496,
+      "contentLoadingVisibleTime" : 318897667,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 131352810
+    }, {
+      "providerName" : "Module 'My_Application2222.app.main' (all roots)",
+      "totalNumberOfIndexedFiles" : 37,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 624057419,
+      "contentLoadingVisibleTime" : 311666232,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 217632537
+    }, {
+      "providerName" : "Library Gradle: androidx.credentials:credentials:1.2.0-rc01@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 519,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 617379545,
+      "contentLoadingVisibleTime" : 151042291,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 104987212
+    }, {
+      "providerName" : "Library Gradle: com.google.protobuf:protobuf-javalite:3.14.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 529,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 564396276,
+      "contentLoadingVisibleTime" : 159815197,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 138019902
+    }, {
+      "providerName" : "Library Gradle: androidx.appcompat:appcompat:1.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 506,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 512217457,
+      "contentLoadingVisibleTime" : 128807102,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 185973743
+    }, {
+      "providerName" : "Library Gradle: androidx.recyclerview:recyclerview:1.2.1@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 247,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 478351688,
+      "contentLoadingVisibleTime" : 184643819,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 87937839
+    }, {
+      "providerName" : "Library Gradle: junit:junit:4.12 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 486,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 463016534,
+      "contentLoadingVisibleTime" : 229217657,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 92703264
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-auth:23.0.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1364,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 462763481,
+      "contentLoadingVisibleTime" : 166769244,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 105797780
+    }, {
+      "providerName" : "Library Gradle: androidx.activity:activity:1.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 86,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 445805061,
+      "contentLoadingVisibleTime" : 195816354,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 148738888
+    }, {
+      "providerName" : "Library Gradle: com.google.android.recaptcha:recaptcha:18.4.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 462,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 438000125,
+      "contentLoadingVisibleTime" : 238812420,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 48316436
+    }, {
+      "providerName" : "Library Gradle: org.checkerframework:checker-qual:3.12.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 657,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 428151328,
+      "contentLoadingVisibleTime" : 233685988,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 89176269
+    }, {
+      "providerName" : "Library Gradle: org.hamcrest:hamcrest-library:1.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 73,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 370212921,
+      "contentLoadingVisibleTime" : 310607174,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 27817705
+    }, {
+      "providerName" : "Library Gradle: androidx.test:runner:1.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 338,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 367704459,
+      "contentLoadingVisibleTime" : 165424178,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 69228935
+    }, {
+      "providerName" : "Library Gradle: androidx.browser:browser:1.4.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 247,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 366145412,
+      "contentLoadingVisibleTime" : 174713161,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 76945554
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains:annotations:23.0.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 90,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 353214145,
+      "contentLoadingVisibleTime" : 241852472,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 13619076
+    }, {
+      "providerName" : "Library Gradle: org.checkerframework:checker-qual:3.33.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 703,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 335760469,
+      "contentLoadingVisibleTime" : 146022292,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 90297686
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-base:18.0.1@aar (#3 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 383,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 312293001,
+      "contentLoadingVisibleTime" : 164025980,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 52745696
+    }, {
+      "providerName" : "Library Gradle: androidx.constraintlayout:constraintlayout:2.1.1@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 224,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 310113674,
+      "contentLoadingVisibleTime" : 98626980,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 79471963
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-basement:18.3.0@aar (#3 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 406,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 262259676,
+      "contentLoadingVisibleTime" : 100827601,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 49750089
+    }, {
+      "providerName" : "Library Gradle: androidx.core:core-ktx:1.3.2@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 173,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 213596157,
+      "contentLoadingVisibleTime" : 45600313,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 35437794
+    }, {
+      "providerName" : "Library Gradle: androidx.annotation:annotation-experimental:1.3.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 13,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 208897418,
+      "contentLoadingVisibleTime" : 18989605,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "annotation-experimental_release.kotlin_module",
+        "processingTime" : 519870600,
+        "evaluationOfIndexValueChangerTime" : 168700,
+        "contentLoadingTime" : 13087400
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 173489367
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-common:21.0.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 157,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 204560430,
+      "contentLoadingVisibleTime" : 104139938,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 36780426
+    }, {
+      "providerName" : "Library Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 5,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 202732410,
+      "contentLoadingVisibleTime" : 5840300,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "WakefulBroadcastReceiver.class",
+        "processingTime" : 567374000,
+        "evaluationOfIndexValueChangerTime" : 753400,
+        "contentLoadingTime" : 291800
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 195383761
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 198303826,
+      "contentLoadingVisibleTime" : 121650735,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 54496180
+    }, {
+      "providerName" : "Library Gradle: org.altbeacon:android-beacon-library:2.19.5@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 229,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 192905110,
+      "contentLoadingVisibleTime" : 44591176,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 74186642
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement-sdk-api:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 56,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 190334593,
+      "contentLoadingVisibleTime" : 162796000,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4887101
+    }, {
+      "providerName" : "Library Gradle: androidx.appcompat:appcompat-resources:1.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 55,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 183149125,
+      "contentLoadingVisibleTime" : 104277906,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 38160102
+    }, {
+      "providerName" : "Library Gradle: androidx.loader:loader:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 32,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 182148201,
+      "contentLoadingVisibleTime" : 112143410,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9174641
+    }, {
+      "providerName" : "Library Gradle: androidx.transition:transition:1.2.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 198,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 181254285,
+      "contentLoadingVisibleTime" : 61409363,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 52565513
+    }, {
+      "providerName" : "Library Gradle: androidx.fragment:fragment:1.3.6@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 193,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 178053822,
+      "contentLoadingVisibleTime" : 40453940,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 59232098
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement-impl:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 430,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 155386580,
+      "contentLoadingVisibleTime" : 57985963,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 38312603
+    }, {
+      "providerName" : "Library Gradle: androidx.privacysandbox.ads:ads-adservices-java:1.0.0-beta05@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 47,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 147337615,
+      "contentLoadingVisibleTime" : 71590979,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8473109
+    }, {
+      "providerName" : "Library Gradle: androidx.drawerlayout:drawerlayout:1.1.1@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 15,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 127988219,
+      "contentLoadingVisibleTime" : 74735132,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8941157
+    }, {
+      "providerName" : "Library Gradle: androidx.credentials:credentials-play-services-auth:1.2.0-rc01@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 85,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 121055771,
+      "contentLoadingVisibleTime" : 20954341,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 17995204
+    }, {
+      "providerName" : "Library Gradle: androidx.viewpager2:viewpager2:1.0.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 58,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 119615223,
+      "contentLoadingVisibleTime" : 62799652,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 11711899
+    }, {
+      "providerName" : "Library Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 21,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 102838676,
+      "contentLoadingVisibleTime" : 74820407,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7763160
+    }, {
+      "providerName" : "Library Gradle: com.google.errorprone:error_prone_annotations:2.11.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 58,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 101193374,
+      "contentLoadingVisibleTime" : 74207361,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 11938420
+    }, {
+      "providerName" : "Library Gradle: androidx.viewpager:viewpager:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 31,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 98881048,
+      "contentLoadingVisibleTime" : 34902756,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 13314682
+    }, {
+      "providerName" : "Library Gradle: androidx.test:monitor:1.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 110,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 94751416,
+      "contentLoadingVisibleTime" : 46805451,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 23393076
+    }, {
+      "providerName" : "Library Gradle: androidx.documentfile:documentfile:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 13,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 90892110,
+      "contentLoadingVisibleTime" : 69562666,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 13950509
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 84572606,
+      "contentLoadingVisibleTime" : 18617782,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8099460
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-installations:18.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 68,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 83836464,
+      "contentLoadingVisibleTime" : 37257837,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 22962814
+    }, {
+      "providerName" : "Library Gradle: org.hamcrest:hamcrest-core:1.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 88,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 79807351,
+      "contentLoadingVisibleTime" : 42307884,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 18043367
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-components:18.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 75,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 76753508,
+      "contentLoadingVisibleTime" : 44030214,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 12919842
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-tasks:18.1.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 52,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 75505479,
+      "contentLoadingVisibleTime" : 59761864,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3839872
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-common:2.5.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 41,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 74611901,
+      "contentLoadingVisibleTime" : 53079968,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9883440
+    }, {
+      "providerName" : "Library Gradle: androidx.test.services:storage:1.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 18,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 65830545,
+      "contentLoadingVisibleTime" : 51978289,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2943995
+    }, {
+      "providerName" : "Library Gradle: com.rmtheis:tess-two:9.1.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 65,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 59830003,
+      "contentLoadingVisibleTime" : 18557619,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 19965247
+    }, {
+      "providerName" : "Library Gradle: com.google.code.findbugs:jsr305:3.0.2 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 70,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 56077602,
+      "contentLoadingVisibleTime" : 32943292,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 10147816
+    }, {
+      "providerName" : "Library Gradle: com.google.android.play:integrity:1.2.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 115,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 53566741,
+      "contentLoadingVisibleTime" : 18426344,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 10494019
+    }, {
+      "providerName" : "Library Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 18,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 51421416,
+      "contentLoadingVisibleTime" : 16826637,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6906186
+    }, {
+      "providerName" : "Library Gradle: androidx.test:core:1.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 43,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 51163766,
+      "contentLoadingVisibleTime" : 24586012,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 10477897
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-viewmodel:2.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 45,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 48439295,
+      "contentLoadingVisibleTime" : 7786955,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 12201106
+    }, {
+      "providerName" : "Library Gradle: androidx.arch.core:core-runtime:2.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 47587662,
+      "contentLoadingVisibleTime" : 35191873,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3013114
+    }, {
+      "providerName" : "Library Gradle: com.google.j2objc:j2objc-annotations:1.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 26,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 46566255,
+      "contentLoadingVisibleTime" : 34580482,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5030172
+    }, {
+      "providerName" : "Library Gradle: org.hamcrest:hamcrest-integration:1.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 13,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 45834540,
+      "contentLoadingVisibleTime" : 5643286,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7371396
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 16,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 45293621,
+      "contentLoadingVisibleTime" : 36566614,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2877952
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-stats:17.0.2@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 19,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 43838878,
+      "contentLoadingVisibleTime" : 38270084,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1747848
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-database-collection:18.0.1@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 40,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 43128557,
+      "contentLoadingVisibleTime" : 8623717,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 25416386
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-common-ktx:21.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 43098105,
+      "contentLoadingVisibleTime" : 37927328,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1284126
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-annotations:16.2.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 8,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 40672653,
+      "contentLoadingVisibleTime" : 38404604,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 451216
+    }, {
+      "providerName" : "Library Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 15,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 37405809,
+      "contentLoadingVisibleTime" : 26268561,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3016055
+    }, {
+      "providerName" : "Library Gradle: com.google.errorprone:error_prone_annotations:2.26.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 62,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 34342064,
+      "contentLoadingVisibleTime" : 10882167,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 13653923
+    }, {
+      "providerName" : "Library Gradle: androidx.collection:collection:1.1.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 29,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 33598587,
+      "contentLoadingVisibleTime" : 8455634,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 10974912
+    }, {
+      "providerName" : "Library Gradle: com.google.guava:failureaccess:1.0.1 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 8,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 32346198,
+      "contentLoadingVisibleTime" : 29496062,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1030362
+    }, {
+      "providerName" : "Library Gradle: androidx.dynamicanimation:dynamicanimation:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 46,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 32245917,
+      "contentLoadingVisibleTime" : 9080680,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8556220
+    }, {
+      "providerName" : "Library Gradle: androidx.customview:customview:1.1.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 24,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 29064145,
+      "contentLoadingVisibleTime" : 6474877,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9809285
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-livedata-core:2.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 14,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 28914381,
+      "contentLoadingVisibleTime" : 16199124,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3911796
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 28903025,
+      "contentLoadingVisibleTime" : 11349033,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4000857
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement-api:22.0.1@aar (#3 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 35,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 28824138,
+      "contentLoadingVisibleTime" : 13237959,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5173243
+    }, {
+      "providerName" : "Library Gradle: androidx.cardview:cardview:1.0.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 25,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 28030706,
+      "contentLoadingVisibleTime" : 13369842,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6980645
+    }, {
+      "providerName" : "Library Gradle: javax.inject:javax.inject:1 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 13,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 26503092,
+      "contentLoadingVisibleTime" : 19794832,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3924944
+    }, {
+      "providerName" : "Library Gradle: androidx.savedstate:savedstate:1.2.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 21,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 25205649,
+      "contentLoadingVisibleTime" : 6634476,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3410050
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-auth-interop:20.0.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 10,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 23958195,
+      "contentLoadingVisibleTime" : 4217001,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 17216238
+    }, {
+      "providerName" : "Library Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 22931449,
+      "contentLoadingVisibleTime" : 5917024,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7756536
+    }, {
+      "providerName" : "Library Gradle: androidx.lifecycle:lifecycle-runtime:2.5.0@aar (#3 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 13,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 22864696,
+      "contentLoadingVisibleTime" : 13980422,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3024437
+    }, {
+      "providerName" : "Library Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 22,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 21729150,
+      "contentLoadingVisibleTime" : 7339726,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6392205
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-auth-api-phone:18.0.2@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 41,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 21125601,
+      "contentLoadingVisibleTime" : 10370349,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4021744
+    }, {
+      "providerName" : "Library Gradle: androidx.arch.core:core-common:2.1.0 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 14,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 19937566,
+      "contentLoadingVisibleTime" : 10690527,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1894164
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-appcheck-interop:17.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 10,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 17602054,
+      "contentLoadingVisibleTime" : 14028450,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1421924
+    }, {
+      "providerName" : "Library Gradle: com.squareup:javawriter:2.1.1 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 15330118,
+      "contentLoadingVisibleTime" : 9696937,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2105442
+    }, {
+      "providerName" : "Library Gradle: androidx.interpolator:interpolator:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 11,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 15062903,
+      "contentLoadingVisibleTime" : 8463036,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4274291
+    }, {
+      "providerName" : "Module 'My_Application2222.app' (all roots)",
+      "totalNumberOfIndexedFiles" : 4,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 13779216,
+      "contentLoadingVisibleTime" : 506613,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4396271
+    }, {
+      "providerName" : "Library Gradle: androidx.arch.core:core-runtime:2.1.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 13438826,
+      "contentLoadingVisibleTime" : 7650542,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1990728
+    }, {
+      "providerName" : "Library Gradle: com.google.j2objc:j2objc-annotations:2.8 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 12844268,
+      "contentLoadingVisibleTime" : 4360850,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3956242
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-installations-interop:17.1.1@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 16,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 12388623,
+      "contentLoadingVisibleTime" : 6120427,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2272037
+    }, {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 17,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 10863000,
+      "contentLoadingVisibleTime" : 4947907,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1344299
+    }, {
+      "providerName" : "Library Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 8,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 9759431,
+      "contentLoadingVisibleTime" : 5221981,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1128718
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-measurement-connector:19.0.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 6,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 9739287,
+      "contentLoadingVisibleTime" : 5452727,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1077377
+    }, {
+      "providerName" : "Library Gradle: androidx.test.espresso:espresso-idling-resource:3.4.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 9,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 8600159,
+      "contentLoadingVisibleTime" : 4507031,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2037404
+    }, {
+      "providerName" : "Library Gradle: androidx.test.ext:junit:1.1.3@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 10,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 8495855,
+      "contentLoadingVisibleTime" : 4706276,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1567970
+    }, {
+      "providerName" : "Library Gradle: com.google.firebase:firebase-analytics:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 2,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7798818,
+      "contentLoadingVisibleTime" : 7115199,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 167879
+    }, {
+      "providerName" : "Library Gradle: androidx.print:print:1.0.0@aar (#2 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 10,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6902029,
+      "contentLoadingVisibleTime" : 1398603,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1534407
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-ads-identifier:18.0.0@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 17,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6572556,
+      "contentLoadingVisibleTime" : 2290086,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1559182
+    }, {
+      "providerName" : "Library Gradle: com.google.android.gms:play-services-measurement-sdk:22.0.1@aar (#2 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6133000,
+      "contentLoadingVisibleTime" : 2421800,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1079709
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 4,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3608213,
+      "contentLoadingVisibleTime" : 2610095,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 384024
+    }, {
+      "providerName" : "Library Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22 (#1 class roots, #1 source roots)",
+      "totalNumberOfIndexedFiles" : 4,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3130295,
+      "contentLoadingVisibleTime" : 2114669,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 480351
+    }, {
+      "providerName" : "Module 'My_Application2222.app.androidTest' (all roots)",
+      "totalNumberOfIndexedFiles" : 1,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1746124,
+      "contentLoadingVisibleTime" : 290975,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 173084
+    }, {
+      "providerName" : "Library Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1633438,
+      "contentLoadingVisibleTime" : 572352,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 359046
+    }, {
+      "providerName" : "Module 'My_Application2222.app.unitTest' (all roots)",
+      "totalNumberOfIndexedFiles" : 1,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1099177,
+      "contentLoadingVisibleTime" : 172746,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 129822
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.3666637413675548
+  }
+}

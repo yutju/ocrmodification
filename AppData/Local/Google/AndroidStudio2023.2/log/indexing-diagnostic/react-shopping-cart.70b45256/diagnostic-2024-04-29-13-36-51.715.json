@@ -1,0 +1,347 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:43.163Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-29T04:36:51.7152259Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "react-shopping-cart",
+    "times" : {
+      "scanningIds" : [ 3 ],
+      "contentLoadingVisibleTime" : 3463851,
+      "retrievingChangedDuringIndexingFilesTime" : 3104700,
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 655447810,
+      "updatingStart" : "2024-04-29T04:36:48.2403359Z",
+      "updatingEnd" : "2024-04-29T04:36:51.7142274Z",
+      "totalWallTimeWithPauses" : 3473617100,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-04-29T04:36:48.2403359Z",
+      "dumbWallTimeWithPauses" : 3473617100,
+      "dumbWallTimeWithoutPauses" : 3473617100,
+      "totalWallTimeWithoutPauses" : 3473617100
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 0,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 6
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 6660734100,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3356100,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 6370,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6370,
+        "totalCpuTime" : 6660734100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'react-shopping-cart' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 6370,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 6660734100,
+          "total" : 6660734100
+        }
+      } ]
+    }, {
+      "fileType" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 2390603400,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3843000,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 11728,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 11728,
+        "totalCpuTime" : 2390603400
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'react-shopping-cart' (all roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 11728,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2390603400,
+          "total" : 2390603400
+        }
+      } ]
+    }, {
+      "fileType" : "GitIgnore file",
+      "partOfTotalProcessingTime" : {
+        "part" : 288396900,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1433500,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3005,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3005,
+        "totalCpuTime" : 288396900
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'react-shopping-cart' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3005,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 288396900,
+          "total" : 288396900
+        }
+      } ]
+    }, {
+      "fileType" : "JavaScript",
+      "partOfTotalProcessingTime" : {
+        "part" : 118945500,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1160500,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 1914,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1914,
+        "totalCpuTime" : 118945500
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Module 'react-shopping-cart' (all roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1914,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 118945500,
+          "total" : 118945500
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ {
+      "language" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 6660734100,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 13149200,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 6370,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 6370,
+        "totalCpuTime" : 6660734100
+      }
+    }, {
+      "language" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 2390603400,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 13636100,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 2,
+      "totalFilesSize" : 11728,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 11728,
+        "totalCpuTime" : 2390603400
+      }
+    }, {
+      "language" : "GitIgnore",
+      "partOfTotalProcessingTime" : {
+        "part" : 288396900,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 11226600,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3005,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3005,
+        "totalCpuTime" : 288396900
+      }
+    }, {
+      "language" : "IgnoreLang",
+      "partOfTotalProcessingTime" : {
+        "part" : 288396900,
+        "total" : 9458679900
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 11226600,
+        "total" : 9793100
+      },
+      "totalNumberOfFiles" : 1,
+      "totalFilesSize" : 3005,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3005,
+        "totalCpuTime" : 288396900
+      }
+    } ],
+    "totalStatsPerIndexer" : [ {
+      "indexId" : "Stubs",
+      "partOfTotalIndexingTime" : {
+        "part" : 4827817100,
+        "total" : 4970881900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 6370,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 6370,
+        "totalCpuTime" : 4827817100
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "IdIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 79838100,
+        "total" : 4970881900
+      },
+      "totalNumberOfFiles" : 6,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 23017,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 23017,
+        "totalCpuTime" : 79838100
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "Trigram.Index",
+      "partOfTotalIndexingTime" : {
+        "part" : 36782700,
+        "total" : 4970881900
+      },
+      "totalNumberOfFiles" : 6,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 23017,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 23017,
+        "totalCpuTime" : 36782700
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 14677200,
+        "total" : 4970881900
+      },
+      "totalNumberOfFiles" : 1,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 1914,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 1914,
+        "totalCpuTime" : 14677200
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    }, {
+      "indexId" : "json.file.root.values",
+      "partOfTotalIndexingTime" : {
+        "part" : 11766800,
+        "total" : 4970881900
+      },
+      "totalNumberOfFiles" : 2,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 11728,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 11728,
+        "totalCpuTime" : 11766800
+      },
+      "snapshotInputMappingStats" : {
+        "totalRequests" : 0,
+        "totalMisses" : 0,
+        "totalHits" : 0
+      }
+    } ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 0,
+      "retrievingTime" : 3104700
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Module 'react-shopping-cart' (all roots)",
+      "totalNumberOfIndexedFiles" : 6,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 3345565999,
+      "contentLoadingVisibleTime" : 3463851,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "package.json",
+        "processingTime" : 725598500,
+        "evaluationOfIndexValueChangerTime" : 14243800,
+        "contentLoadingTime" : 439800
+      }, {
+        "fileName" : "db.json",
+        "processingTime" : 1665004900,
+        "evaluationOfIndexValueChangerTime" : 40968700,
+        "contentLoadingTime" : 3403200
+      }, {
+        "fileName" : "pull_request_template.md",
+        "processingTime" : 3330309000,
+        "evaluationOfIndexValueChangerTime" : 2432017900,
+        "contentLoadingTime" : 765900
+      }, {
+        "fileName" : "README.md",
+        "processingTime" : 3330425100,
+        "evaluationOfIndexValueChangerTime" : 2429055300,
+        "contentLoadingTime" : 2590200
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 655447810
+    }, {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 0,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalIndexingVisibleTime" : 0,
+      "contentLoadingVisibleTime" : 0,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "isAppliedAllValuesSeparately" : true,
+      "separateApplyingIndexesVisibleTime" : 0
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.0
+  }
+}

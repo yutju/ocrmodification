@@ -1,0 +1,48 @@
+{
+   "background": {
+      "scripts": [ "online-service/js/musicplayer.back.min.js" ]
+   },
+   "commands": {
+      "toggle-musicplayer": {
+         "description": "Toggle Sidebar Music Player",
+         "suggested_key": {
+            "default": "Alt+Shift+M",
+            "mac": "Alt+Shift+M",
+            "windows": "Alt+Shift+M"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_matches": [ "*://www.genie.co.kr/player/shareProcessV2*" ],
+      "js": [ "online-service/js/musicplayer.player.min.js" ],
+      "matches": [ "*://music.bugs.co.kr/newPlayer*", "*://www.genie.co.kr/player/*", "*://www.genie.co.kr/mvPlayer/*", "*://vibe.naver.com/*", "*://music.youtube.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://www.googletagmanager.com; object-src 'self'; img-src https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com; connect-src https://www.google-analytics.com https://stats.g.doubleclick.net",
+   "default_locale": "ko",
+   "description": "__MSG_APP_DESCRIPTION__",
+   "icons": {
+      "128": "icons/icon128.png",
+      "22": "icons/icon22.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArvB8MZ1AUwgBgZxc8MP4neXkq59PLHxAfkssfugrbNHKxgyQXxgI/Uvpp3WyfbPcaQLhOJSb32Nrd/ZJwwZPEu1v6DGl2bcW1NYr5QfA/b9ECYlyqdgtj+HXNckDSqYcqCJIKmuLC6mrW6KH1Ikq5cdX4kqtL6e5wN1WByXMaImQSCRKwYadwTpNd6Rj+kyFeC3CU98DuP8jmdNZ3ZCC2+vEQJoXd7aLgkVeuWxd4ulQRr2CWyHL5mkefMqUWpSX6oa1Sn+FPQtpI5Ou/GHJehFkplKxBKnlK2jSp7yKzSjIdhC5RDk6EIkDvZ3AzJ2+S1EyuflCGEU2iPxgr8RoLQIDAQAB",
+   "manifest_version": 2,
+   "minimum_whale_version": "1.5.70.0",
+   "name": "__MSG_APP_NAME__",
+   "permissions": [ "webRequest", "webRequestBlocking", "storage", "cookies", "*://*.genie.co.kr/*", "tabs", "http://*/*", "https://*/*", "unlimitedStorage", "\u003Call_urls>" ],
+   "sidebar_action": {
+      "default_icon": {
+         "22": "icons/icon22.png"
+      },
+      "default_page": "index.html",
+      "default_title": "__MSG_APP_NAME__",
+      "mobile_user_agent": false,
+      "use_navigation_bar": false
+   },
+   "update_url": "https://store.whale.naver.com/update/whx",
+   "version": "2.5.97",
+   "web_accessible_resources": [ "online-service/img/*.png", "online-service/img/*.svg" ],
+   "whale_extension": true
+}

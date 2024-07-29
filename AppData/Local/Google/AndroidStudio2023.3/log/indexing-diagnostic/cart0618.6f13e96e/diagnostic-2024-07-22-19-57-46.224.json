@@ -1,0 +1,79 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-22T10:57:46.226404Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningReason" : "changes in: \"Module 'My_Application2222.app.main' (debug, out, processDebugGoogleServices)\", \"Module 'My_Application2222.app.androidTest' (debug)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 4,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 41888500,
+      "concurrentHandlingWallTimeWithPauses" : 41888500,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 37009500,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 142200,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 34735600,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 10000,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-07-22T10:57:46.1665617Z",
+      "updatingEnd" : "2024-07-22T10:57:46.2174267Z",
+      "totalWallTimeWithPauses" : 50186000,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 50186000
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 2,
+      "numberOfScannedFiles" : 1,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 1
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'My_Application2222.app.main' (debug, out, processDebugGoogleServices)",
+      "numberOfScannedFiles" : 1,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 1,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 10547100,
+      "totalOneThreadTimeWithPauses" : 29616200,
+      "iterationAndScannersApplicationTime" : 99100,
+      "filesCheckTime" : 28288600,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 4023600,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 10000,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'My_Application2222.app.androidTest' (debug)",
+      "numberOfScannedFiles" : 0,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 0,
+      "totalOneThreadTimeWithPauses" : 7393300,
+      "iterationAndScannersApplicationTime" : 43100,
+      "filesCheckTime" : 6447000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    } ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"instances" : 
+	{
+		"0" : 
+		{
+			"emergency_mode" : false,
+			"modem_technoloy" : 2,
+			"network_selection_mode" : 0,
+			"preferred_network_mode" : 513
+		}
+	}
+}

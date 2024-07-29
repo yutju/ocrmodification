@@ -1,0 +1,87 @@
+{
+  "appInfo" : {
+    "build" : "233.14808.21.2331.11842104",
+    "buildDate" : "2024-05-15T00:49:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-07-22T11:55:24.4271054Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.10 17.0.10+0--11572160"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 102398976,
+    "maxSizeOfFileForContentLoading" : 102398976
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application2222",
+    "times" : {
+      "scanningIds" : [ ],
+      "contentLoadingVisibleTime" : 2080036,
+      "retrievingChangedDuringIndexingFilesTime" : 4624300,
+      "separateApplyingIndexesVisibleTime" : 783931,
+      "updatingStart" : "2024-07-22T11:55:24.1528393Z",
+      "updatingEnd" : "2024-07-22T11:55:24.4221174Z",
+      "totalWallTimeWithPauses" : 269490600,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbModeStart" : "2024-07-22T11:55:24.1528393Z",
+      "dumbWallTimeWithoutPauses" : 269490600,
+      "dumbWallTimeWithPauses" : 269490600,
+      "totalWallTimeWithoutPauses" : 269490600
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 57,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 57,
+      "numberOfNothingToWriteFiles" : 0
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "UNKNOWN",
+      "partOfTotalProcessingTime" : {
+        "part" : 589072100,
+        "total" : 589072100
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 4718700,
+        "total" : 4718700
+      },
+      "totalNumberOfFiles" : 57,
+      "totalFilesSize" : 0,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 0,
+        "totalCpuTime" : 589072100
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Refreshed files",
+        "numberOfFiles" : 57,
+        "totalFilesSize" : 0,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 589072100,
+          "total" : 589072100
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ ],
+    "totalStatsPerIndexer" : [ ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 57,
+      "retrievingTime" : 4624300
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 57,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 259667200,
+      "contentLoadingVisibleTime" : 2080036,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 783931
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.44080716095703737
+  }
+}

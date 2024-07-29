@@ -1,0 +1,1979 @@
+{
+  "concatenatedAriaLabel": "{0}, {1}",
+  "_concatenatedAriaLabel.comment": "Aria label of the dropdown list item which consists of two parts and combined by a comma. {0} refers to the content of the list item and {1} refers to the subtitle of the current group. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "xAxisDescriptor": "X",
+  "_xAxisDescriptor.comment": "Descriptive label for an x/horizontal axis.",
+
+  "yAxisDescriptor": "Y",
+  "_yAxisDescriptor.comment": "Descriptive label for a y/vertical axis.",
+
+  "primaryXAxisDescriptor": "Primary X-Axis",
+  "_primaryXAxisDescriptor.comment": "Descriptive label for primary x/horizontal axis.",
+
+  "primaryYAxisDescriptor": "Primary Y-Axis",
+  "_primaryYAxisDescriptor.comment": "Descriptive label for primary y/vertical axis.",
+
+  "secondaryXAxisDescriptor": "Secondary X-Axis",
+  "_secondaryXAxisDescriptor.comment": "Descriptive label for secondary x/horizontal axis.",
+
+  "secondaryYAxisDescriptor": "Secondary Y-Axis",
+  "_secondaryYAxisDescriptor.comment": "Descriptive label for secondary y/vertical axis.",
+
+  "insightsServiceErrorTitle": "We gave it our best try but...",
+  "_insightsServiceErrorTitle.comment": "Title for error when the user has an issue with the insights service.",
+
+  "insightsServiceErrorDescription": "We can't find any suggestions because our service is temporarily unavailable. Please try again later.",
+  "_insightsServiceErrorDescription.comment": "Longer description of error when user has an issue with the insights service.",
+
+  "insightsServiceErrorDescriptionNLMode": "The service is temporarily unavailable. Please try again later.",
+  "_insightsServiceErrorDescriptionNLMode.comment": "Longer description of error when user has an issue with the insights service in NL launch mode.",
+
+  "largeDataErrorTitle": "Too much of a good thing?",
+  "_largeDataErrorTitle.comment": "Title for error when the user's dataset is too large to run Insights on.",
+
+  "largeDataErrorDescription": "You may have too much data selected to come up with meaningful suggestions. Try selecting a smaller set of data and try again.",
+  "_largeDataErrorDescription.comment": "Longer description of error when the user's dataset is too large to run Insights on.",
+
+  "largeDataErrorTitleNLMode": "The selected data is too large",
+  "_largeDataErrorTitleNLMode.comment": "Title for error when the user's dataset is too large to run Insights on in NL launch mode.",
+
+  "largeDataErrorDescriptionNLMode": "You may have selected too much data for us to find a meaningful answer. Try selecting a smaller set of data and try again.",
+  "_largeDataErrorDescriptionNLMode.comment": "Longer description of error when the user's dataset is too large to run Insights on in NL launch mode.",
+
+  "largePivotTableSourceErrorTitle": "Please select a smaller data set",
+  "_largePivotTableSourceErrorTitle.comment": "Title for error when the user's source pivot table is too large to run Insights on.",
+
+  "largePivotTableSourceErrorDescription": "Your data set is too large for Recommended Charts to create meaningful suggestions. Select a smaller data set and try again!",
+  "_largePivotTableSourceErrorDescription.comment": "Longer description of error when the user's source pivot table is too large to run Insights on.",
+
+  "notAlignedRangesErrorTitle": "We can't create recommendations with an uneven selection.",
+  "_notAlignedRangesErrorTitle.comment": "Title for error when user's selected discontinous ranges are not aligned.",
+
+  "notAlignedRangesErrorDescription": "Make sure the cells you've selected are even across rows and columns.",
+  "_notAlignedRangesErrorDescription.comment": "Longer description of error when user's selected discontinous ranges are not aligned.",
+
+  "separateRowsSelectedErrorTitle": "We can't get chart recommendations with separate rows selected.",
+  "_separateRowsSelectedErrorTitle.comment": "Title for error when user selected separate rows.",
+
+  "separateRowsSelectedErrorDescription": "Select specific columns or a range of data that you want to get chart recommendations for and try again.",
+  "_separateRowsSelectedErrorDescription.comment": "Longer description of error when user selected separate rows.",
+
+  "separateColumnsSelectedOnRowMajorTableErrorTitle": "We can't get chart recommendations with this selection.",
+  "_separateColumnsSelectedOnRowMajorTableErrorTitle.comment": "Title for error when user selected separate columns on row major table",
+
+  "separateColumnsSelectedOnRowMajorTableErrorDescription": "Select a continuous range in the table or reformat the table to use column headers, then try again.",
+  "_separateColumnsSelectedOnRowMajorTableErrorDescription.comment": "Longer description of error when user selected separate columns on row major table",
+
+  "selectionsFromDifferentRangesErrorTitle": "Unable to provide recommendations",
+  "_selectionsFromDifferentRangesErrorTitle.comment": "Title for error when user's discontinuous selections are from different data range/table.",
+
+  "selectionsFromDifferentRangesErrorDescription": "We can't provide recommendations for columns selected from different tables. Select columns from the same table and try again.",
+  "_selectionsFromDifferentRangesErrorDescription.comment": "Longer description for error when user's discontinuous selections are from different data range/table.",
+
+  "networkErrorTitle": "We gave it our best try but...",
+  "_networkErrorTitle.comment": "Title for error when the user has an issue with their network connection.",
+
+  "networkErrorDescription": "We can't find any suggestions because you seem to be offline. Try connecting to the internet.",
+  "_networkErrorDescription.comment": "Longer description of error when user has an issue with their network connection.",
+
+  "networkErrorTitleNLMode": "Check your network connection",
+  "_networkErrorTitleNLMode.comment": "Title for error when the user has an issue with their network connection in NL launch mode.",
+
+  "networkErrorDescriptionNLMode": "You need to be online to use this feature. Check your internet connection and try again.",
+  "_networkErrorDescriptionNLMode.comment": "Longer description of error when user has an issue with their network connection in NL launch mode.",
+
+  "noRecommendationsErrorTitle": "Couldn't find any patterns",
+  "_noRecommendationsErrorTitle.comment": "Title for error when the user doesn't get any Insights on their data.",
+
+  "noRecommendationsErrorDescription": "We couldn't find any significant patterns in your data to make suggestions. Try using a larger dataset with more variation in it.",
+  "_noRecommendationsErrorDescription.comment": "Longer description of error when user doesn't get any Insights on their data.",
+
+  "noRecommendationsErrorTitleNLMode": "Couldn't find an answer",
+  "_noRecommendationsErrorTitleNLMode.comment": "Title for error when the user doesn't get any Insights on their data in NL Mode.",
+
+  "noRecommendationsErrorDescriptionNLMode": "We couldn't find any significant patterns in your data to find an answer. Try again using a larger dataset with more variation in it.",
+  "_noRecommendationsErrorDescriptionNLMode.comment": "Longer description of error when user doesn't get any Insights on their data in NL Mode.",
+
+  "noValueAnswerCardText": "Based on your question, we didn't find a match for the answer in the data.",
+  "_noValueAnswerCardText.comment": "Text for answer card when Ideas can interpret the question but can't find a valid value.",
+
+  "noValueAnswerCardForNLInsightsText": "Based on your question, we didn't find any insights that would match the answer.",
+  "_noValueAnswerCardForNLInsightsText.comment": "Text for answer card when NL can interpret the insights question but can't find a valid value.",
+
+  "recommendationsFailedWithPreferencesErrorTitle": "Couldn't make any suggestions",
+  "_recommendationsFailedWithPreferencesErrorTitle.comment": "Title for error when the user doesn't get any Insights on their data and they have applied preferences.",
+
+  "recommendationsFailedWithPreferencesErrorDescription": "We weren't able to come up with any suggestions based on your customization settings.",
+  "_recommendationsFailedWithPreferencesErrorDescription.comment": "Longer description of error when the user doesn't get any Insights on their data and they have applied preferences.",
+
+  "pivotTableMark": "PivotTable{0}",
+  "_pivotTableMark.comment": "Name mark for new inserted PivotTable. {Placeholder=\"{0}\"}",
+
+  "pivotTableSelectionErrorTitle": "Sorry, we can't create suggestions based on PivotTables",
+  "_pivotTableSelectionErrorTitle.comment": "Title for error when the user attempts to run Insights on a PivotTable. Should be consistent with Excel name for PivotTable.",
+
+  "pivotTableSelectionErrorDescription": "{Brand} works best when your data is formatted as an Excel Table with a single header row at the top.",
+  "_pivotTableSelectionErrorDescription.comment": "Longer description of error when the user attempts to run Insights on a PivotTable. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "recommendationsFailedErrorTitle": "We gave it our best try but...",
+  "_recommendationsFailedErrorTitle.comment": "Title for general error that occurs when getting Insights.",
+
+  "recommendationsFailedErrorDescription": "We can't create any suggestions from your data.",
+  "_recommendationsFailedErrorDescription.comment": "Longer description of general error that occurs when getting Insights.",
+
+  "recommendationsFailedErrorDescriptionNLMode": "We weren't able to find an answer from your data.",
+  "_recommendationsFailedErrorDescriptionNLMode.comment": "Longer description of general error that occurs when getting Insights in NL launch mode.",
+
+  "multiSelectionErrorTitle": "{Brand} currently doesn’t support multiple ranges.",
+  "_multiSelectionErrorTitle.comment": "Title for error when user attempts to run Ideas with multiple selected ranges. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "multiSelectionErrorDescription": "Please select one range and try again.",
+  "_multiSelectionErrorDescription.comment": "Longer description of error when user attempts to run Ideas with multiple selected ranges.",
+
+  "cellEditModeErrorTitle": "Sorry, we can't create suggestions when in cell edit mode.",
+  "_cellEditModeErrorTitle.comment": "Title for error when user attempts to run Ideas when excel in cell edit mode.",
+
+  "cellEditModeErrorTitleNLMode": "We can't find an answer if you're editing a cell",
+  "_cellEditModeErrorTitleNLMode.comment": "Title for error when user attempts to run Ideas when excel in cell edit mode in NL launch mode.",
+
+  "cellEditModeErrorDescription": "{Brand} works best when a range of data is selected.",
+  "_cellEditModeErrorDescription.comment": "Longer description of error when user attempts to run Ideas when excel in cell edit mode. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "invalidSelectionTitle": "Sorry, we can't create suggestions when a range of data isn't selected.",
+  "_invalidSelectionTitle.comment": "Title for error when user attempts to run Ideas with selection is not on a cell.",
+
+  "invalidSelectionDescription": "{Brand} works best when a range of data is selected.",
+  "_invalidSelectionDescription.comment": "Longer description of error when user attempts to run Ideas with selection is not on a cell. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "helpLinkText": "Learn more",
+  "_helpLinkText.comment": "Text for link that the user can click to reach Ideas help documentation.",
+
+  "helpLinkTextInline": "Learn more...",
+  "_helpLinkTextInline.comment": "Text for link that the user can click to reach Ideas help documentation, displayed at the end of a paragraph of text.",
+
+  "insertionErrorTitle": "Couldn't insert this suggestion",
+  "_insertionErrorTitle.comment": "Title for error that occurs when inserting an Insight.",
+
+  "insertionErrorTitleNL": "Couldn't insert this",
+  "_insertionErrorTitleNL.comment": "Title for error that occurs when inserting a Natural Language Insight.",
+
+  "insertionErrorDescription": "Something went wrong and we couldn't insert the suggestion that you chose. Please select {Brand} to try again.",
+  "_insertionErrorDescription.comment": "Longer description of error that occurs when inserting a suggestion. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "insertionErrorDescriptionNL": "Something went wrong and we couldn't insert the answer. Please select {Brand} to try again.",
+  "_insertionErrorDescriptionNL.comment": "Longer description of error that occurs when inserting a Natural Language suggestion. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "insertionErrorDescriptionPivotTable": "We're sorry, but we couldn't insert the PivotTable. Please try again.",
+  "_insertionErrorDescriptionPivotTable.comment": "Longer description of error that occurs when inserting a PivotTable suggestion.",
+
+  "insertionErrorDescriptionBlankPivotTableInvalidDataSource": "The range you picked can't be used as a data source. To create a PivotTable, you need to use a range that is organized as a list with labeled columns.",
+  "_insertionErrorDescriptionBlankPivotTableInvalidDataSource.comment": "Longer description of error that occurs when inserting a blank PivotTable on an invalid range.",
+
+  "insertionErrorDescriptionCalculatedColumn": "Something went wrong and we couldn't insert the suggestion that you chose. Please try again.",
+  "_insertionErrorDescriptionCalculatedColumn.comment": "Longer description of error that occurs when inserting a calculated column suggestion.",
+
+  "insertionErrorCellEditTitle": "Select another cell and try again",
+  "_insertionErrorCellEditTitle.comment": "Title for error that occurs when the user attempts to insert a recommendation while editing a cell.",
+
+  "insertionErrorCellEditDescription": "We can't insert a suggestion when you're editing a cell. Press Enter or Tab, or select another cell and try again.",
+  "_insertionErrorCellEditDescription.comment": "Longer description of error that occurs when the user attempts to insert a recommendation while editing a cell. 'Enter' and 'Tab' are referring to keys on the keyboard.",
+
+  "insertionErrorCellEditDescriptionNL": "We can't insert an answer when you're editing a cell. Press Enter or Tab, or select another cell and try again.",
+  "_insertionErrorCellEditDescriptionNL.comment": "Longer description of error that occurs when the user attempts to insert a Natural Language suggestion while editing a cell. 'Enter' and 'Tab' are referring to keys on the keyboard.",
+
+  "insertionErrorCellEditDescriptionPivotTable": "We can't insert a PivotTable when you're editing a cell. Press Enter or Tab, or select another cell and try again.",
+  "_insertionErrorCellEditDescriptionPivotTable.comment": "Longer description of error that occurs when the user attempts to insert a PivotTable while editing a cell. 'Enter' and 'Tab' are referring to keys on the keyboard.",
+
+  "signInErrorTitle": "You may not be signed in",
+  "_signInErrorTitle.comment": "Title for error that occurs when the user fails to sign in.",
+
+  "signInErrorDescription": "To use Ideas, sign in with an account associated with Office and select Ideas to try again.",
+  "_signInErrorDescription.comment": "Longer description of error that occurs when the user fails to sign in. Please make sure that the translation follows the guidelines for Term 2655663: 'Ideas' in Term Studio.",
+
+  "sampleDataErrorTitle": "Couldn't insert sample data",
+  "_sampleDataErrorTitle.comment": "Title for error that occurs when we couldn't insert the sample data.",
+
+  "sampleDataErrorDescription": "Something went wrong and we couldn't insert sample data into your worksheet. Please add data to your worksheet and select {Brand} to try again.",
+  "_sampleDataErrorDescription.comment": "Longer description of error that occurs when we couldn't insert the sample data. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "sampleDataNotEnoughDataTitle": "Not enough data to get insights",
+  "_sampleDataNotEnoughDataTitle.comment": "Title for sample data pane when there's not enough data in NL launch mode.",
+
+  "sampleDataNotEnoughDataDescription": "To get insights, open a sheet with data and then ask what you want to know about it.",
+  "_sampleDataNotEnoughDataDescription.comment": "The message to be displayed in the pane when a request gets routed to the sample dataset due to not enough data in NL launch mode.",
+
+  "sampleDataNotEnoughDataTrySampleHint": "Want to try it out? Open the sample data set below and then ask questions about the data.",
+  "_sampleDataNotEnoughDataTrySampleHint.comment": "A hint to be displayed in the pane indicating that user could click the try out the service with sample data.",
+
+  "preferencesFailedErrorTitle": "Sorry, we've encountered an error",
+  "_preferencesFailedErrorTitle.comment": "Title for error that occurs when we are unable to allow the user to customize their results.",
+
+  "preferencesFailedErrorDescription": "We're having trouble allowing you to customize your results.",
+  "_preferencesFailedErrorDescription.comment": "Longer description of error that occurs when we are unable to allow the user to customize their results.",
+
+  "naturalLanguageFailedErrorTitle": "Oops, something went wrong.",
+  "_naturalLanguageFailedErrorTitle.comment": "Title for error when a natural language request fails.",
+
+  "naturalLanguageFailedErrorTitleNLMode": "We couldn't find an answer",
+  "_naturalLanguageFailedErrorTitleNLMode.comment": "Title for error when a natural language request fails in NL launch mode.",
+
+  "naturalLanguageFailedErrorDescription": "We can't find a good answer. Try these instead:",
+  "_naturalLanguageFailedErrorDescription.comment": "Longer description of error for when a natural language request fails.",
+
+  "naturalLanguageFailedErrorDescriptionForShortQuery": "The more we know, the better we can answer. Try adding more information like these questions:",
+  "_naturalLanguageFailedErrorDescriptionForShortQuery.comment": "Longer description of error for when a natural language request fails for short query.",
+
+  "naturalLanguageFailedErrorDescriptionNLMode": "We couldn't find an answer to your question, but these might help:",
+  "_naturalLanguageFailedErrorDescriptionNLMode.comment": "Longer description of error for when a natural language request fails in NL launch mode.",
+
+  "naturalLanguageFailedErrorDescriptionNoSuggestions": "We're not sure what happened, but we couldn't find any answers.",
+  "_naturalLanguageFailedErrorDescriptionNoSuggestions.comment": "Longer description of error for when a natural language request fails.",
+
+  "relatedQuestionFailedErrorDescriptionNoSuggestions": "We're not sure what happened, but we couldn't find the answer.",
+  "_relatedQuestionFailedErrorDescriptionNoSuggestions.comment": "Longer description of error for when a related question request fails.",
+
+  "naturalLanguageFailedErrorDescriptionNoSuggestionsNLMode": "Something went wrong and we couldn't find an answer.",
+  "_naturalLanguageFailedErrorDescriptionNoSuggestionsNLMode.comment": "Longer description of error for when a natural language request fails in NL launch mode.",
+
+  "naturalLanguageFailedConversationErrorDescription": "Hmm… we didn't quite get that. Try asking a question about your data. Some suggestions for you:",
+  "_naturalLanguageFailedConversationErrorDescription.comment": "Longer description of error for when users want to have a conversation with Ideas.",
+
+  "naturalLanguageFailedConversationErrorDescriptionNLMode": "We didn't quite get that. Try asking a question about your data. Here are some suggestions to try:",
+  "_naturalLanguageFailedConversationErrorDescriptionNLMode.comment": "Longer description of error for when users want to have a conversation with Ideas in NL launch mode.",
+
+  "naturalLanguageFailedErrorDescriptionForPotentialBiasQuery": "The more we know, the better we can answer. Try specifying your question like these:",
+  "_naturalLanguageFailedErrorDescriptionForPotentialBiasQuery.comment": "Longer description of error for when a natural language request fails for potential bias query.",
+
+  "recommendedChartsPivotTableSourceLackFieldErrorTiTle": "We could not create any recommendations.",
+  "_recommendedChartsPivotTableSourceLackFieldErrorTiTle.comment": "Title of error when pivot table data source for recommended charts does not have any value fields or row fields.",
+
+  "recommendedChartsPivotTableSourceNoDataFieldErrorDescription": "Please add one or more value fields to your pivot table and run chart recommendations again.",
+  "_recommendedChartsPivotTableSourceNoDataFieldErrorDescription.comment": "Longer description of error when pivot table data source for recommended charts does not have any value fields.",
+
+  "recommendedChartsPivotTableSourceNoRowFieldErrorDescription": "Please add one or more row fields to your pivot table and run chart recommendations again.",
+  "_recommendedChartsPivotTableSourceNoRowFieldErrorDescription.comment": "Longer description of error when pivot table data source for recommended charts does not have any row fields.",
+
+  "noAggregationLabel": "Not a value",
+  "_noAggregationLabel.comment": "Label used to describe that there is no aggregation applied to a data field.",
+
+  "sumAggregationLabel": "Sum",
+  "_sumAggregationLabel.comment": "Label used to describe that a data field is summed.",
+
+  "averageAggregationLabel": "Average",
+  "_averageAggregationLabel.comment": "Label used to describe that a data field is averaged.",
+
+  "countAggregationLabel": "Count",
+  "_countAggregationLabel.comment": "The Excel Count function that can be used as a data calculation function for a PivotTable datafield. It should match the Excel string with id: AggCounta",
+
+  "minAggregationLabel": "Min",
+  "_minAggregationLabel.comment": "The Excel Min function that can be used as a data calculation function for a PivotTable datafield. It should match the Excel string with id: AggMin",
+
+  "maxAggregationLabel": "Max",
+  "_maxAggregationLabel.comment": "The Excel Max function that can be used as a data calculation function for a PivotTable datafield. It should match the Excel string with id: AggMax",
+
+  "stdDevAggregationLabel": "StdDev",
+  "_stdDevAggregationLabel.comment": "The Excel StdDev function that can be used as a data calculation function for a PivotTable datafield. It should match the Excel string with id: AggStdev",
+
+  "varAggregationLabel": "Var",
+  "_varAggregationLabel.comment": "The Excel Var function that can be used as a data calculation function for a PivotTable datafield. It should match the Excel string with id: AggVar",
+
+  "chartTypeAlternateText": "Chart type: {0}.",
+  "_chartTypeAlternateText.comment": "Alternate text used to describe the type of a given chart. {0} is the chart type. {Placeholder=\"{0}\"}",
+
+  "comboChartTypeAlternateText": "Chart type: Combo: {0}; {1}.",
+  "_comboChartTypeAlternateText.comment": "Alternate text used to describe the types of a given combo chart. {0}, {1} are the chart type. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "seriesCountAlternateText": "{0} series.",
+  "_seriesCountAlternateText.comment": "Alternate text used to describe the number of series in a chart. {0} is the number of series. {Placeholder=\"{0}\"}",
+
+  "datapointCountAlternateText": "Series {0}: {1} datapoints.",
+  "_datapointCountAlternateText.comment": "Alternate text used to describe the datapoints in a series. {0} is the index of the series in the chart. {1} is the number of datapoints in that series. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "xAxisAlternateText": "X axis title: {0}.",
+  "_xAxisAlternateText.comment": "Alternate text used to describe a horizontal axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "yAxisAlternateText": "Y axis title: {0}.",
+  "_yAxisAlternateText.comment": "Alternate text used to describe a vertical axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "primaryHorizontalAxisAlternateText": "Primary Horizontal axis title: {0}.",
+  "_primaryHorizontalAxisAlternateText.comment": "Alternate text used to describe a primary horizontal axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "primaryVerticalAxisAlternateText": "Primary Vertical axis title: {0}.",
+  "_primaryVerticalAxisAlternateText.comment": "Alternate text used to describe a primary vertical axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "secondaryHorizontalAxisAlternateText": "Secondary Horizontal axis title: {0}.",
+  "_secondaryHorizontalAxisAlternateText.comment": "Alternate text used to describe a secondary horizontal axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "secondaryVerticalAxisAlternateText": "Secondary Vertical axis title: {0}.",
+  "_secondaryVerticalAxisAlternateText.comment": "Alternate text used to describe a secondary vertical axis with a title. {0} is the contents of the axis title. {Placeholder=\"{0}\"}",
+
+  "subtitleUnits": "({0})",
+  "_subtitleUnits.comment": "Subtitle for chart with a single value axis and that axis uses display units. {0} is the display units for the value axis. {Placeholder=\"{0}\"}",
+
+  "subtitleNameUnits": "{0} ({1})",
+  "_subtitleNameUnits.comment": "Subtitle for chart with multiple value axes that uses display units for one of them. {0} is a name for the axis and is usually taken from the source data. {1} is the display units for the value axis. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "subtitleNameUnits2": "{0} ({1}); {2} ({3})",
+  "_subtitleNameUnits2.comment": "Subtitle for chart with two value axes and they both use display units. {0} and {2} are the names of the axes and are usually taken from the source data. {1} and {3} are the display units. {Placeholder=\"{0}\",\"{1}\",\"{2}\",\"{3}\"}",
+
+  "subtitleWithSemicolon": "{0}; ",
+  "_subtitleWithSemicolon.comment": "Subtitle with semicolon at end for pivot chart. {0} is a name for the value field and is usually taken from the source data. {Placeholder=\"{0}\"}",
+
+  "thousandsUnitsLabel": "Thousands",
+  "_thousandsUnitsLabel.comment": "Display units label for an axis whose values are in the thousands.",
+
+  "millionsUnitsLabel": "Millions",
+  "_millionsUnitsLabel.comment": "Display units label for an axis whose values are in the millions.",
+
+  "billionsUnitsLabel": "Billions",
+  "_billionsUnitsLabel.comment": "Display units label for an axis whose values are in the billions.",
+
+  "trillionsUnitsLabel": "Trillions",
+  "_trillionsUnitsLabel.comment": "Display units label for an axis whose values are in the trillions.",
+
+  "tryAgainButtonText": "Try again",
+  "_tryAgainButtonText.comment": "Text for button that allows user to retry an operation after encountering an error.",
+
+  "backButtonText": "Return to results",
+  "_backButtonText.comment": "Button that lets the user go back to their results when encountering an error in the preferences pane.",
+
+  "dismissErrorDialogText": "Dismiss",
+  "_dismissErrorDialogText.comment": "Text for button that allows the user to dismiss an error dialog.",
+
+  "sampleRecommendationAlternateText": "Sample suggestion.",
+  "_sampleRecommendationAlternateText.comment": "Alternate text used to describe UI that displays a sample recommendation.",
+
+  "trySampleDataButtonText": "Try sample data",
+  "_trySampleDataButtonText.comment": "Text for button that allows the user to insert sample data into their workbook and run Insights on it.",
+
+  "sampleDataEmptyWorksheetDescription": "To get started, open a worksheet with data and {Brand} will look for ways to summarize and highlight interesting information about it. Here's an example of what's possible:",
+  "_sampleDataEmptyWorksheetDescription.comment": "Message describing how to use the app and encouraging them to try out the sample data. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "sampleDataEmptyWorksheetTitle": "This sheet is blank",
+  "_sampleDataEmptyWorksheetTitle.comment": "Title for sample data pane which appears when the user has a blank worksheet.",
+
+  "sampleDataSmallRequestDescription": "We couldn't find any significant patterns in the data you selected to make suggestions. Try selecting a larger dataset with more variation in it. Here's an example of what's possible:",
+  "_sampleDataSmallRequestDescription.comment": "The message to be displayed in the pane when a request gets routed to the sample dataset due to having too few cells selected.",
+
+  "sampleDataSmallRequestTitle": "Couldn't find any patterns",
+  "_sampleDataSmallRequestTitle.comment": "Title for sample data pane when user is routed to it for having too few cells selected.",
+
+  "loadingRecommendationsLabel": "Analyzing your data...",
+  "_loadingRecommendationsLabel.comment": "Label underneath spinner icon when loading recommendations.",
+
+  "loadingRecommendationsLabel2": "Still analyzing...",
+  "_loadingRecommendationsLabel2.comment": "Label underneath spinner icon when still loading recommendations after some period of time.",
+
+  "updatePreferencesButtonText": "Update",
+  "_updatePreferencesButtonText.comment": "Text for button that allows the user to commit changes to their preferences.",
+
+  "cancelButtonText": "Cancel",
+  "_cancelButtonText.comment": "Text for button that allows the user to cancel changes to Ideas.",
+
+  "submitButtonText": "Submit",
+  "_submitButtonText.comment": "Text for button that allows the user to submit changes to Ideas.",
+
+  "doneButtonText": "Done",
+  "_doneButtonText.comment": "Text for a button that allows users to update their source and destination for inserting a PivotTable.",
+
+  "preferencesEntryPointText": "Which fields interest you the most?",
+  "_preferencesEntryPointText.comment": "Text for preferences pane field list indicate that users can setup field filter.",
+
+  "preferencesSummarizeValueHeaderText": "Summarize value by",
+  "_preferencesSummarizeValueHeaderText.comment": "Column header for the aggregation menus in the preferences field list.",
+
+  "preferencesCheckBoxHeaderText": "Include fields",
+  "_preferencesCheckBoxHeaderText.comment": "Column header for the field selection checkboxes in the preferences field list.",
+
+  "selectAllFieldsCheckboxLabel": "(Select All)",
+  "_selectAllFieldsCheckboxLabel.comment": "Text for label on checkbox that allows the user to toggle selection on all field checkboxes.",
+
+  "insertChartButtonText": "Insert Chart",
+  "_insertChartButtonText.comment": "Text for button that allows the user to insert a recommendation as a chart. Should be consistent with Excel name for Chart.",
+
+  "insertPivotTableButtonText": "Insert PivotTable",
+  "_insertPivotTableButtonText.comment": "Text for button that allows the user to insert a recommendation as a PivotTable. Should be consistent with Excel name for PivotTable.",
+
+  "insertPivotChartButtonText": "Insert PivotChart",
+  "_insertPivotChartButtonText.comment": "Text for button that allows the user to insert a recommendation as a PivotChart. Should be consistent with Excel name for PivotChart.",
+
+  "insertQueryResultButtonText": "Insert",
+  "_insertQueryResultButtonText.comment": "Text for a button that allows the user to insert a recommended table into Excel",
+
+  "insertChartButtonAlternateText": "Insert Chart.",
+  "_insertChartButtonAlternateText.comment": "Alternate text for button that allows the user to insert a recommendation as a chart. Should be consistent with Excel name for Chart. Should match insertChartButtonText string, but end with a period (or localized equivalent).",
+
+  "insertPivotTableButtonAlternateText": "Insert PivotTable.",
+  "_insertPivotTableButtonAlternateText.comment": "Alternate text for button that allows the user to insert a recommendation as a PivotTable. Should be consistent with Excel name for PivotTable. Should match insertPivotTableButtonText string, but end with a period (or localized equivalent).",
+
+  "insertPivotChartButtonAlternateText": "Insert PivotChart.",
+  "_insertPivotChartButtonAlternateText.comment": "Alternate text for button that allows the user to insert a recommendation as a PivotChart. Should be consistent with Excel name for PivotChart. Should match insertPivotChartButtonText string, but end with a period (or localized equivalent).",
+
+  "recommendationAlternateText": "Recommendation {0} of {1}.",
+  "_recommendationAlternateText.comment": "Alternate text for a recommendation. {0} is the index of the recommendation in a list of recommendations. {1} is the total number of visible recommendations. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "feedbackButtonText": "Is this helpful?",
+  "_feedbackButtonText.comment": "Text for button asking the user for feedback on a recommendation.",
+
+  "feedbackButtonHoverText": "Feedback options",
+  "_feedbackButtonHoverText.comment": "The text to be displayed in the tooltip that appears on the 'Is this helpful?' button.",
+
+  "feedbackPositiveResponseButtonText": "Yes",
+  "_feedbackPositiveResponseButtonText.comment": "Text for button that has the positive/affirmative answer to the question posed in feedbackButtonText.",
+
+  "feedbackPositiveResponseButtonTextLong": "This is helpful",
+  "_feedbackPositiveResponseButtonTextLong.comment": "Alternate text for the positive/affirmative feedback button text in the event that feedbackButtonText is not being displayed.",
+
+  "feedbackNegativeResponseButtonText": "No",
+  "_feedbackNegativeResponseButtonText.comment": "Text for button that has the negative answer to the question posed in the feedbackButtonText.",
+
+  "feedbackNegativeResponseButtonTextLong": "This is not helpful",
+  "_feedbackNegativeResponseButtonTextLong.comment": "Alternate text for the negative feedback button text in the event that feedbackButtonText is not being displayed.",
+
+  "feedbackReplyLabel": "Thanks!",
+  "_feedbackReplyLabel.comment": "Contents of label shown to the user after they have given feedback.",
+
+  "positiveFeedbackAlternateText": "One of two selected, yes.",
+  "_positiveFeedbackAlternateText.comment": "The message read by a screen-reader as an option for positive feedback. 'One of two' refers to the number of options available. 'Yes' refers to the label on the button. The text should be identical to the default text-to-speech behavior for callout menus.",
+
+  "negativeFeedbackAlternateText": "Two of two selected, no.",
+  "_negativeFeedbackAlternateText.comment": "The message read by a screen-reader as an option for negative feedback. 'Two of two' refers to the number of options available. 'No' refers to the label on the button. The text should be identical to the default text-to-speech behavior for callout menus.",
+
+  "feedbackButtonAlternateText": "Is this helpful? Collapsed.",
+  "_feedbackButtonAlternateText.comment": "An extended message read by a screen-reader alerting the user that there are collapsed options not shown. 'Is this helpful' refers to the label on the button. The text should be identical to the default text-to-speech behavior for callout menus.",
+
+  "showAllButtonText": "Show all {0} results",
+  "_showAllButtonText.comment": "Text for button that allows the user to see all results in cases where we initially only show them a few results.  {0} is the number of results that they will see after hitting the button, and will always be greater than one. {Placeholder=\"{0}\"}",
+
+  "showMoreButtonText": "Show more",
+  "_showMoreButtonText.comment": "Text for button that allows the user to see more results in cases where we initially only show them a few results.",
+
+  "chartTypeArea": "Area",
+  "_chartTypeArea.comment": "Display name for area chart. Should be consistent with Excel chart types.",
+
+  "chartTypeAreaStacked": "Stacked Area",
+  "_chartTypeAreaStacked.comment": "Display name for stacked area chart. Should be consistent with Excel chart types.",
+
+  "chartTypeAreaStacked100": "100% Stacked Area",
+  "_chartTypeAreaStacked100.comment": "Display name for 100% stacked area chart. Should be consistent with Excel chart types.",
+
+  "chartTypeBarClustered": "Clustered Bar",
+  "_chartTypeBarClustered.comment": "Display name for clustered bar chart. Should be consistent with Excel chart types.",
+
+  "chartTypeBarStacked": "Stacked Bar",
+  "_chartTypeBarStacked.comment": "Display name for stacked bar chart. Should be consistent with Excel chart types.",
+
+  "chartTypeBarStacked100": "100% Stacked Bar",
+  "_chartTypeBarStacked100.comment": "Display name for 100% stacked bar chart. Should be consistent with Excel chart types.",
+
+  "chartTypeColumnClustered": "Clustered Column",
+  "_chartTypeColumnClustered.comment": "Display name for a clustered column chart. Should be consistent with Excel chart types.",
+
+  "chartTypeColumnStacked": "Stacked Column",
+  "_chartTypeColumnStacked.comment": "Display name for a stacked column chart. Should be consistent with Excel chart types.",
+
+  "chartTypeColumnStacked100": "100% Stacked Column",
+  "_chartTypeColumnStacked100.comment": "Display name for a 100% stacked column chart. Should be consistent with Excel chart types.",
+
+  "chartTypeLine": "Line",
+  "_chartTypeLine.comment": "Display name for a line chart. Should be consistent with Excel chart types.",
+
+  "chartTypeLineStacked": "Stacked Line",
+  "_chartTypeLineStacked.comment": "Display name for a stacked line chart. Should be consistent with Excel chart types.",
+
+  "chartTypeLineStacked100": "100% Stacked Line",
+  "_chartTypeLineStacked100.comment": "Display name for a 100% stacked line chart. Should be consistent with Excel chart types.",
+
+  "chartTypeDoughnut": "Doughnut",
+  "_chartTypeDoughnut.comment": "Display name for a doughnut chart. Should be consistent with Excel chart types.",
+
+  "chartTypePie": "Pie",
+  "_chartTypePie.comment": "Display name for a pie chart. Should be consistent with Excel chart types.",
+
+  "chartTypeScatter": "Scatter",
+  "_chartTypeScatter.comment": "Display name for a scatter chart. Should be consistent with Excel chart types.",
+
+  "chartTypeHistogram": "Histogram",
+  "_chartTypeHistogram.comment": "Display name for a histogram chart. Should be consistent with Excel chart types.",
+
+  "chartTypeBubble": "Bubble",
+  "_chartTypeBubble.comment": "Display name for a bubble chart. Should be consistent with Excel chart types.",
+
+  "pivotTableSingleRowTitle": "{0} as row",
+  "_pivotTableSingleRowTitle.comment": "Text to be read by screen reader to describe the row field of a PivotTable with one row field. {0} is the name of the row field. {Placeholder=\"{0}\"}",
+
+  "pivotTableTwoRowTitle": "{0} and {1} as rows",
+  "_pivotTableTwoRowTitle.comment": "Text to be read by screen reader to describe the row fields of a PivotTable with two row fields. {0} and {1} are the names of the row fields. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "pivotTableColumnTitle": "{0} as column",
+  "_pivotTableColumnTitle.comment": "Text to be read by screen reader to describe the column field of a PivotTable with one column field. {0} is the name of the column field. {Placeholder=\"{0}\"}",
+
+  "pivotTableDataTitle": "{0} as values",
+  "_pivotTableDataTitle.comment": "Text to be read by screen reader to describe the data field of a PivotTable with one data field. {0} is the name of the data field. {Placeholder=\"{0}\"}",
+
+  "pivotTableRowLabels": "Row Labels",
+  "_pivotTableRowLabels.comment": "Text for header cell for the row-label column of a PivotTable that has row fields. Should match the Excel string with id: idsRowsDropZoneHeader",
+
+  "pivotTableColumnLabels": "Column Labels",
+  "_pivotTableColumnLabels.comment": "Text for header cell for the row-label column of a PivotTable that has column fields. Should match the Excel string with id: idsColumnsDropZoneHeader",
+
+  "pivotTableGrandTotal": "Grand Total",
+  "_pivotTableGrandTotal.comment": "Text for footer cell for the row-label column of a PivotTable. Should match the Excel string wtih id: SxGrTotal",
+
+  "pivotTableDataFieldHeader": "{0} of {1}",
+  "_pivotTableDataFieldHeader.comment": "Text for header cell of the value column of a PivotTable. {0} is the localized name of the function being used to summarize. {1} is the name of the data field. Make sure this matches the PivotTable UI in Excel. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "pivotTableGrandTotalWithDataField": "Total {0} of {1}",
+  "_pivotTableGrandTotalWithDataField.comment": "Text for header cell of a total column of a PivotTable with multiple data fields. {0} is the localized name of the function being used to summarize. {1} is the name of the data field. Make sure this matches the PivotTable UI in Excel. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "pivotTableSubtotalWithDataField": "{0} {1} of {2}",
+  "_pivotTableSubtotalWithDataField.comment": "Text for header cell of a subtotal column of a PivotTable with multiple data fields. {0} is the name of the item for which this is a subtotal. {1} is the localized name of the function being used to summarize. {2} is the name of the data field for the column. Make sure this matches the PivotTable UI in Excel. {Placeholder=\"{0}\",\"{1}\",\"{2}\"}",
+
+  "pivotTableSubtotal": "{0} Total",
+  "_pivotTableSubtotal.comment": "Text for header cell of a subtotal column of a PivotTable. {0} is the name of the item for which this is a subtotal. {Placeholder=\"{0}\"}",
+
+  "blankCellValue": "(blank)",
+  "_blankCellValue.comment": "Text for cells that reference an empty cell in the source data. Should match the Excel string with id: SxEmpty.",
+
+  "nlInputTextFieldPlaceholderText": "Ask a question about your data",
+  "_nlInputTextFieldPlaceholderText.comment": "Placeholder text in a text field that allows users to ask questions about their data.",
+
+  "nlInputSearchButtonAltText": "Ask a question",
+  "_nlInputSearchButtonAltText.comment": "Alternate text used to describe the search button in the NL input box.",
+
+  "nlInputBackButtonAltText": "Return to results",
+  "_nlInputBackButtonAltText.comment": "Alternate text used to describe the back button in the NL input box.",
+
+  "nlInputBackButtonAltTextNLMode": "Go back",
+  "_nlInputBackButtonAltTextNLMode.comment": "Alternate text used to describe the back button in the NL input box in NL launch mode.",
+
+  "nlInputClearButtonAltText": "Clear question",
+  "_nlInputClearButtonAltText.comment": "Alternate text used to describe the clear button in the NL input box.",
+
+  "nlInputSubmitButtonAltText": "Submit question",
+  "_nlInputSubmitButtonAltText.comment": "Alternate text used to describe the submit button in the NL input box.",
+
+  "nlAnswerHeaderTextUpdated": "Here's our answer",
+  "_nlAnswerHeaderTextUpdated.comment": "Header text for the natural language answer for the updated UX.",
+
+  "nlRelatedQuestionsHeaderText": "Not what you meant? Try:",
+  "_nlRelatedQuestionsHeaderText.comment": "Header text for the natural language related questions under natural language answer.",
+
+  "nlRelatedQuestionsForShortQueryHeaderText": "Not what you meant? Tell us more:",
+  "_nlRelatedQuestionsForShortQueryHeaderText.comment": "Header text for the natural language related questions under natural language answer, especially for short query. More concrete related questions followed.",
+
+  "nlRelatedQuestionsSubtitleText": "Example questions:",
+  "_nlRelatedQuestionsSubtitleText.comment": "Subtitle text for the natural language related questions.",
+
+  "nlQuestionUnrecognizedAriaHint": "Words we didn't recognize: {0}.",
+  "_nlQuestionUnrecognizedAriaHint.comment": "A description for the screen reader to read. Words we didn't recognize is a description for words in a natural language query that are unrecognized by the natural language machine learning model. 0 refers to the list of the words we didn't recognize. {Placeholder=\"{0}\"}",
+
+  "loadingNLAnswerLabel": "Looking for answers...",
+  "_loadingNLAnswerLabel.comment": "Label underneath spinner icon when loading a natural language answer.",
+
+  "dropdownExpanded": "Expanded",
+  "_dropdownExpanded.comment": "Text to be read by screen reader when the NL dropdown is expanded",
+
+  "dropdownCollapsed": "Collapsed",
+  "_dropdownCollapsed.comment": "Text to be read by screen reader when the NL dropdown is collapsed",
+
+  "sampleDataColumnTitleYear": "Year",
+  "_sampleDataColumnTitleYear.comment": "A calendar year. The column title in the sample data of 'Ideas' named 'Year'",
+
+  "sampleDataColumnTitleCategory": "Category",
+  "_sampleDataColumnTitleCategory.comment": "A way to organize products sold in an online store. e.g. Filter by the 'category' of product. The column title in the sample data of 'Ideas' named 'Category'",
+
+  "sampleDataColumnTitleProduct": "Product",
+  "_sampleDataColumnTitleProduct.comment": "A type of things sold in an online store. The column title in the sample data of 'Ideas' named 'Product'",
+
+  "sampleDataColumnTitleSales": "Sales",
+  "_sampleDataColumnTitleSales.comment": "The amount of money made by selling products online. The column title in the sample data of 'Ideas' named 'Sales'",
+
+  "sampleDataColumnTitleRating": "Rating",
+  "_sampleDataColumnTitleRating.comment": "A noun describing the ratings customers have provided at an online bicycle store. The column title in the sample data of 'Ideas' named 'Rating'",
+
+  "sampleDataValueAccessories": "Accessories",
+  "_sampleDataValueAccessories.comment": "A general term used to describe accessories for a bicycle sold in a bicycle store. E.g. bicycle locks. The value 'Accessories' in the sample data of 'Ideas' in the column named 'Category'",
+
+  "sampleDataValueBikes": "Bikes",
+  "_sampleDataValueBikes.comment": "A general term used to describe several bicycles in a bicycle store. The value 'Bikes' in the sample data of 'Ideas' in the column named 'Category'",
+
+  "sampleDataValueClothing": "Clothing",
+  "_sampleDataValueClothing.comment": "A general term used to describe the clothing sold in a bicycle store. The value 'Clothing' in the sample data of 'Ideas' in the column named 'Category'",
+
+  "sampleDataValueComponents": "Components",
+  "_sampleDataValueComponents.comment": "A general term used to describe the parts of a bicycle sold in a bicycle store. The value 'Components' in the sample data of 'Ideas' in the column named 'Category'",
+
+  "sampleDataValueBibShorts": "Bib-Shorts",
+  "_sampleDataValueBibShorts.comment": "A specialized type of clothing worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Bib-Shorts' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueBikeRacks": "Bike Racks",
+  "_sampleDataValueBikeRacks.comment": "Storage for bicycles, usually attached to a vehicle. This is sample data from a bicycle store. The product value 'Bike Racks' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueBottomBrackets": "Bottom Brackets",
+  "_sampleDataValueBottomBrackets.comment": "The connection between a bicycle's pedals and the chain. This is sample data from a bicycle store. 'The product value 'Bottom Brackets' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueBrakes": "Brakes",
+  "_sampleDataValueBrakes.comment": "The brakes for a bicycle. This is sample data from a bicycle store. The product value 'Brakes' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueCaps": "Caps",
+  "_sampleDataValueCaps.comment": "A baseball cap. This is sample data from a bicycle store. The product value 'Caps' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueCargoBike": "Cargo Bike",
+  "_sampleDataValueCargoBike.comment": "A type of bicycle. This is sample data from a bicycle store. The product value 'Cargo Bike' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueChains": "Chains",
+  "_sampleDataValueChains.comment": "The chains that connect to the gears on a bicycle. This is sample data from a bicycle store. The product value 'Chains' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueGloves": "Gloves",
+  "_sampleDataValueGloves.comment": "Gloves worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Gloves' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueHandlebars": "Handlebars",
+  "_sampleDataValueHandlebars.comment": "The handlebars on a bicycle. This is sample data from a bicycle store. The product value 'Handlebars' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueHelmets": "Helmets",
+  "_sampleDataValueHelmets.comment": "Head protection worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Helmets' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueJerseys": "Jerseys",
+  "_sampleDataValueJerseys.comment": "A sporty shirt worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Jerseys' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueLights": "Lights",
+  "_sampleDataValueLights.comment": "Headlights that can be installed on the front of a bicycle. This is sample data from a bicycle store. The product value 'Lights' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueLocks": "Locks",
+  "_sampleDataValueLocks.comment": "Locks used to prevent bicycle theft. This is sample data from a bicycle store. The product value 'Locks' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueMountainBikes": "Mountain Bikes",
+  "_sampleDataValueMountainBikes.comment": "A type of bicycle. This is sample data from a bicycle store. The product value 'Mountain Bikes' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValuePedals": "Pedals",
+  "_sampleDataValuePedals.comment": "Pedals used to power a bicycle. This is sample data from a bicycle store. The product value 'Pedals' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValuePumps": "Pumps",
+  "_sampleDataValuePumps.comment": "A pump to fill the tires of a bicycle. This is sample data from a bicycle store. The product value 'Pumps' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueRoadBikes": "Road Bikes",
+  "_sampleDataValueRoadBikes.comment": "A type of bicycle. This is sample data from a bicycle store. The product value 'Road Bikes' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueSaddles": "Saddles",
+  "_sampleDataValueSaddles.comment": "A seat for a bicycle. This is sample data from a bicycle store. The product value 'Saddles' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueShorts": "Shorts",
+  "_sampleDataValueShorts.comment": "Trousers worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Shorts' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueSocks": "Socks",
+  "_sampleDataValueSocks.comment": "Socks worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Socks' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueTights": "Tights",
+  "_sampleDataValueTights.comment": "Legging worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Tights' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueTiresAndTubes": "Tires and Tubes",
+  "_sampleDataValueTiresAndTubes.comment": "The rubber tube around a bicycle wheel. This is sample data from a bicycle store. The product value 'Tires and Tubes' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueTouringBikes": "Touring Bikes",
+  "_sampleDataValueTouringBikes.comment": "A type of bicycle. This is sample data from a bicycle store. The product value 'Touring Bikes' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueVests": "Vests",
+  "_sampleDataValueVests.comment": "A high-visibility shirt worn while riding a bicycle. This is sample data from a bicycle store. The product value 'Vests' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleDataValueWheels": "Wheels",
+  "_sampleDataValueWheels.comment": "A bicycle wheel. This is sample data from a bicycle store. The product value 'Wheels' in the sample data of 'Ideas' in the column named 'Product'",
+
+  "sampleChartTitle": "'{0}': {1} has noticeably higher '{2}'.",
+  "_sampleChartTitle.comment": "The title of the sample chart. '{0}' is a column title from the data. '{1}' is a value found in the column titled '{0}.' '{2}' is another column title which has a higher value for '{1}' than the other values found in the column with title '{0}'. {Placeholder=\"{0}\",\"{1}\",\"{2}\"}",
+
+  "nonrefreshabelMessage": "If your data changes, be sure to go back to {Brand} and ask your question again to get an updated answer.",
+  "_nonrefreshabelMessage.comment": "The message is used to remind users to ask question again after changing data. Shown above non-refreshable PivotTable/chart and static answers. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "recommendationContextMenuAlternateText": "Recommendation context menu",
+  "_recommendationContextMenuAlternateText.comment": "Alternate text read by a screen reader when the recommendation context menu is opened.",
+
+  "subMenuContextMenuAlternateText": "{0} menu",
+  "_subMenuContextMenuAlternateText.comment": "Alternate text read by a screen reader when a submenu is opened in the recommendation context menu.  {0} is the name of the submenu. {Placeholder=\"{0}\"}",
+
+  "floodgateSurveyTitle": "We’d love feedback on your Ideas experience!",
+  "_floodgateSurveyTitle.comment": "The title of the floodgate survey for 'Ideas'. Please make sure that the translation follows the guidelines for Term 2655663: 'Ideas' in Term Studio.",
+
+  "floodgateSurveyRequest": "We have two quick questions for you.",
+  "_floodgateSurveyRequest.comment": "The request subtitle in the floodgate survey for 'Ideas'.",
+
+  "floodgateSurveyQuestionOne": "How does Ideas compare to what you expected?",
+  "_floodgateSurveyQuestionOne.comment": "The first question that will be asked in the floodgate survey for 'Ideas'. Please make sure that the translation follows the guidelines for Term 2655663: 'Ideas' in Term Studio.",
+
+  "floodgateSurveyQuestionTwo": "Please tell us more, what were you expecting?",
+  "_floodgateSurveyQuestionTwo.comment": "The second question that will be asked in the floodgate survey for 'Ideas'.",
+
+  "addPeriodToText": "{0}.",
+  "_addPeriodToText.comment": "Appends a period (or localized form of a full stop) to the end of the substring denoted by '{0}'. {Placeholder=\"{0}\"}",
+
+  "columnTitle": "Column{0}",
+  "_columnTitle.comment": "The name of a column in a data table. '{0}' is the index of the column in the source data. {Placeholder=\"{0}\"}",
+
+  "fieldTitle": "Field{0}",
+  "_fieldTitle.comment": "The name of a column field in a data table. '{0}' is the index of the field in the source data. {Placeholder=\"{0}\"}",
+
+  "rowTitle": "Row{0}",
+  "_rowTitle.comment": "The name of a row in a data table. '{0}' is the index of the row in the source data. {Placeholder=\"{0}\"}",
+
+  "insertedDataSheetName": "Transformed Data",
+  "_insertedDataSheetName.comment": "The name of the worksheet inserted by Ideas when inserting source data.",
+
+  "insertedDataSheetNameConflict": "Transformed Data ({0})",
+  "_insertedDataSheetNameConflict.comment": "The name of the worksheet inserted by Ideas when inserting transposed source data if a sheet with the name 'Transposed Data' already exists. {0} is a number. {Placeholder=\"{0}\"}",
+
+  "insertedDataTitle": "IMPORTANT DETAIL",
+  "_insertedDataTitle.comment": "A title for the pane explaining why Ideas inserted data.",
+
+  "insertedDataForPivotOrFormulaDescription": "In order to insert a suggestion that uses a PivotTable or formula, your data was organized in columns with a single header row.",
+  "_insertedDataForPivotOrFormulaDescription.comment": "A short description explaining why Ideas inserted data. Should be consistent with Excel name for PivotTable and Formula.",
+
+  "insertedDataDescription": "You inserted a recommendation that uses a PivotTable.",
+  "_insertedDataDescription.comment": "A short description explaining the user action.",
+
+  "insertedDataReasonForPivotTable": "In order to insert the PivotTable you selected, we had to organize your data in columns with a single header row.",
+  "_insertedDataReasonForPivotTable.comment": "A short description explaining why Ideas inserted data in PivotTable launch mode. Should be consistent with Excel name for PivotTable.",
+
+  "insertedDataReason": "PivotTables work best when the data is organized in columns and have a single header row, so we did that below.",
+  "_insertedDataReason.comment": "A short description explaining why Ideas inserted data. Should be consistent with Excel name for PivotTable.",
+
+  "transformedColumnName": "{0}{1}",
+  "_transformedColumnName.comment": "A column name to be generated for duplicate headers, '0' refers to the original column and '1' will be a number to create a unique header name. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "generalFormatting": "General",
+  "_generalFormatting.comment": "A string for local format assignment, please make sure it matches the formatting string in excel General with resource Id: idsNumberFormatGeneral",
+
+  "oneSheetInserted": "Inserted 1 sheet",
+  "_oneSheetInserted.comment": "Text to be read aloud by the screen reader to alert the user that Ideas has inserted a new worksheet into the workbook",
+
+  "twoSheetsInserted": "Inserted 2 sheets",
+  "_twoSheetsInserted.comment": "Text to be read aloud by the screen reader to alert the user that Ideas has inserted two new worksheets into the workbook",
+
+  "chartTypeNotSupportedTextMap": "(Unfortunately, {Brand} doesn't support Map Charts at this moment)",
+  "_chartTypeNotSupportedTextMap.comment": "A message to display when the user specifies map charts in natural language question. It indicates that map chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextScatter": "(Unfortunately, {Brand} doesn't support Scatter Charts at this moment)",
+  "_chartTypeNotSupportedTextScatter.comment": "A message to display when the user specifies scatter charts in natural language question. It indicates that scatter chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextClusteredCombo": "(Unfortunately, {Brand} doesn't support Clustered Combo Charts at this moment)",
+  "_chartTypeNotSupportedTextClusteredCombo.comment": "A message to display when the user specifies clustered combo charts in natural language question. It indicates that clustered combo chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextStackedCombo": "(Unfortunately, {Brand} doesn't support Stacked Combo Charts at this moment)",
+  "_chartTypeNotSupportedTextStackedCombo.comment": "A message to display when the user specifies stacked combo charts in natural language question. It indicates that stacked combo chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextHundredPercentCombo": "(Unfortunately, {Brand} doesn't support Hundred Percent Combo Charts at this moment)",
+  "_chartTypeNotSupportedTextHundredPercentCombo.comment": "A message to display when the user specifies hundred percent combo charts in natural language question. It indicates that hundred percent combo chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextFunnel": "(Unfortunately, {Brand} doesn't support Funnel Charts at this moment)",
+  "_chartTypeNotSupportedTextFunnel.comment": "A message to display when the user specifies funnel charts in natural language question. It indicates that funnel chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextTreemap": "(Unfortunately, {Brand} doesn't support Treemap Charts at this moment)",
+  "_chartTypeNotSupportedTextTreemap.comment": "A message to display when the user specifies treemap charts in natural language question. It indicates that treemap chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextSunburst": "(Unfortunately, {Brand} doesn't support Sunburst Charts at this moment)",
+  "_chartTypeNotSupportedTextSunburst.comment": "A message to display when the user specifies sunburst charts in natural language question. It indicates that sunburst chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextColorFilledMap": "(Unfortunately, {Brand} doesn't support Color Filled Map Charts at this moment)",
+  "_chartTypeNotSupportedTextColorFilledMap.comment": "A message to display when the user specifies filled map charts in natural language question. It indicates that filled map chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextCircularTreemap": "(Unfortunately, {Brand} doesn't support Circular Treemap Charts at this moment)",
+  "_chartTypeNotSupportedTextCircularTreemap.comment": "A message to display when the user specifies circular treemap charts in natural language question. It indicates that circular treemap chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextHeatMap": "(Unfortunately, {Brand} doesn't support Heat Map Charts at this moment)",
+  "_chartTypeNotSupportedTextHeatMap.comment": "A message to display when the user specifies heat map charts in natural language question. It indicates that heat map chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextWaterfall": "(Unfortunately, {Brand} doesn't support Waterfall Charts at this moment)",
+  "_chartTypeNotSupportedTextWaterfall.comment": "A message to display when the user specifies waterfall charts in natural language question. It indicates that waterfall chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextRose": "(Unfortunately, {Brand} doesn't support Rose Charts at this moment)",
+  "_chartTypeNotSupportedTextRose.comment": "A message to display when the user specifies rose charts in natural language question. It indicates that rose chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextNetworkMap": "(Unfortunately, {Brand} doesn't support Network Map Charts at this moment)",
+  "_chartTypeNotSupportedTextNetworkMap.comment": "A message to display when the user specifies network map charts in natural language question. It indicates that network map chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextSmoothLine": "(Unfortunately, {Brand} doesn't support Smooth Line Charts at this moment)",
+  "_chartTypeNotSupportedTextSmoothLine.comment": "A message to display when the user specifies smooth line charts in natural language question. It indicates that smooth line chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextCombo": "(Unfortunately, {Brand} doesn't support Combo Charts at this moment)",
+  "_chartTypeNotSupportedTextCombo.comment": "A message to display when the user specifies combo charts in natural language question. It indicates that combo chart is not supported by Ideas currently. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotSupportedTextUnknown": "(Unfortunately, {Brand} doesn't support the specified chart type at this moment)",
+  "_chartTypeNotSupportedTextUnknown.comment": "A Message to display when the user specifies a chart type in natural language question which is not supported by Ideas currently and the specified chart type are not int the known unsupported chart type set. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextLine": "({Brand} doesn't support Line Charts for this scenario)",
+  "_chartTypeNotAppropriateTextLine.comment": "A message to display when the user specifies the \"line chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextPie": "({Brand} doesn't support Pie Charts for this scenario)",
+  "_chartTypeNotAppropriateTextPie.comment": "A message to display when the user specifies the \"pie chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextDonut": "({Brand} doesn't support Donut Charts for this scenario)",
+  "_chartTypeNotAppropriateTextDonut.comment": "A message to display when the user specifies the \"donut chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextScatter": "({Brand} doesn't support Scatter Charts for this scenario)",
+  "_chartTypeNotAppropriateTextScatter.comment": "A message to display when the user specifies the \"scatter chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextArea": "({Brand} doesn't support Area Charts for this scenario)",
+  "_chartTypeNotAppropriateTextArea.comment": "A message to display when the user specifies the \"area chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextStackedArea": "({Brand} doesn't support Stacked Area Charts for this scenario)",
+  "_chartTypeNotAppropriateTextStackedArea.comment": "A message to display when the user specifies the \"stacked area chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextHundredPercentStackedArea": "({Brand} doesn't support Hundred Percent Stacked Area Charts for this scenario)",
+  "_chartTypeNotAppropriateTextHundredPercentStackedArea.comment": "A message to display when the user specifies the \"hundred percent stacked area chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextClusteredBar": "({Brand} doesn't support Clustered Bar Charts for this scenario)",
+  "_chartTypeNotAppropriateTextClusteredBar.comment": "A message to display when the user specifies the \"clustered bar chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextStackedBar": "({Brand} doesn't support Stacked Bar Charts for this scenario)",
+  "_chartTypeNotAppropriateTextStackedBar.comment": "A message to display when the user specifies the \"stacked bar chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextHundredPercentStackedBar": "({Brand} doesn't support Hundred Percent Stacked Bar Charts for this scenario)",
+  "_chartTypeNotAppropriateTextHundredPercentStackedBar.comment": "A message to display when the user specifies the \"hundred percent stacked bar chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextClusteredColumn": "({Brand} doesn't support Clustered Column Charts for this scenario)",
+  "_chartTypeNotAppropriateTextClusteredColumn.comment": "A message to display when the user specifies the \"clustered column chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextStackedColumn": "({Brand} doesn't support Stacked Column Charts for this scenario)",
+  "_chartTypeNotAppropriateTextStackedColumn.comment": "A message to display when the user specifies the \"stacked column chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextHundredPercentStackedColumn": "({Brand} doesn't support Hundred Percent Stacked Column Charts for this scenario)",
+  "_chartTypeNotAppropriateTextHundredPercentStackedColumn.comment": "A message to display when the user specifies the \"hundred percent stacked column chart\" chart type in natural language when it is not appropriate for the user's query. The name should be consistent with Excel chart types. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "chartTypeNotAppropriateTextUnknown": "({Brand} doesn't support the specified chart type for this scenario)",
+  "_chartTypeNotAppropriateTextUnknown.comment": "A message to display when the user specifies a chart type in natural language which is not appropriate for the user's query. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "suggestedDropdownHeader": "Suggested",
+  "_suggestedDropdownHeader.comment": "Header section title for suggested queries in the natural language input dropdown",
+
+  "recentDropdownHeader": "Recent",
+  "_recentDropdownHeader.comment": "Header section title for recent queries in the natural language input dropdown",
+
+  "disclaimerText": "Results are based on the data you provided.",
+  "_disclaimerText.comment": "Message indicates that recommendations are based on users' source data",
+
+  "chartDesignerErrorTitle": "We couldn't get any chart design ideas.",
+  "_chartDesignerErrorTitle.comment": "The title for a generic chart designer error",
+
+  "chartDesignerErrorDescription": "You can try again or try a different chart.",
+  "_chartDesignerErrorDescription.comment": "The description for a generic chart designer error",
+
+  "designerRenderErrorDescription": "This chart may be too complex. You can try again or simplify your chart first.",
+  "_designerRenderErrorDescription.comment": "The description for the chart designer error that all previews fail to render.",
+
+  "designerUnsupportedChartErrorDescription": "This type of chart isn't supported yet. Try a different chart.",
+  "_designerUnsupportedChartErrorDescription.comment": "The description displayed when a selected chart type isn't supported by chart designer.",
+
+  "designerEmptyChartErrorDescription": "This chart is blank. Create a chart with data and try again.",
+  "_designerEmptyChartErrorDescription.comment": "The description displayed when a selected chart type is an empty chart.",
+
+  "loadingChartDesigner": "Loading Chart Designer...",
+  "_loadingChartDesigner.comment": "Text displayed in loading screen when intializing and waiting on a chart designer web request",
+
+  "insertChartDesignerButtonText": "Apply settings",
+  "_insertChartDesignerButtonText.comment": "Text for button that applies chart styles and settings to a selected chart on the Excel worksheet.",
+
+  "insertBlankPivotTableButtonText": "Create your own PivotTable",
+  "_insertBlankPivotTableButtonText.comment": "Text for button that inserts an empty PivotTable to the Excel worksheet",
+
+  "altTextDisclaimer": "Description automatically generated",
+  "_altTextDisclaimer.comment": "The message is used to show that the description is automatically generated. It would be at the end of a description",
+
+  "largeDataErrorDescriptionRecommendedCharts": "You may have too much data selected for Recommended Charts to come up with meaningful suggestions. Try selecting a smaller set of data and try again.",
+  "_largeDataErrorDescriptionRecommendedCharts.comment": "Longer description of error when the user's dataset is too large to run Recommended Charts on. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "pivotTableSelectionErrorDescriptionRecommendedCharts": "Recommended Charts works best when your data is formatted as an Excel Table with a single header row at the top.",
+  "_pivotTableSelectionErrorDescriptionRecommendedCharts.comment": "Longer description of error when the user attempts to run Recommended Charts on a PivotTable. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "insertionErrorDescriptionRecommendedCharts": "Something went wrong and we couldn't insert the suggestion that you chose. Please try again.",
+  "_insertionErrorDescriptionRecommendedCharts.comment": "Longer description of error that occurs when inserting a suggestion",
+
+  "sampleDataErrorDescriptionRecommendedCharts": "Something went wrong and we couldn't insert sample data into your worksheet. Please add data to your worksheet and select Recommended Charts to try again.",
+  "_sampleDataErrorDescriptionRecommendedCharts.comment": "Longer description of error that occurs when we couldn't insert the sample data. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "sampleDataTryExampleButtonRecommendedCharts": "Try an Example",
+  "_sampleDataTryExampleButtonRecommendedCharts.comment": "Text for the button that inserts sample data and generates recommendations from it",
+
+  "sampleDataTryExampleButtonRecommendedChartsAriaText": "There is no data in your workbook. Try an Example and we will insert sample data.",
+  "_sampleDataTryExampleButtonRecommendedChartsAriaText.comment": "Screen reader text for the Try an Example button in Recommended Charts. 'Try an example' should match text in 'sampleDataTryExampleButtonRecommendedCharts'",
+
+  "sampleDataOopsTitleRecommendedCharts": "Oops, something went wrong!",
+  "_sampleDataOopsTitleRecommendedCharts.comment": "Title for the error pane when the user's initial selection is not valid for creating recommendations",
+
+  "sampleDataOopsDescriptionRecommendedCharts": "We could not find data to generate recommendations. Click 'Try an Example' to explore recommendations with inserted sample data.",
+  "_sampleDataOopsDescriptionRecommendedCharts.comment": "This message is displayed when the user's initial selection is not valid for creating recommendations, they are invited to fix the selection and reload. 'Try an Example' should match text in 'sampleDataTryExampleButtonRecommendedCharts'",
+
+  "insertedWorksheetNameRecommendedCharts": "Recommendation{0}",
+  "_insertedWorksheetNameRecommendedCharts.comment": "The name of a worksheet inserted by Recommended Charts. {0} is a number. Should mirror Excel's default new sheet naming scheme (i.e. Sheet1, Sheet2 ...). {Placeholder=\"{0}\"}",
+
+  "sampleDataEmptyWorksheetDescriptionRecommendedCharts": "To create a chart, select the cells that contain the data you'd like to use. If you have names for the rows and columns and you'd like to use them as labels, include them in your selection. To see examples of charts we can recommend, try inserting the sample dataset below.",
+  "_sampleDataEmptyWorksheetDescriptionRecommendedCharts.comment": "Message describing how to use the app and encouraging them to try out the sample data.",
+
+  "sampleDataSmallRequestDescriptionRecommendedCharts": "We couldn't create any charts from the selected data. Try selecting a larger dataset and select Recommended Charts to try again. To see examples of charts we can recommend, try inserting the sample dataset below.",
+  "_sampleDataSmallRequestDescriptionRecommendedCharts.comment": "The message to be displayed in the pane when a request gets routed to the sample dataset due to having too few cells selected. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "sampleDataSmallRequestTitleRecommendedCharts": "Couldn't recommend any charts",
+  "_sampleDataSmallRequestTitleRecommendedCharts.comment": "Title for sample data pane when user is routed to it for having too few cells selected.",
+
+  "pageTitleRecommendedCharts": "Recommended Charts",
+  "_pageTitleRecommendedCharts.comment": "The title of the application to match the task pane title for Recommended Charts. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "multiSelectionErrorTitleRecommendedCharts": "Recommended Charts currently doesn’t support multiple ranges.",
+  "_multiSelectionErrorTitleRecommendedCharts.comment": "Title for error when user attempts to run Recommended Charts with multiple selected ranges. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "cellEditModeErrorDescriptionRecommendedCharts": "Recommended Charts works best when a range of data is selected.",
+  "_cellEditModeErrorDescriptionRecommendedCharts.comment": "Longer description of error when user attempts to run Recommended Charts when excel is in cell edit mode. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "invalidSelectionDescriptionRecommendedCharts": "Recommended Charts works best when a range of data is selected.",
+  "_invalidSelectionDescriptionRecommendedCharts.comment": "Longer description of error when user attempts to run Recommended Charts with selection is not on a cell. Please make sure that the translation follows the guidelines for Term 1636476: 'Recommended Charts' in Term Studio.",
+
+  "floodgatePromptOne": "We’d love feedback on your Ideas experience!",
+  "_floodgatePromptOne.comment": "This is a floodgate survey string for Ideas. It is the first line of the prompt. Please make sure that the translation follows the guidelines for Term 2655663: 'Ideas' in Term Studio.",
+
+  "floodgatePromptTwo": "We have two quick questions for you.",
+  "_floodgatePromptTwo.comment": "This is a floodgate survey string for Ideas. It is the second line of the prompt.",
+
+  "floodgateRatingQuestion": "How does Ideas compare to what you expected?",
+  "_floodgateRatingQuestion.comment": "This is a floodgate survey string for Ideas. It will be the question above the rating in the survey. Please make sure that the translation follows the guidelines for Term 2655663: 'Ideas' in Term Studio.",
+
+  "floodgateRatingScaleOne": "1 - Did not meet expectations",
+  "_floodgateRatingScaleOne.comment": "This is a floodgate survey string for Ideas. It will be the rating option 1 in the survey.",
+
+  "floodgateRatingScaleTwo": "2",
+  "_floodgateRatingScaleTwo.comment": "This is a floodgate survey string for Ideas. It will be the rating option 2 in the survey.",
+
+  "floodgateRatingScaleThree": "3",
+  "_floodgateRatingScaleThree.comment": "This is a floodgate survey string for Ideas. It will be the rating option 3 in the survey.",
+
+  "floodgateRatingScaleFour": "4",
+  "_floodgateRatingScaleFour.comment": "This is a floodgate survey string for Ideas. It will be the rating option 4 in the survey.",
+
+  "floodgateRatingScaleFive": "5 - Exceeded expectations",
+  "_floodgateRatingScaleFive.comment": "This is a floodgate survey string for Ideas. It will be the rating option 5 in the survey.",
+
+  "floodgateCommentQuestion": "Please tell us more, what were you expecting?",
+  "_floodgateCommentQuestion.comment": "This is a floodgate survey string for Ideas. It will be the question requesting comments in the survey.",
+
+  "insertPivotTableHeaderSource": "Source:",
+  "_insertPivotTableHeaderSource.comment": "This is a header string for Ideas. It will label source range information for recommending PivotTables",
+
+  "insertPivotTableDialogInputTitle": "Select a table or range to analyze:",
+  "_insertPivotTableDialogInputTitle.comment": "Text to describe an input in the insert PivotTable dialog.",
+
+  "insertPivotTableChoiceGroupDescription": "Choose a destination for the PivotTable:",
+  "_insertPivotTableChoiceGroupDescription.comment": "The description to go above the choice group in the insert PivotTable dialog.",
+
+  "insertBlankPivotTableDescriptionNewSheet": "Insert your own PivotTable on a new Worksheet",
+  "_insertBlankPivotTableDescriptionNewSheet.comment": "Description when focus is on the button that allows users to create and insert their own PivotTable on a new sheet.",
+
+  "insertBlankPivotTableDescriptionExistingSheet": "Insert your own PivotTable on an existing Worksheet",
+  "_insertBlankPivotTableDescriptionExistingSheet.comment": "Description when focus is on the button that allows users to create and insert their own PivotTable on an existing sheet.",
+
+  "recommendedPivotTableDescriptionNewSheet": "Insert PivotTable recommendation on a new Worksheet",
+  "_recommendedPivotTableDescriptionNewSheet.comment": "Description when focus is on the button that allows users to insert a PivotTable recommendation on a new sheet.",
+
+  "recommendedPivotTableDescriptionExistingSheet": "Insert PivotTable recommendation on an existing Worksheet",
+  "_recommendedPivotTableDescriptionExistingSheet.comment": "Description when focus is on the button that allows users to insert a PivotTable recommendation on an existing sheet.",
+
+  "newSheet": "New sheet",
+  "_newSheet.comment": "The label to insert a PivotTable on a new worksheet in the recommendation footer button.",
+
+  "existingSheet": "Existing sheet",
+  "_existingSheet.comment": "The label to insert a PivotTable on an existing worksheet in the recommendation footer button.",
+
+  "recommendedPivotTablesNoRecommendationsErrorDescription": "We can't find any suggestions for this data set. Please select a different data source or Create your own PivotTable to continue.",
+  "_recommendedPivotTablesNoRecommendationsErrorDescription.comment": "Longer description of no recommendation error that occurs when getting recommendations in PivotTable launch mode.",
+
+  "recommendedPivotTablesFailedErrorDescription": "We can't find any suggestions for this data set, please Create your own PivotTable.",
+  "_recommendedPivotTablesFailedErrorDescription.comment": "Longer description of general error that occurs when getting Insights in PivotTable launch mode.",
+
+  "recommendedPivotTablesPivotTableSelectionErrorDescription": "We can't find any suggestions for this data set. Please select a different data source.",
+  "_recommendedPivotTablesPivotTableSelectionErrorDescription.comment": "Longer description of selection error that user selects a PivotTable as source in RecommendedPivotTable LaunchMode.",
+
+  "insertText": "Insert",
+  "_insertText.comment": "The text for inserting recommended PivotTables after clicking the insert PivotTable button.",
+
+  "recommendationsListAriaLabel": "Recommendations",
+  "_recommendationsListAriaLabel.comment": "Label to be read by the screenreader for the list of Ideas recommendations. Should be the plural of the word used in \"recommendationAlternateText\"",
+
+  "recommendationsListAriaLabelForNL": "Response",
+  "_recommendationsListAriaLabelForNL.comment": "Label to be read by the screenreader for the list of NL answer recommendations.",
+
+  "rangePickerSelectionRangeInvalidSourceErrorMessage": "Please select a table or range with data.",
+  "_rangePickerSelectionRangeInvalidSourceErrorMessage.comment": "Error message for invalid range input",
+
+  "rangePickerSelectionRangeInvalidDestinationErrorMessage": "Please select any empty cell.",
+  "_rangePickerSelectionRangeInvalidDestinationErrorMessage.comment": "Error message for invalid range input",
+
+  "rangePickerSelectionSourceHeaderErrorMessage": "Please organize your data in columns with a single header row.",
+  "_rangePickerSelectionSourceHeaderErrorMessage.comment": "Error message when user selects a range as PivotTable recommendation source without header",
+
+  "rangePickerSelectionCollisionErrorMessage": "The PivotTable won’t fit in this space. Please change the destination.",
+  "_rangePickerSelectionCollisionErrorMessage.comment": "Error message when the destination range is not empty or not large enough",
+
+  "rangePickerSelectionMultiSelectionErrorMessage": "Select a table or range, instead of separate columns.",
+  "_rangePickerSelectionMultiSelectionErrorMessage.comment": "Error message when the source range contains multiple ranges.",
+
+  "rangePickerSelectionSourcePivotTableErrorMessage": "The source table or range can’t contain another PivotTable.",
+  "_rangePickerSelectionSourcePivotTableErrorMessage.comment": "Error message when the source range contains a pivot table.",
+
+  "rangePickerSelectionTooltip": "You can select cells directly on the grid.",
+  "_rangePickerSelectionTooltip.comment": "Tooltip to show when hover on source data selection input",
+
+  "sourceEditAriaLabel": "Source: {0}",
+  "_sourceEditAriaLabel.comment": "The header label describing the current source of data in Recommended PivotTables, {0} refers to the current source selected. {Placeholder=\"{0}\"}",
+
+  "destinationEditAriaLabel": "Destination: {0}",
+  "_destinationEditAriaLabel.comment": "The header label describing the current destination for Recommended PivotTables, {0} refers to the current destination selected. {Placeholder=\"{0}\"}",
+
+  "insertPivotTableDestinationOnRecommendationFooter": "Insert on:",
+  "_insertPivotTableDestinationOnRecommendationFooter.comment": "The text to show before the two insert buttons on recommendation footer in Pivot Table recommendation",
+
+  "destinationSelectionPaneText": "Select where the PivotTable should be placed by entering a location below or using your mouse to select a location on the grid.",
+  "_destinationSelectionPaneText.comment": "Text to show on the top of destination selection pane in Pivot Table Recommendation.",
+
+  "insertPivotTableDestinationOnContextMenuNewSheet": "Insert on new sheet",
+  "_insertPivotTableDestinationOnContextMenuNewSheet.comment": "The text to show on the context menu option 'insert on newsheet' in Pivot Table recommendation.",
+
+  "insertPivotTableDestinationOnContextMenuExistingSheet": "Insert on existing sheet",
+  "_insertPivotTableDestinationOnContextMenuExistingSheet.comment": "The text to show on the context menu option 'insert on existing sheet' in Pivot Table recommendation.",
+
+  "recommendedPivotTableSampleTitle": "Select data to analyze",
+  "_recommendedPivotTableSampleTitle.comment": "The text used as title in RecommendedPivotTable launch mode sample data page.",
+
+  "recommendedPivotTableSampleDescription": "You can select the PivotTable's data source on the grid using a mouse or keyboard.",
+  "_recommendedPivotTableSampleDescription.comment": "The detail description used as title in RecommendedPivotTable launch mode sample data page.",
+
+  "insertedWorksheetName": "Suggestion{0}",
+  "_insertedWorksheetName.comment": "The name of a worksheet inserted by Analyze Data. {0} is a number. Should mirror Excel's default new sheet naming scheme (i.e. Sheet1, Sheet2 ...). {Placeholder=\"{0}\"}",
+
+  "insertedWorksheetNameNLMode": "Answer{0}",
+  "_insertedWorksheetNameNLMode.comment": "The name of a worksheet inserted by Ideas in NL launch mode. Answer is a noun. {0} is a number. Should mirror Excel's default new sheet naming scheme (i.e. Sheet1, Sheet2 ...). {Placeholder=\"{0}\"}",
+
+  "pageTitle": "Analyze Data",
+  "_pageTitle.comment": "The title of the application to match the task pane title, it's only for screen reader. It's also a candidate title of the application in NL launch mode.",
+
+  "pageTitleAskAndAnalyze": "Ask and Analyze",
+  "_pageTitleAskAndAnalyze.comment": "Candidate title of the application in NL launch mode.",
+
+  "pageTitleAskMyData": "Ask My Data",
+  "_pageTitleAskMyData.comment": "Candidate title of the application in NL launch mode.",
+
+  "naturalLanguageUnsupportedLanguageErrorTitle": "Try a different Office display language",
+  "_naturalLanguageUnsupportedLanguageErrorTitle.comment": "The title of the error page which suggests users to change a display language to use the natural language feature since current Office display language could not be supported by the naturaly language service.",
+
+  "naturalLanguageUnsupportedLanguageErrorDescription": "We're sorry, but this feature isn't available in this language yet.",
+  "_naturalLanguageUnsupportedLanguageErrorDescription.comment": "The text to show on the error page indicating current Office display language could not be supported by the natural language service.",
+
+  "allChartsButtonText": "More Chart Types",
+  "_allChartsButtonText.comment": "Text for the button above recommended charts to open the All Charts dialog",
+
+  "inactiveWorkbookErrorTitle": "Please try again and wait for suggestions",
+  "_inactiveWorkbookErrorTitle.comment": "The title of the error page which appears when the user switches workbooks while Ideas is selecting a range.",
+
+  "inactiveWorkbookErrorDescription": "We're sorry, but you need to stay in the workbook while we get suggestions. Please try again and wait before switching to another workbook.",
+  "_inactiveWorkbookErrorDescription.comment": "The text to show on the error page which appears when the user switches workbooks while Ideas is selecting a range.",
+
+  "networkThrottleErrorTitle": "Too many requests were made to the server",
+  "_networkThrottleErrorTitle.comment": "The title of the error page when user send too many request in a short time.",
+
+  "networkThrottleErrorDescription": "Wait a few seconds before trying again",
+  "_networkThrottleErrorDescription.comment": "The text to show on the error page when user send too many request in a short time.",
+
+  "pageTitleRecommendedPivotTables": "Recommended PivotTables",
+  "_pageTitleRecommendedPivotTables.comment": "The title of the application to match the task pane title for Recommended PivotTables. Please make sure that the translation follows the guidelines for Term 1636479: 'Recommended PivotTables' in Term Studio.",
+
+  "pageTitleInsertPivotTable": "Insert PivotTable",
+  "_pageTitleInsertPivotTable.comment": "The title of the application to match the task pane title for Insert PivotTable.",
+
+  "allChartsErrorDescriptionText": "We couldn't create any chart suggestions. Try fixing the issue below, or ",
+  "_allChartsErrorDescriptionText.comment": "An error description to go above Recommended Charts in desktop. The description should be read as a complete sentence, ending with the following line, allChartsErrorLinkText.",
+
+  "allChartsErrorLinkText": "create your own chart",
+  "_allChartsErrorLinkText.comment": "Text for a link above recommended charts errors to open the All Charts dialog",
+
+  "localDataRefreshTitle": "Looks like you are editing the data",
+  "_localDataRefreshTitle.comment": "Title on data refresh page when users make changes to the selection remotely.",
+
+  "localDataRefreshDescription": "To avoid conflicts, we won't analyze your data while you are making changes. We will refresh analysis as soon as you are done.",
+  "_localDataRefreshDescription.comment": "Description on data refresh page when user make changes to the selection locally.",
+
+  "remoteDataRefreshTitle": "Someone else is editing",
+  "_remoteDataRefreshTitle.comment": "Title on data refresh page when someone make changes to the selection remotely.",
+
+  "remoteDataRefreshDescription": "To avoid conflicts, we won't analyze your data while others are making changes to the data. We will refresh analysis as soon as others are done making changes.",
+  "_remoteDataRefreshDescription.comment": "Description on data refresh page when user make changes to the selection remotely.",
+
+  "suggestedQuestionsTitle": "Suggested questions",
+  "_suggestedQuestionsTitle.comment": "Title of the suggested questions on home pane.",
+
+  "recommendationListTitle": "Discover insights",
+  "_recommendationListTitle.comment": "Title of the recommendations on home pane.",
+
+  "relatedInsightsTitle": "Related insights",
+  "_relatedInsightsTitle.comment": "Title of the related insights recommendations list for natural language question.",
+
+  "ariaLabelForSettingsIconButton": "Settings",
+  "_ariaLabelForSettingsIconButton.comment": "Label to be read by the screenreader for the icon only button of preference settings.",
+
+  "ariaLabelForFilterIconButton": "Filter",
+  "_ariaLabelForFilterIconButton.comment": "Label to be read by the screenreader for the icon only button of preference filter button.",
+
+  "chartDesignerColorsScreenReader": "Background color {0} with data series colors {1}.",
+  "_chartDesignerColorsScreenReader.comment": "Screen reader description of the colors used in a Chart Designer recommendation. {0} will be replaced with chart background color, {1} with list of data series colors. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "chartDesignerDataLabelsOnScreenReader": "Data labels turned on.",
+  "_chartDesignerDataLabelsOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on the data labels on chart.",
+
+  "chartDesignerDataLabelsOffScreenReader": "Data labels turned off",
+  "_chartDesignerDataLabelsOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off the data labels on chart.",
+
+  "chartDesignerDataLabelsMovedScreenReader": "Data labels position has changed from {0} to {1}",
+  "_chartDesignerDataLabelsMovedScreenReader.comment": "Screen reader description when Chart Designer recommendation moves data labels to new position. {0} will be old position, {1} will be new position. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "chartDesignerLegendOffScreenReader": "Legend turned off.",
+  "_chartDesignerLegendOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off the legend on chart.",
+
+  "chartDesignerLegendOnScreenReader": "Legend turned on to {0}.",
+  "_chartDesignerLegendOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on the legend on chart. {0} will be replaced with legend position. {Placeholder=\"{0}\"}",
+
+  "chartDesignerLegendMovedScreenReader": "Legend position has changed from {0} to {1}.",
+  "_chartDesignerLegendMovedScreenReader.comment": "Screen reader description when Chart Designer recommendation moves the legend to a new position. {0} will be the old position, {1} will be the new position. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "chartDesignerHorizontalMajorGridlinesOffScreenReader": "Primary major horizontal gridlines have been turned off.",
+  "_chartDesignerHorizontalMajorGridlinesOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off primary major horizontal gridlines on chart.",
+
+  "chartDesignerHorizontalMajorGridlinesOnScreenReader": "Primary major horizontal gridlines have been turned on.",
+  "_chartDesignerHorizontalMajorGridlinesOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on primary major horizontal gridlines on chart.",
+
+  "chartDesignerVerticalMajorGridlinesOffScreenReader": "Primary major vertical gridlines have been turned off.",
+  "_chartDesignerVerticalMajorGridlinesOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off primary major vertical gridlines on chart.",
+
+  "chartDesignerVerticalMajorGridlinesOnScreenReader": "Primary major vertical gridlines have been turned on.",
+  "_chartDesignerVerticalMajorGridlinesOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on primary major vertical gridlines on chart.",
+
+  "chartDesignerCategoryAxisTitleOnScreenReader": "Primary category axis title has been turned on.",
+  "_chartDesignerCategoryAxisTitleOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on primary category axis title for chart.",
+
+  "chartDesignerCategoryAxisTitleOffScreenReader": "Primary category axis title has been turned off.",
+  "_chartDesignerCategoryAxisTitleOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off primary category axis title for chart.",
+
+  "chartDesignerValueAxisTitleOnScreenReader": "Primary value axis title has been turned on.",
+  "_chartDesignerValueAxisTitleOnScreenReader.comment": "Screen reader description when Chart Designer recommendation turns on primary value axis title for chart.",
+
+  "chartDesignerValueAxisTitleOffScreenReader": "Primary value axis title has been turned off.",
+  "_chartDesignerValueAxisTitleOffScreenReader.comment": "Screen reader description when Chart Designer recommendation turns off primary value axis title for chart.",
+
+  "chartDesignerDataSeriesGapWidthChangedScreenReader": "Data series gap width has changed from {0} to {1}.",
+  "_chartDesignerDataSeriesGapWidthChangedScreenReader.comment": "Screen reader description when Chart Designer recommendation changes the data series gap width. {0} is old gap width number, {1} is new gap width number. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "chartDesignerAspectRatioChangedScreenReader": "Aspect ratio has changed from {0} to {1}.",
+  "_chartDesignerAspectRatioChangedScreenReader.comment": "Screen reader description when Chart Designer recommendation changes the aspect ratio. {0} is old aspect ratio number, {1} is new aspect ratio number. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "chartDesignerMinorChangesScreenReader": "And other minor changes were applied.",
+  "_chartDesignerMinorChangesScreenReader.comment": "Screen reader description when Chart Designer recommendation has minor changes in addition to ones already mentioned.",
+
+  "chartDesignerApplyRecommendationAriaLabel": "Apply recommendation",
+  "_chartDesignerApplyRecommendationAriaLabel.comment": "Aria label for apply recommendation button",
+
+  "chartDesignerListChangesAriaLabel": "Chart changes",
+  "_chartDesignerListChangesAriaLabel.comment": "Aria label for list of changes recommendation will apply to chart",
+
+  "chartDesignerRecommendationApplied": "Recommendation applied",
+  "_chartDesignerRecommendationApplied.comment": "Text to be read aloud by the screen reader to alert the user that Chart Designer has applied a design recommendation",
+
+  "chartDesignerChartTitleScreenReader": "Chart title: {0}",
+  "_chartDesignerChartTitleScreenReader.comment": "Screen reader description for Chart Designer recommendation header. {0} is the chart's title. {Placeholder=\"{0}\"}",
+
+  "positionInvalid": "Invalid",
+  "_positionInvalid.comment": "Screen reader text for when position of a chart legend, or chart data labels is invalid",
+
+  "positionNone": "None",
+  "_positionNone.comment": "Screen reader text for when position of a chart legend or data label item is none",
+
+  "positionCenter": "Center",
+  "_positionCenter.comment": "Screen reader text for when position of chart data labels is centered",
+
+  "positionInsideEnd": "Inside end",
+  "_positionInsideEnd.comment": "Screen reader text for when chart data labels is positioned on the inside end of a chart element (bar, column, pie slice, etc). e.g. If there is a bar chart with labels for each bar, the label will be positioned at the end of each bar, located inside of the bar.",
+
+  "positionInsideBase": "Inside base",
+  "_positionInsideBase.comment": "Screen reader text for when chart data labels are positioned on the inside at the base of a chart elements (bar, column, pie slice, etc). e.g. If there is a bar chart with labels for each bar, the label will be positioned at the beginning of each bar, located inside of the bar.",
+
+  "positionOutsideEnd": "Outside end",
+  "_positionOutsideEnd.comment": "Screen reader text for when chart data labels are positioned on the outside end of the chart element (bar, column, pie slice, etc). e.g. If there is a bar chart with labels for each bar, the label will be positioned at the end of each bar, located outside of the bar.",
+
+  "positionLeft": "Left",
+  "_positionLeft.comment": "Screen reader text for when chart data labels or chart legend is rendered on the left",
+
+  "positionRight": "Right",
+  "_positionRight.comment": "Screen reader text for when chart data labels or chart legend is rendered on the right",
+
+  "positionTop": "Top",
+  "_positionTop.comment": "Screen reader text for when chart data labels or chart legend is rendered on the top",
+
+  "positionBottom": "Bottom",
+  "_positionBottom.comment": "Screen reader text for when chart data labels or chart legend is rendered at the bottom",
+
+  "positionBestFit": "Best fit",
+  "_positionBestFit.comment": "Screen reader text for when chart data labels are rendered using best fit calculations",
+
+  "positionCallout": "Callout",
+  "_positionCallout.comment": "Screen reader text for when chart data labels are rendered in a callout",
+
+  "positionCorner": "Corner",
+  "_positionCorner.comment": "Screen reader text for when chart legend is rendered in the corner",
+
+  "positionCustom": "Custom",
+  "_positionCustom.comment": "Screen reader text for when chart legend is rendered at a custom position",
+
+  "aliceblue": "Alice Blue",
+  "_aliceblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F0F8FF",
+
+  "antiquewhite": "Antique White",
+  "_antiquewhite.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FAEBD7",
+
+  "aqua": "Aqua",
+  "_aqua.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00FFFF",
+
+  "aquamarine": "Aquamarine",
+  "_aquamarine.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #7FFFD4",
+
+  "azure": "Azure",
+  "_azure.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F0FFFF",
+
+  "beige": "Beige",
+  "_beige.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F5F5DC",
+
+  "bisque": "Bisque",
+  "_bisque.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFE4C4",
+
+  "black": "Black",
+  "_black.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #000000",
+
+  "blanchedalmond": "Blanched Almond",
+  "_blanchedalmond.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFEBCD",
+
+  "blue": "Blue",
+  "_blue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #0000FF",
+
+  "blueviolet": "Blue Violet",
+  "_blueviolet.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #8A2BE2",
+
+  "brown": "Brown",
+  "_brown.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #A52A2A",
+
+  "burlywood": "Burlywood",
+  "_burlywood.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DEB887",
+
+  "cadetblue": "Cadet Blue",
+  "_cadetblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #5F9EA0",
+
+  "chartreuse": "Chartreuse",
+  "_chartreuse.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #7FFF00",
+
+  "chocolate": "Chocolate",
+  "_chocolate.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #D2691E",
+
+  "coral": "Coral",
+  "_coral.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF7F50",
+
+  "cornflowerblue": "Cornflower Blue",
+  "_cornflowerblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #6495ED",
+
+  "cornsilk": "Cornsilk",
+  "_cornsilk.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFF8DC",
+
+  "crimson": "Crimson",
+  "_crimson.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DC143C",
+
+  "cyan": "Cyan",
+  "_cyan.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00FFFF",
+
+  "darkblue": "Dark Blue",
+  "_darkblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00008B",
+
+  "darkcyan": "Dark Cyan",
+  "_darkcyan.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #008B8B",
+
+  "darkgoldenrod": "Dark Goldenrod",
+  "_darkgoldenrod.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #B8860B",
+
+  "darkgray": "Dark Gray",
+  "_darkgray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #A9A9A9",
+
+  "darkgreen": "Dark Green",
+  "_darkgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #006400",
+
+  "darkgrey": "Dark Grey",
+  "_darkgrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #A9A9A9",
+
+  "darkkhaki": "Dark Khaki",
+  "_darkkhaki.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #BDB76B",
+
+  "darkmagenta": "Dark Magenta",
+  "_darkmagenta.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #8B008B",
+
+  "darkolivegreen": "Dark Olive Green",
+  "_darkolivegreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #556B2F",
+
+  "darkorange": "Dark Orange",
+  "_darkorange.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF8C00",
+
+  "darkorchid": "Dark Orchid",
+  "_darkorchid.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #9932CC",
+
+  "darkred": "Dark Red",
+  "_darkred.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #8B0000",
+
+  "darksalmon": "Dark Salmon",
+  "_darksalmon.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #E9967A",
+
+  "darkseagreen": "Dark Sea Green",
+  "_darkseagreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #8FBC8F",
+
+  "darkslateblue": "Dark Slate Blue",
+  "_darkslateblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #483D8B",
+
+  "darkslategray": "Dark Slate Gray",
+  "_darkslategray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #2F4F4F",
+
+  "darkslategrey": "Dark Slate Grey",
+  "_darkslategrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #2F4F4F",
+
+  "darkturquoise": "Dark Turquoise",
+  "_darkturquoise.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00CED1",
+
+  "darkviolet": "Dark Violet",
+  "_darkviolet.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #9400D3",
+
+  "deeppink": "Deep Pink",
+  "_deeppink.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF1493",
+
+  "deepskyblue": "Deep Sky Blue",
+  "_deepskyblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00BFFF",
+
+  "dimgray": "Dim Gray",
+  "_dimgray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #696969",
+
+  "dimgrey": "Dim Grey",
+  "_dimgrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #696969",
+
+  "dodgerblue": "Dodger Blue",
+  "_dodgerblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #1E90FF",
+
+  "firebrick": "Fire Brick",
+  "_firebrick.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #B22222",
+
+  "floralwhite": "Floral White",
+  "_floralwhite.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFAF0",
+
+  "forestgreen": "Forest Green",
+  "_forestgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #228B22",
+
+  "fuchsia": "Fuchsia",
+  "_fuchsia.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF00FF",
+
+  "gainsboro": "Gainsboro",
+  "_gainsboro.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DCDCDC",
+
+  "ghostwhite": "Ghost White",
+  "_ghostwhite.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F8F8FF",
+
+  "gold": "Gold",
+  "_gold.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFD700",
+
+  "goldenrod": "Goldenrod",
+  "_goldenrod.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DAA520",
+
+  "gray": "Gray",
+  "_gray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #808080",
+
+  "green": "Green",
+  "_green.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #008000",
+
+  "greenyellow": "Green Yellow",
+  "_greenyellow.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #ADFF2F",
+
+  "grey": "Grey",
+  "_grey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #808080",
+
+  "honeydew": "Honeydew",
+  "_honeydew.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F0FFF0",
+
+  "hotpink": "Hot Pink",
+  "_hotpink.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF69B4",
+
+  "indianred": "Indian Red",
+  "_indianred.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #CD5C5C",
+
+  "indigo": "Indigo",
+  "_indigo.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #4B0082",
+
+  "ivory": "Ivory",
+  "_ivory.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFFF0",
+
+  "khaki": "Khaki",
+  "_khaki.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F0E68C",
+
+  "lavender": "Lavender",
+  "_lavender.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #3636FA",
+
+  "lavenderblush": "Lavender Blush",
+  "_lavenderblush.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFF0F5",
+
+  "lawngreen": "Lawn Green",
+  "_lawngreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #7CFC00",
+
+  "lemonchiffon": "Lemon Chiffon",
+  "_lemonchiffon.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFACD",
+
+  "lightblue": "Light Blue",
+  "_lightblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #ADD8E6",
+
+  "lightcoral": "Light Coral",
+  "_lightcoral.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F08080",
+
+  "lightcyan": "Light Cyan",
+  "_lightcyan.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #E0FFFF",
+
+  "lightgoldenrodyellow": "Light Goldenrod Yellow",
+  "_lightgoldenrodyellow.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FAFAD2",
+
+  "lightgray": "Light Gray",
+  "_lightgray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #D3D3D3",
+
+  "lightgreen": "Light Green",
+  "_lightgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #90EE90",
+
+  "lightgrey": "Light Grey",
+  "_lightgrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #D3D3D3",
+
+  "lightpink": "Light Pink",
+  "_lightpink.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFB6C1",
+
+  "lightsalmon": "Light Salmon",
+  "_lightsalmon.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFA07A",
+
+  "lightseagreen": "Light Sea Green",
+  "_lightseagreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #20B2AA",
+
+  "lightskyblue": "Light Sky Blue",
+  "_lightskyblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #87CEFA",
+
+  "lightslategray": "Light Slate Gray",
+  "_lightslategray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #778899",
+
+  "lightslategrey": "Light Slate Grey",
+  "_lightslategrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #778899",
+
+  "lightsteelblue": "Light Steel Blue",
+  "_lightsteelblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #B0C4DE",
+
+  "lightyellow": "Light Yellow",
+  "_lightyellow.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFFE0",
+
+  "lime": "Lime",
+  "_lime.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00FF00",
+
+  "limegreen": "Lime Green",
+  "_limegreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #32CD32",
+
+  "linen": "Linen",
+  "_linen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FAF0E6",
+
+  "magenta": "Magenta",
+  "_magenta.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF00FF",
+
+  "maroon": "Maroon",
+  "_maroon.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #800000",
+
+  "mediumaquamarine": "Medium Aquamarine",
+  "_mediumaquamarine.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #66CDAA",
+
+  "mediumblue": "Medium Blue",
+  "_mediumblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #0000CD",
+
+  "mediumorchid": "Medium Orchid",
+  "_mediumorchid.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #BA55D3",
+
+  "mediumpurple": "Medium Purple",
+  "_mediumpurple.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #9370DB",
+
+  "mediumseagreen": "Medium Sea Green",
+  "_mediumseagreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #3CB371",
+
+  "mediumslateblue": "Medium Slate Blue",
+  "_mediumslateblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #7B68EE",
+
+  "mediumspringgreen": "Medium Spring Green",
+  "_mediumspringgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00FA9A",
+
+  "mediumturquoise": "Medium Turquoise",
+  "_mediumturquoise.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #48D1CC",
+
+  "mediumvioletred": "Medium Violet Red",
+  "_mediumvioletred.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #C71585",
+
+  "midnightblue": "Midnight Blue",
+  "_midnightblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #191970",
+
+  "mintcream": "Mint Cream",
+  "_mintcream.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F5FFFA",
+
+  "mistyrose": "Misty Rose",
+  "_mistyrose.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFE4E1",
+
+  "moccasin": "Moccasin",
+  "_moccasin.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFE4B5",
+
+  "navajowhite": "Navajo White",
+  "_navajowhite.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFDEAD",
+
+  "navy": "Navy",
+  "_navy.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #000080",
+
+  "oldlace": "Old Lace",
+  "_oldlace.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FDF5E6",
+
+  "olive": "Olive",
+  "_olive.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #808000",
+
+  "olivedrab": "Olive Drab",
+  "_olivedrab.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #6B8E23",
+
+  "orange": "Orange",
+  "_orange.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFA500",
+
+  "orangered": "Orange Red",
+  "_orangered.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF4500",
+
+  "orchid": "Orchid",
+  "_orchid.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DA70D6",
+
+  "palegoldenrod": "Pale Goldenrod",
+  "_palegoldenrod.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #EEE8AA",
+
+  "palegreen": "Pale Green",
+  "_palegreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #98FB98",
+
+  "paleturquoise": "Pale Turquoise",
+  "_paleturquoise.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #AFEEEE",
+
+  "palevioletred": "Pale Violet Red",
+  "_palevioletred.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DB7093",
+
+  "papayawhip": "Papaya Whip",
+  "_papayawhip.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFEFD5",
+
+  "peachpuff": "Peach Puff",
+  "_peachpuff.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFDAB9",
+
+  "peru": "Peru",
+  "_peru.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #CD853F",
+
+  "pink": "Pink",
+  "_pink.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFC0CB",
+
+  "plum": "Plum",
+  "_plum.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #DDA0DD",
+
+  "powderblue": "Powder Blue",
+  "_powderblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #B0E0E6",
+
+  "purple": "Purple",
+  "_purple.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #800080",
+
+  "rebeccapurple": "Rebecca Purple",
+  "_rebeccapurple.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #663399",
+
+  "red": "Red",
+  "_red.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF0000",
+
+  "rosybrown": "Rosy Brown",
+  "_rosybrown.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #BC8F8F",
+
+  "royalblue": "Royal Blue",
+  "_royalblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #4169E1",
+
+  "saddlebrown": "Saddle Brown",
+  "_saddlebrown.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #8B4513",
+
+  "salmon": "Salmon",
+  "_salmon.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FA8072",
+
+  "sandybrown": "Sandy Brown",
+  "_sandybrown.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F4A460",
+
+  "seagreen": "Sea Green",
+  "_seagreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #2E8B57",
+
+  "seashell": "Seashell",
+  "_seashell.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFF5EE",
+
+  "sienna": "Sienna",
+  "_sienna.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #A0522D",
+
+  "silver": "Silver",
+  "_silver.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #C0C0C0",
+
+  "skyblue": "Sky Blue",
+  "_skyblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #87CEEB",
+
+  "slateblue": "Slate Blue",
+  "_slateblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #6A5ACD",
+
+  "slategray": "Slate Gray",
+  "_slategray.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #708090",
+
+  "slategrey": "Slate Grey",
+  "_slategrey.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #708090",
+
+  "snow": "Snow",
+  "_snow.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFAFA",
+
+  "springgreen": "Spring Green",
+  "_springgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #00FF7F",
+
+  "steelblue": "Steel Blue",
+  "_steelblue.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #4682B4",
+
+  "tan": "Tan",
+  "_tan.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #D2B48C",
+
+  "teal": "Teal",
+  "_teal.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #008080",
+
+  "thistle": "Thistle",
+  "_thistle.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #D8BFD8",
+
+  "tomato": "Tomato",
+  "_tomato.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FF6347",
+
+  "turquoise": "Turquoise",
+  "_turquoise.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #40E0D0",
+
+  "violet": "Violet",
+  "_violet.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #EE82EE",
+
+  "wheat": "Wheat",
+  "_wheat.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F5DEB3",
+
+  "white": "White",
+  "_white.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFFFF",
+
+  "whitesmoke": "White Smoke",
+  "_whitesmoke.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #F5F5F5",
+
+  "yellow": "Yellow",
+  "_yellow.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #FFFF00",
+
+  "yellowgreen": "Yellow Green",
+  "_yellowgreen.comment": "CSS color name, used by screen reader for describing color on chart. Hex color: #9ACD32",
+
+  "fields1": "'{0}'",
+  "_fields1.comment": "Placeholder for one field name in pivot table source chart recommendations title. For example, 'Sales'. {Placeholder=\"{0}\"}",
+
+  "fields2": "'{0}' and '{1}'",
+  "_fields2.comment": "Placeholder for two field name in pivot table source chart recommendations title. For example, 'Sales' and 'Rating'. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "fields3": "'{0}', '{1}' and '{2}'",
+  "_fields3.comment": "Placeholder for three field name in pivot table source chart recommendations title. For example, 'Sales', 'Rating' and 'Profit'. {Placeholder=\"{0}\",\"{1}\",\"{2}\"}",
+
+  "multipleValues": "Multiple Values",
+  "_multipleValues.comment": "Describe more than 3 value fields in pivot table source chart recommendations title. For example, Multiple Values by 'Year' and 'Category'",
+
+  "multipleRowsOrColumns": "multiple Rows or Columns",
+  "_multipleRowsOrColumns.comment": "Describe more than 3 row/column fields in pivot table source chart recommendations title. For example, 'Sales' and 'Rating' by multiple Rows or Columns",
+
+  "concatenatedTitle": "{0} by {1}",
+  "_concatenatedTitle.comment": "Used to concate pivot table source chart recommendations title. For example, 'Sales' by 'Year'. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "autoAddedValuesFieldName": "Values",
+  "_autoAddedValuesFieldName.comment": "When there are two or more values fields in a pivot table, a 'Values' field will be auto added to the pivot table's columns fields by Excel. This text is the name of the auto added field and should be align with Excel exactly. It should match the Excel string with id: idsFldListMeasures",
+
+  "newPositiveFeedbackAlternateText": "This was helpful.",
+  "_newPositiveFeedbackAlternateText.comment": "The message read by a screen-reader as an option for positive feedback. The text should be identical to the default text-to-speech behavior for callout menus.",
+
+  "newNegativeFeedbackAlternateText": "This wasn't helpful.",
+  "_newNegativeFeedbackAlternateText.comment": "The message read by a screen-reader as an option for negative feedback. The text should be identical to the default text-to-speech behavior for callout menus.",
+
+  "aggregationDetailText": "Row {0}, column 2, Summarize value by header.",
+  "_aggregationDetailText.comment": "The message read by a screen-reader when focus on aggregation, follow the MAS 4.2.3 rule, placeholder indicate the row index. For example, Row '2', column 2, Summarize value by header. {Placeholder=\"{0}\"}",
+
+  "preferencesResultTypeHeaderText": "Result Type",
+  "_preferencesResultTypeHeaderText.comment": "Result type header for preferences pane",
+
+  "charts": "Charts",
+  "_charts.comment": "charts type string, used for Result type in preferences pane",
+
+  "tables": "Tables",
+  "_tables.comment": "tables type string, used for Result type in preferences pane",
+
+  "trend": "Trend",
+  "_trend.comment": "trend type string, used for Analysis type in preferences pane",
+
+  "outlier": "Outlier",
+  "_outlier.comment": "outlier type string, used for Analysis type in preferences pane",
+
+  "correlation": "Correlation",
+  "_correlation.comment": "correlation type string, used for Analysis type in preferences pane",
+
+  "distribution": "Distribution",
+  "_distribution.comment": "distribution type string, used for Analysis type in preferences pane",
+
+  "attribution": "Attribution",
+  "_attribution.comment": "attribution type string, used for Analysis type in preferences pane",
+
+  "others": "Others",
+  "_others.comment": "others type string, used for Analysis type in preferences pane",
+
+  "expandButtonLabel": "Expand",
+  "_expandButtonLabel.comment": "Descriptive label for a button which expands a recommendation card",
+
+  "collapseButtonLabel": "Collapse",
+  "_collapseButtonLabel.comment": "Descriptive label for a button which collapses a recommendation card",
+
+  "suggestionAlternateText": "Suggestion {0} of {1}.",
+  "_suggestionAlternateText.comment": "Alternate text for a suggested question. {0} is the index of the suggestion in a list of suggestions. {1} is the total number of visible suggestions. {Placeholder=\"{0}\",\"{1}\"}",
+
+  "preferencesHeaderText": "Which results interest you the most?",
+  "_preferencesHeaderText.comment": "Text for preferences pane indicate that users can setup field filter and result filter.",
+
+  "ocvFeedback": "Help Improve {Brand}",
+  "_ocvFeedback.comment": "ocv feedback string, used for ocv feedback button, {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "focusedHintForPivotChartRecommendation": "Press enter to select",
+  "_focusedHintForPivotChartRecommendation.comment": "Hint for pivotChart card to choose tab and enter",
+
+  "tableTabText": "Table",
+  "_tableTabText.comment": "Tab name for table.",
+
+  "chartTabText": "Chart",
+  "_chartTabText.comment": "Tab name for chart",
+
+  "insertAsSpecifiedType": "Insert as {0}.",
+  "_insertAsSpecifiedType.comment": "Insert as some table type or chart type. {0} refers to the type. {Placeholder=\"{0}\"}",
+
+  "pivotTableEnum": "Pivot Table",
+  "_pivotTableEnum.comment": "Insert type enum for Pivot Table",
+
+  "pivotChartTypeEnum": "{0} Chart",
+  "_pivotChartTypeEnum.comment": "Insert type enum for Pivot Chart. {0} refers to the chart type(e.g. Column, Bar). {Placeholder=\"{0}\"}",
+
+  "labelForNLInputHeader": "Ask a question about your data",
+  "_labelForNLInputHeader.comment": "Heading text for input box the user can type in to ask questions about their data.",
+
+  "suggestedQuestionsTitleUpdate": "Not sure what to ask? Try:",
+  "_suggestedQuestionsTitleUpdate.comment": "Title of the suggested questions on home pane.",
+
+  "insertOnNewSheetDescription": "Insert recommendation on a new Worksheet.",
+  "_insertOnNewSheetDescription.comment": "Description when focus is on the button that allows users to insert recommendation on a new sheet.",
+
+  "insertOnExistingSheetDescription": "Insert recommendation on an existing Worksheet.",
+  "_insertOnExistingSheetDescription.comment": "Description when focus is on the button that allows users to insert recommendation on an existing sheet.",
+
+  "insertOnNewSheetAsTypeDescription": "Insert as {0} on new sheet.",
+    "_insertOnNewSheetAsTypeDescription.comment": "Description when focus is on the button that allows users to insert recommendation on a new sheet. {0} will be either 'Table' or 'Chart' from the resource strings 'tableTabText' or 'chartTabText'. {Placeholder=\"{0}\"}",
+
+  "insertOnExistingSheetAsTypeDescription": "Insert as {0} on existing sheet.",
+  "_insertOnExistingSheetAsTypeDescription.comment": "Description when focus is on the button that allows users to insert recommendation on an existing sheet. {0} will be either 'Table' or 'Chart' from the resource strings 'tableTabText' or 'chartTabText'. {Placeholder=\"{0}\"}",
+
+  "rangePickerSelectionNLAnswerCollisionErrorMessage": "The recommendation won't fit in this space. Please change the destination.",
+  "_rangePickerSelectionNLAnswerCollisionErrorMessage.comment": "Error message when the destination range is not empty or not large enough",
+
+  "nlDestinationSelectionPaneText": "Select where the recommendation should be placed by entering a location below or using your mouse to select a location on the grid.",
+  "_nlDestinationSelectionPaneText.comment": "Text to show on the top of destination selection pane in Recommendation.",
+
+  "sampleDataEmptyWorksheetTitleNL": "We need data to give you answers.",
+  "_sampleDataEmptyWorksheetTitleNL.comment": "Title for sample data pane which appears when the user has a blank worksheet.",
+
+  "sampleDataWorksheetTitleNL": "We need more data to give you answers.",
+  "_sampleDataWorksheetTitleNL.comment": "Title for sample data pane when user is routed to it for having too few cells selected.",
+
+  "sampleDataEmptyWorksheetNLDescription": "Open a worksheet with data or select 'Try an Example' to explore {Brand} with inserted sample data.",
+  "_sampleDataEmptyWorksheetNLDescription.comment": "Message describing how to use the app and encouraging them to try out the sample data. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "sampleDataWorksheetNLDescription": "Select a larger table and try again or 'Try an Example' to explore {Brand} with inserted sample data.",
+  "_sampleDataWorksheetNLDescription.comment": "The message to be displayed in the pane when a request gets routed to the sample dataset due to having too few cells selected. {Placeholder=\"{Brand}\"}",
+
+  "tryAnExampleButtonText": "Try an Example",
+  "_tryAnExampleButtonText.comment": "Text for button that allows the user to try an example in their workbook and run Insights on it.",
+
+  "cellEditModeErrorTitleInRefresh": "Are you still editing?",
+  "_cellEditModeErrorTitleInRefresh.comment": "Title when analyze data attempts to do refresh when excel in cell edit mode.",
+
+  "cellEditModeErrorDescriptionInRefresh": "When you're done, press Enter or Tab, or select another cell and we'll update our analysis.",
+  "_cellEditModeErrorDescriptionInRefresh.comment": "Longer description when analyze data attempts to do refresh when excel in cell edit mode.",
+
+  "recommendationListTitleForAnalyzeDataNL": "Get answers like these:",
+  "_recommendationListTitleForAnalyzeDataNL.comment": "Title of the recommendations on home pane.",
+  
+  "sampleDataEmptyWorksheetTitleNoNL": "We need data to get insights.",
+  "_sampleDataEmptyWorksheetTitleNoNL.comment": "Title for sample data pane which appears when the user has a blank worksheet.",
+
+  "sampleDataWorksheetTitleNoNL": "We need more data to get insights.",
+  "_sampleDataWorksheetTitleNoNL.comment": "Title for sample data pane when user is routed to it for having too few cells selected.",
+
+  "sampleDataEmptyWorksheetNoNLDescription": "Open a worksheet with data or select 'Try an Example' to explore Analyze Data with inserted sample data.",
+  "_sampleDataEmptyWorksheetNoNLDescription.comment": "Message describing how to use the app and encouraging them to try out the sample data. {Brand} is the placeholder for Ideas branding.",
+
+  "sampleDataWorksheetNoNLDescription": "Select a larger table and try again or 'Try an Example' to explore Analyze Data with inserted sample data.",
+  "_sampleDataWorksheetNoNLDescription.comment": "The message to be displayed in the pane when a request gets routed to the sample dataset due to having too few cells selected.",
+
+  "insertionErrorCurrentWorksheetProtectedDescription": "Cannot insert because the current sheet is protected. Temporarily remove protection and try again.",
+  "_insertionErrorCurrentWorksheetProtectedDescription.comment": "Description of error shown when insertion fails due to the current worksheet being protected",
+
+  "insertionErrorPivotCacheProtectedDescription": "Cannot insert because another PivotTable with a connection to the same source data is on a protected sheet. Temporarily remove protection and try again.",
+  "_insertionErrorPivotCacheProtectedDescription.comment": "Description of error shown when inserting fails because another pivottable uses the same source data and is on a protected worksheet",
+
+  "insertionErrorDestinationProtectedDescription": "Cannot insert on a protected sheet. Temporarily remove protection and try again.",
+  "_insertionErrorDestinationProtectedDescription.comment": "Description of error shown when insertion fails because the destination is a protected worksheet",
+
+  "insertionErrorTitleGeneric": "Couldn't insert this",
+  "_insertionErrorTitleGeneric.comment": "Title for error that occurs when failing to insert something that can be something other than a recommendation.",
+
+  "pivotTableDateTimeGroupingByMonthJanuary":  "Jan",
+  "_pivotTableDateTimeGroupingByMonthJanuary.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is January",
+
+  "pivotTableDateTimeGroupingByMonthFebuary":  "Feb",
+  "_pivotTableDateTimeGroupingByMonthFebuary.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is January",
+
+  "pivotTableDateTimeGroupingByMonthMarch":  "Mar",
+  "_pivotTableDateTimeGroupingByMonthMarch.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is March",
+
+  "pivotTableDateTimeGroupingByMonthApril":  "Apr",
+  "_pivotTableDateTimeGroupingByMonthApril.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is April",
+
+  "pivotTableDateTimeGroupingByMonthMay":  "May",
+  "_pivotTableDateTimeGroupingByMonthMay.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is May",
+
+  "pivotTableDateTimeGroupingByMonthJune":  "Jun",
+  "_pivotTableDateTimeGroupingByMonthJune.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is June",
+
+  "pivotTableDateTimeGroupingByMonthJuly":  "Jul",
+  "_pivotTableDateTimeGroupingByMonthJuly.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is July",
+
+  "pivotTableDateTimeGroupingByMonthAugust":  "Aug",
+  "_pivotTableDateTimeGroupingByMonthAugust.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is August",
+
+  "pivotTableDateTimeGroupingByMonthSeptember":  "Sep",
+  "_pivotTableDateTimeGroupingByMonthSeptember.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is September",
+
+  "pivotTableDateTimeGroupingByMonthOctober":  "Oct",
+  "_pivotTableDateTimeGroupingByMonthOctober.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is October",
+
+  "pivotTableDateTimeGroupingByMonthNovember":  "Nov",
+  "_pivotTableDateTimeGroupingByMonthNovember.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is November",
+
+  "pivotTableDateTimeGroupingByMonthDecember":  "Dec",
+  "_pivotTableDateTimeGroupingByMonthDecember.comment": "The value to be displayed in Pivot Table Grouping if grouped by Month and the value is December",
+
+  "pivotTableDateTimeGroupingByQuarter1":  "Qtr1",
+  "_pivotTableDateTimeGroupingByQuarter1.comment": "The value to be displayed in Pivot Table Grouping if grouped by Quarter and the value is Quarter 1",
+
+  "pivotTableDateTimeGroupingByQuarter2":  "Qtr2",
+  "_pivotTableDateTimeGroupingByQuarter2.comment": "The value to be displayed in Pivot Table Grouping if grouped by Quarter and the value is Quarter 2",
+
+  "pivotTableDateTimeGroupingByQuarter3":  "Qtr3",
+  "_pivotTableDateTimeGroupingByQuarter3.comment": "The value to be displayed in Pivot Table Grouping if grouped by Quarter and the value is Quarter 3",
+
+  "pivotTableDateTimeGroupingByQuarter4":  "Qtr4",
+  "_pivotTableDateTimeGroupingByQuarter4.comment": "The value to be displayed in Pivot Table Grouping if grouped by Quarter and the value is Quarter 4",
+
+  "dataAITableSuggestionsHeader": "Table Suggestions",
+  "_dataAITableSuggestionsHeader.comment": "Header for the table suggestions section of the Analyze Data pane",
+
+  "dataAINavigateDescription": "Get feedback from AI to improve or understand your data",
+  "_dataAINavigateDescription.comment": "Description for the link to Data AI view from the Analyze Data pane",
+
+  "dataAITitle": "Copilot",
+  "_dataAITitle.comment": "Title for the Copilot view",
+
+  "dataAISuggestionHeader": "These are our suggestions:",
+  "_dataAISuggestionHeader.comment": "Header for the suggestions section of the Data AI view",
+
+  "columnRecoAddColumnButtonText": "Add column",
+  "_columnRecoAddColumnButtonText.comment": "Text for the button to add a column to the table",
+
+  "columnRecoShowFormulaExplanationText": "Explain formula",
+  "_columnRecoShowFormulaExplanationText.comment": "Text for the button to show the explaination for suggested formula",
+
+  "columnRecoHideFormulaExplanationText": "Hide",
+  "_columnRecoHideFormulaExplanationText.comment": "Text for the button to hide the explaination for suggested formula",
+
+  "dataAILoadingLabel": "Gathering your data...",
+  "_dataAILoadingLabel.comment": "Label that appears on a loading screen while data is being gathered and processed",
+
+  "dataAILoadingCard1Title": "Important to know",
+  "_dataAILoadingCard1Title.comment": "Title on a card describing the contents of the card as important",
+
+  "dataAILoadingCard1Description": "Always fact-check results that Copilot generates.",
+  "_dataAILoadingCard1Description.comment": "Directive to the user to fact-check recommendations from the Copilot feature",
+
+  "dataAILoadingCard2Title": "What can this feature do?",
+  "_dataAILoadingCard2Title.comment": "Title on a card describing the capabilities of a feature",
+
+  "dataAILoadingCard2Description": "Iterate your data by typing what you need.",
+  "_dataAILoadingCard2Description.comment": "Text explaining a feature that can interpret and answer a question about data",
+
+  "dataAILoadingCard3Title": "Limitation",
+  "_dataAILoadingCard3Title.comment": "Title on a card describing a limitation of feature",
+
+  "dataAILoadingCard3Description": "May occasionally produce biased content.",
+  "_dataAILoadingCard3Description.comment": "Disclaimer that the feature may create content that is biased",
+  
+  "ocvFeedbackErrorTitle": "Couldn't send feedback now",
+  "_ocvFeedbackErrorTitle.comment": "Title for error that occurs while attempting to send user feedback.",
+
+  "ocvFeedbackErrorDescription": "Something went wrong and we couldn't send feedback now. Please select {Brand} to try again.",
+  "_ocvFeedbackErrorDescription.comment": "Longer description of error that occurs while attempting to send user feedback. {Brand} is the placeholder for Ideas branding. {Placeholder=\"{Brand}\"}",
+
+  "dataAIQueryLabel": "Complete your data by adding a column",
+  "_dataAIQueryLabel.comment": "Label for search box that lets users generate column suggestions for their table",
+
+  "dataAIQueryPlaceholder": "Add a column with...",
+  "_dataAIQueryPlaceholder.comment": "Placeholder text for a search box that lets users generate column suggestions for their table",
+
+  "dataAIQuerySubtext": "Always validate our results. We could be wrong.",
+  "_dataAIQuerySubtext.comment": "Subtext advising users that the generated column suggestions may not be correct.",
+
+  "dataAIQueryButtonAriaLabel": "Submit query",
+  "_dataAIQueryButtonAriaLabel.comment": "Aria label for button that submits request for column suggestions for a table",
+
+   "dataAITopSuggestionHeader": "Is this what you meant?",
+  "_dataAITopSuggestionHeader.comment": "Header shown above the best answer for a query",
+
+  "dataAIOtherSuggestionsHeader": "Not what you meant? Try these:",
+  "_dataAIOtherSuggestionsHeader.comment": "Header shown above other answers for a query",
+
+  "columnRecoReportButtonText": "Report",
+  "_columnRecoReportButtonText.comment": "Button that will open feedback dialog to report a bad column recommendation",
+
+  "columnRecoAddedColumnButtonText": "Added",
+  "_columnRecoAddedColumnButtonText.comment": "Text on add column button shown when the column has already been successfully added",
+
+  "dataAIErrorTitle": "We were unable to generate any results. Please try again.",
+  "_dataAIErrorTitle.comment": "Title on data ai error view",
+
+  "dataAIErrorHelpListTitle": "It might help if you:",
+  "_dataAIErrorHelpListTitle.comment": "Title on list of suggestions for how to improve the result",
+
+  "dataAIErrorHelpListItem1": "Rephrase your suggestion",
+  "_dataAIErrorHelpListItem1.comment": "First item on list of suggestions for how to improve the result",
+
+  "dataAIErrorHelpListItem2": "Break your problem down into smaller problems",
+  "_dataAIErrorHelpListItem2.comment": "Second item on list of suggestions for how to improve the result",
+
+  "dataAIErrorHelpListItem3": "Be as specific as possible",
+  "_dataAIErrorHelpListItem3.comment": "Third item on list of suggestions for how to improve the result",
+
+  "dataAIErrorHelpListItem4": "Specify a name or data format for your new column",
+  "_dataAIErrorHelpListItem4.comment": "Fourth item on list of suggestions for how to improve the result",
+
+  "dataAIErrorBackButtonText": "Back",
+  "_dataAIErrorBackButtonText.comment": "Text on button that will navigate back to the previous view",
+
+  "dataRefreshButtonAriaLabel": "Refresh data",
+  "_dataRefreshButtonAriaLabel.comment": "Aria label for button that submits request for refresh data"
+
+}

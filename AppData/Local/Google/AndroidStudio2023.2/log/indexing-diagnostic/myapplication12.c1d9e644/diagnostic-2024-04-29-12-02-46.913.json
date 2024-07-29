@@ -1,0 +1,137 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:19.581Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-29T03:02:46.9169333Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application12",
+    "times" : {
+      "scanningReason" : "changes in: \"External roots from entity (roots=classes, source roots=empty)\", \"External roots from entity (roots=classes, source roots=empty)\", \"External roots from entity (roots=classes, source roots=empty)\", \"External roots from entity (roots=classes, source roots=empty)\", \"External roots from entity (roots=classes, source roots=empty)\", \"External roots from entity (roots=google-services-4.4.1.jar, source roots=empty)\", \"External roots from entity (roots=strict-version-matcher-plugin-1.2.4.jar, source roots=empty)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 4,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 714668700,
+      "delayedPushPropertiesStageTime" : 46859600,
+      "indexExtensionsTime" : 875400,
+      "dumbModeStart" : "2024-04-29T03:02:46.1211247Z",
+      "dumbWallTimeWithPauses" : 792773500,
+      "dumbWallTimeWithoutPauses" : 792773500,
+      "updatingStart" : "2024-04-29T03:02:46.1211247Z",
+      "updatingEnd" : "2024-04-29T03:02:46.9138982Z",
+      "totalWallTimeWithPauses" : 793881200,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 793881200
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 7,
+      "numberOfScannedFiles" : 463,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 463
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 351,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 351,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 220447200,
+      "scanningTime" : 243035900,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 151894300,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 567800,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 32,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 32,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 35440200,
+      "scanningTime" : 73697600,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 30736300,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 160600,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 25,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 25,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 54541200,
+      "scanningTime" : 59438000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 37578900,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 88300,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=google-services-4.4.1.jar, source roots=empty)",
+      "numberOfScannedFiles" : 24,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 24,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 12725700,
+      "scanningTime" : 26135100,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 9882500,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 22100,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=strict-version-matcher-plugin-1.2.4.jar, source roots=empty)",
+      "numberOfScannedFiles" : 27,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 27,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 17103300,
+      "scanningTime" : 24267300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 12238300,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 24600,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 2,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 2,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 17477900,
+      "scanningTime" : 17995300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 17142000,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 6400,
+      "roots" : [ ]
+    }, {
+      "providerName" : "External roots from entity (roots=classes, source roots=empty)",
+      "numberOfScannedFiles" : 2,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 2,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 1772000,
+      "scanningTime" : 2462300,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 1276600,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 5600,
+      "roots" : [ ]
+    } ]
+  }
+}

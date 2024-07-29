@@ -1,0 +1,58 @@
+{
+  "appInfo" : {
+    "build" : "232.10300.40.2321.11668458",
+    "buildDate" : "2024-04-03T23:04:55.733Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2024-04-22T05:33:51.5469097Z",
+    "os" : "Windows 10.0",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+0--11185874"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 4,
+    "maxNumberOfIndexingThreads" : 3,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "My Application12",
+    "times" : {
+      "scanningReason" : "Merged changes in: \"Module 'My Application12' (all roots)\" with changes in: \"Module 'My Application12' (all roots)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 9,
+      "creatingIteratorsTime" : 0,
+      "collectingIndexableFilesTime" : 19946900,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 2000,
+      "dumbWallTimeWithPauses" : 0,
+      "dumbWallTimeWithoutPauses" : 0,
+      "updatingStart" : "2024-04-22T05:33:51.3753691Z",
+      "updatingEnd" : "2024-04-22T05:33:51.5419233Z",
+      "totalWallTimeWithPauses" : 166805400,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 166805400
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 7,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 7
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "Module 'My Application12' (all roots)",
+      "numberOfScannedFiles" : 7,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 7,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 17071700,
+      "scanningTime" : 17802000,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 12000,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 2000,
+      "roots" : [ ]
+    } ]
+  }
+}

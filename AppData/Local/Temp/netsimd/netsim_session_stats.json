@@ -1,0 +1,1 @@
+{"durationSecs": "2426", "deviceCount": 1, "peakConcurrentDevices": 1, "radioStats": [{"deviceId": 1, "kind": "BLUETOOTH_LOW_ENERGY", "durationSecs": "2423", "txCount": 0, "rxCount": 0}, {"deviceId": 1, "kind": "BLUETOOTH_CLASSIC", "durationSecs": "2423", "txCount": 0, "rxCount": 0}], "version": "0.2.15"}
