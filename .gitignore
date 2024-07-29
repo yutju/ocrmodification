@@ -19,11 +19,33 @@ local.properties
 gradle/wrapper/gradle-wrapper.properties
 gradle/wrapper/gradle-wrapper.jar
 
-# JSON 파일을 포함시키기 위한 규칙 추가
-# 모든 JSON 파일 포함
+# JSON 파일을 포함시키기 위한 규칙
 !*.json
 
 # src와 res 디렉토리는 포함
 !app/src/
 !app/src/main/res/
 !app/src/main/AndroidManifest.xml
+
+# 시스템 특정 디렉토리 무시
+# Windows 시스템 디렉토리
+AppData/
+Application Data/
+Cookies/
+Documents/My Music/
+Documents/My Pictures/
+Documents/My Videos/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Templates/
+시작 메뉴/
+
+# 기타 무시할 수 있는 시스템 디렉토리
+# 임시 파일 및 캐시 디렉토리
+Temporary Internet Files/
+Temp/
+Local/
