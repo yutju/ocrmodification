@@ -1,23 +1,23 @@
 # Android Studio 관련 파일
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
+.gradle/
+local.properties
+/.idea/caches/
+/.idea/libraries/
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+/build/
+/captures/
+/.externalNativeBuild/
+/.cxx
 local.properties
 
 # Gradle Wrapper 파일
-gradle/wrapper/gradle-wrapper.properties
-gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
 
 # JSON 파일을 포함시키기 위한 규칙
 !*.json
