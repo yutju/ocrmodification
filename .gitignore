@@ -21,6 +21,8 @@ local.properties
 # JSON 파일을 포함시키기 위한 규칙
 !*.json
 
+*.hprof
+
 # src와 res 디렉토리는 포함
 !app/src/
 !app/src/main/res/
