@@ -25,6 +25,10 @@ local.properties
 *.hprof
 *.log
 *.tmp
+*.zip
+*.mp4
+*.tar.gz
+*.rar
 
 # src와 res 디렉토리는 포함
 !app/src/
@@ -42,4 +46,5 @@ Local/
 # Ignore bfg.jar
 bfg.jar
 
-
+# 특정 대용량 파일 디렉토리 무시
+large_files/
