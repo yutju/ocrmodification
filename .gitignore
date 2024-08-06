@@ -13,7 +13,6 @@ local.properties
 /captures/
 /.externalNativeBuild/
 /.cxx
-local.properties
 
 # Gradle Wrapper 파일
 !gradle/wrapper/gradle-wrapper.properties
@@ -27,28 +26,10 @@ local.properties
 !app/src/main/res/
 !app/src/main/AndroidManifest.xml
 
-# 시스템 특정 디렉토리 무시
-# Windows 시스템 디렉토리
-AppData/
-Application Data/
-Cookies/
-Documents/My Music/
-Documents/My Pictures/
-Documents/My Videos/
-Local Settings/
-My Documents/
-NetHood/
-PrintHood/
-Recent/
-SendTo/
-Templates/
-시작 메뉴/
-
 # Android AVD 관련 파일 무시
 .android/avd/*.lock
 
 # 기타 무시할 수 있는 시스템 디렉토리
-# 임시 파일 및 캐시 디렉토리
 Temporary Internet Files/
 Temp/
 Local/
