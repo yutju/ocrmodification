@@ -1,0 +1,4 @@
+com.example.myapplication2222.test.app-androidTest-0 C:\Users\gsh56\AndroidStudioProjects\kartrider\app\build\generated\res\resValues\androidTest\debug
+com.example.myapplication2222.test.app-mergeDebugAndroidTestResources-1 C:\Users\gsh56\AndroidStudioProjects\kartrider\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.myapplication2222.test.app-mergeDebugAndroidTestResources-2 C:\Users\gsh56\AndroidStudioProjects\kartrider\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.myapplication2222.test.app-debugAndroidTest-3 C:\Users\gsh56\AndroidStudioProjects\kartrider\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

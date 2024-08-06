@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">709195561017-5joatto2e0022nu6qc5bb6g4kogfb6hg.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://kartrider-f7220-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">709195561017</string>
+    <string name="google_api_key" translatable="false">AIzaSyCCNiZ8hqkCrudH5impLXuh0oMl1df_Rgs</string>
+    <string name="google_app_id" translatable="false">1:709195561017:android:4c8b81a71040e16dfc35e8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCCNiZ8hqkCrudH5impLXuh0oMl1df_Rgs</string>
+    <string name="google_storage_bucket" translatable="false">kartrider-f7220.appspot.com</string>
+    <string name="project_id" translatable="false">kartrider-f7220</string>
+</resources>
