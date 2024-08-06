@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/age_restriction_image"
+        android:layout_width="176dp"
+        android:layout_height="99dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/age_restriction_description"
+        android:src="@drawable/ic_age_restriction" />
+
+    <TextView
+        android:id="@+id/age_restriction_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age_restriction_message"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@id/age_restriction_image"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/age_restriction_submessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age_restriction_submessage"
+        android:textSize="18sp"
+        android:layout_below="@id/age_restriction_message"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

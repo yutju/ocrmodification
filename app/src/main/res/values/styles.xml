@@ -1,0 +1,7 @@
+<resources>
+    <!-- Custom Snackbar Style -->
+    <style name="CustomSnackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="backgroundTint">@color/color_red</item>
+        <!-- Action text color and text color need to be set programmatically -->
+    </style>
+</resources>
