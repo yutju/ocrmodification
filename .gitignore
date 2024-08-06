@@ -1,0 +1,27 @@
+# IDE 및 빌드 파일
+.idea/
+*.iml
+/build/
+.gradle/
+local.properties
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# 운영체제에 의해 생성된 파일
+.DS_Store
+
+# 특정 대용량 파일 무시
+*.hprof
+*.log
+*.tmp
+*.zip
+*.mp4
+*.tar.gz
+*.rar
+
+# 기타 무시할 수 있는 시스템 디렉토리
+Temporary Internet Files/
+Temp/
+Local/
