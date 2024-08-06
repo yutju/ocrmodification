@@ -1,4 +1,4 @@
-#Tue Aug 06 18:44:38 KST 2024
+#Tue Aug 06 23:07:41 KST 2024
 base.0=C\:\\Users\\gsh56\\AndroidStudioProjects\\kartrider\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\gsh56\\AndroidStudioProjects\\kartrider\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\gsh56\\AndroidStudioProjects\\kartrider\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
