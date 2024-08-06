@@ -13,7 +13,6 @@ gradle/wrapper/gradle-wrapper.jar
 .DS_Store
 
 # 특정 대용량 파일 무시
-*.hprof
 *.log
 *.tmp
 *.zip
@@ -25,3 +24,4 @@ gradle/wrapper/gradle-wrapper.jar
 Temporary Internet Files/
 Temp/
 Local/
+*.hprof
