@@ -5,10 +5,6 @@
 .gradle/
 local.properties
 
-# Gradle Wrapper
-gradle/wrapper/gradle-wrapper.properties
-gradle/wrapper/gradle-wrapper.jar
-
 # 운영체제에 의해 생성된 파일
 .DS_Store
 
@@ -19,6 +15,23 @@ gradle/wrapper/gradle-wrapper.jar
 *.mp4
 *.tar.gz
 *.rar
+*.gz
+*.bz2
+*.xz
+*.bak
+*.swp
+*.swo
+*.class
+*.o
+*.a
+*.so
+*.dSYM
+*.pdb
+*.trace
+*.temp
+*.metadata/
+.classpath
+.vscode/
 
 # 기타 무시할 수 있는 시스템 디렉토리
 Temporary Internet Files/
