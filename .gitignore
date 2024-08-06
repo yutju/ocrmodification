@@ -21,7 +21,10 @@ local.properties
 # JSON 파일을 포함시키기 위한 규칙
 !*.json
 
+# 대용량 파일 및 임시 파일 무시
 *.hprof
+*.log
+*.tmp
 
 # src와 res 디렉토리는 포함
 !app/src/
@@ -35,3 +38,8 @@ local.properties
 Temporary Internet Files/
 Temp/
 Local/
+
+# Ignore bfg.jar
+bfg.jar
+
+
