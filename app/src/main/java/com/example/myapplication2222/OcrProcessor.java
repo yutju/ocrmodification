@@ -41,6 +41,7 @@ public class OcrProcessor {
 
         // Initialize Tesseract API with the language code
         tessBaseAPI.init(dataPath, "kor");
+        tessBaseAPI.setPageSegMode(TessBaseAPI.PageSegMode.PSM_SINGLE_BLOCK);
     }
 
     private void copyTrainedData(Context context, String destinationPath) {
@@ -93,12 +94,25 @@ public class OcrProcessor {
     }
 
     public Bitmap preprocessImage(Bitmap bitmap) {
-        // Simple thresholding for demo purposes
-        Bitmap preprocessedBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), bitmap.getConfig());
+        // Convert to grayscale
+        Bitmap grayBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
         for (int y = 0; y < bitmap.getHeight(); y++) {
             for (int x = 0; x < bitmap.getWidth(); x++) {
                 int pixel = bitmap.getPixel(x, y);
                 int gray = (Color.red(pixel) + Color.green(pixel) + Color.blue(pixel)) / 3;
+                grayBitmap.setPixel(x, y, Color.rgb(gray, gray, gray));
+            }
+        }
+
+        // Apply Gaussian Blur
+        Bitmap blurredBitmap = applyGaussianBlur(grayBitmap);
+
+        // Simple thresholding
+        Bitmap preprocessedBitmap = Bitmap.createBitmap(blurredBitmap.getWidth(), blurredBitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        for (int y = 0; y < blurredBitmap.getHeight(); y++) {
+            for (int x = 0; x < blurredBitmap.getWidth(); x++) {
+                int pixel = blurredBitmap.getPixel(x, y);
+                int gray = Color.red(pixel);
                 if (gray > 128) {
                     preprocessedBitmap.setPixel(x, y, Color.WHITE);
                 } else {
@@ -106,7 +120,14 @@ public class OcrProcessor {
                 }
             }
         }
+
         return preprocessedBitmap;
+    }
+
+    private Bitmap applyGaussianBlur(Bitmap bitmap) {
+        // Placeholder for Gaussian Blur implementation
+        // Consider using a library like RenderScript or OpenCV for real blur implementation
+        return bitmap;
     }
 
     public Bitmap detectAndCropIdCard(Bitmap bitmap) {

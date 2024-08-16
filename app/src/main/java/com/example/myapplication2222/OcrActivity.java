@@ -55,18 +55,15 @@ public class OcrActivity extends AppCompatActivity {
         captureButton = findViewById(R.id.captureButton);
         previewView = findViewById(R.id.previewView);
 
-        // Initialize OcrProcessor with context and data path
         String dataPath = getFilesDir() + "/tesseract/";
         ocrProcessor = new OcrProcessor(this, dataPath);
 
-        // Check and request camera permissions
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
         } else {
             startCamera();
         }
 
-        // Set up capture button listener
         captureButton.setOnClickListener(v -> {
             if (imageCapture != null) {
                 captureImage();
@@ -131,10 +128,8 @@ public class OcrActivity extends AppCompatActivity {
                 resultTextView.setText("");
                 imageView.setVisibility(View.VISIBLE);
 
-                // Background thread for OCR processing
                 new Thread(() -> {
                     try {
-                        // Preprocess the image to enhance OCR performance
                         Bitmap preprocessedBitmap = ocrProcessor.preprocessImage(imageBitmap);
                         String extractedText = ocrProcessor.extractText(preprocessedBitmap);
                         runOnUiThread(() -> {
@@ -181,7 +176,6 @@ public class OcrActivity extends AppCompatActivity {
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
-        // Simple date format check
         if (birthDate.matches("\\d{4}-\\d{2}-\\d{2}")) {
             int birthYear = Integer.parseInt(birthDate.split("-")[0]);
             int age = currentYear - birthYear;

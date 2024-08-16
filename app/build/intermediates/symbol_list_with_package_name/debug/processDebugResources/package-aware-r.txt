@@ -3075,7 +3075,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id Textview
+id TextView
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3210,6 +3210,7 @@ id cradle
 id currentState
 id custom
 id customPanel
+id custom_view
 id cut
 id dark
 id date_picker_actions
@@ -3326,6 +3327,7 @@ id listMode
 id list_item
 id m3_side_sheet
 id map_button
+id map_image
 id marquee
 id masked
 id match_constraint

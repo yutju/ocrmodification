@@ -15,13 +15,14 @@ drawable identification
 drawable item_background
 drawable mart_img_example
 drawable smartshoppingcart
-id Textview
+id TextView
 id age_restriction_image
 id age_restriction_message
 id age_restriction_submessage
 id button
 id captureButton
 id cart_button
+id custom_view
 id decreaseButton
 id deleteButton
 id guideTextView
@@ -29,6 +30,7 @@ id imageView
 id increaseButton
 id inventoryRecyclerView
 id map_button
+id map_image
 id nameTextView
 id ocr_button
 id order_info_confirmation

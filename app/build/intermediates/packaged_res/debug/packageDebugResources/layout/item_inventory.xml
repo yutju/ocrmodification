@@ -9,6 +9,7 @@
     android:padding="16dp"
     cardview:cardCornerRadius="8dp"
     cardview:cardElevation="4dp"
+
     android:background="@drawable/item_background">
 
     <LinearLayout

@@ -2,10 +2,14 @@ package com.example.myapplication2222;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,17 +37,28 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
 
     private static final String TAG = "Beacontest";
     private BeaconManager beaconManager;
+    private LocationManager locationManager;
+    private LocationListener locationListener;
+    private double gpsLat = 0.0;
+    private double gpsLon = 0.0;
 
     private List<Beacon> beaconList = new ArrayList<>();
-    private TextView textView;
+    private CustomView customView;
 
-    private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
-    private static final double RSSI_FILTER_THRESHOLD = 1.0; // RSSI 필터 임계값
-    private static final int TARGET_MAJOR_VALUE = 10011; // 필터링할 Major 값
-    private static final int TARGET_MINOR_VALUE = 10011; // 필터링할 Minor 값
-    private static final double A = -69; // 1미터 거리에서의 RSSI 값 (환경에 따라 변경 필요)
-    private static final double N = 2.0; // 신호 전파 손실 계수 (환경에 따라 변경 필요)
-    private static final double MAX_DISTANCE_INCREASE = 1.0; // 거리의 급격한 증가를 감지하는 임계값
+    private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
+    private static final double RSSI_FILTER_THRESHOLD = 1.0;
+    private static final int TARGET_MAJOR_VALUE = 10011;
+    private static final int TARGET_MINOR_VALUE = 10011;
+    private static final double A = -69;
+    private static final double N = 2.0;
+    private static final double MAX_DISTANCE_INCREASE = 1.0;
+
+    // 비콘 위치를 50x50 단위로 설정
+    private static final Map<String, double[]> BEACON_POSITIONS = new HashMap<String, double[]>() {{
+        put("beacon1", new double[]{25.0, 50.0});
+        put("beacon2", new double[]{0.0, 0.0});
+        put("beacon3", new double[]{50.0, 0.0});
+    }};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,47 +66,72 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         setContentView(R.layout.activity_map);
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
-        textView = findViewById(R.id.Textview);
+        customView = findViewById(R.id.custom_view);
 
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                showLocationPermissionDialog();
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                gpsLat = location.getLatitude();
+                gpsLon = location.getLongitude();
+                Log.d(TAG, "Location updated: Lat=" + gpsLat + " Lon=" + gpsLon);
             }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+            @Override
+            public void onProviderEnabled(String provider) {}
+
+            @Override
+            public void onProviderDisabled(String provider) {}
+        };
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                showLocationPermissionDialog();
+            } else {
+                startLocationUpdates();
+            }
+        } else {
+            startLocationUpdates();
         }
     }
 
+    private void startLocationUpdates() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
+    }
+
     private void showLocationPermissionDialog() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("This app needs location access");
-        builder.setMessage("Please grant location access so this app can detect beacons.");
-        builder.setPositiveButton(android.R.string.ok, null);
-        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_COARSE_LOCATION);
-            }
-        });
-        builder.show();
+        new AlertDialog.Builder(this)
+                .setTitle("This app needs location access")
+                .setMessage("Please grant location access so this app can detect beacons and your location.")
+                .setPositiveButton(android.R.string.ok, null)
+                .setOnDismissListener(dialog -> requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_FINE_LOCATION))
+                .show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         beaconManager.unbind(this);
+        if (locationManager != null) {
+            locationManager.removeUpdates(locationListener);
+        }
     }
 
     @Override
     public void onBeaconServiceConnect() {
-        beaconManager.addRangeNotifier(new RangeNotifier() {
-            @Override
-            public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
-                if (beacons.size() > 0) {
-                    beaconList.clear();
-                    beaconList.addAll(beacons);
-                }
+        beaconManager.addRangeNotifier((beacons, region) -> {
+            if (beacons.size() > 0) {
+                beaconList.clear();
+                beaconList.addAll(beacons);
             }
         });
 
@@ -106,7 +146,6 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         handler.sendEmptyMessage(0);
     }
 
-    // Calculate average RSSI
     private double calculateAverageRSSI(List<Integer> rssiValues) {
         if (rssiValues.isEmpty()) return 0;
         int sum = 0;
@@ -116,7 +155,6 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return (double) sum / rssiValues.size();
     }
 
-    // Filter out RSSI values that are out of range
     private List<Integer> filterRSSIValues(List<Integer> rssiValues, double average, double threshold) {
         List<Integer> filtered = new ArrayList<>();
         for (int value : rssiValues) {
@@ -127,7 +165,6 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return filtered;
     }
 
-    // Double-filtering to remove outliers
     private List<Integer> doubleFilterRSSIValues(List<Integer> rssiValues, double threshold) {
         double initialAverage = calculateAverageRSSI(rssiValues);
         List<Integer> filteredOnce = filterRSSIValues(rssiValues, initialAverage, threshold);
@@ -135,47 +172,57 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return filterRSSIValues(filteredOnce, newAverage, threshold);
     }
 
-    // Distance calculation using RSSI
     private double calculateDistance(double rssi) {
         if (rssi == 0) {
-            return -1.0; // signal not found
+            return -1.0;
         }
-        // Distance calculation using RSSI, A, and N
-        double distance = Math.pow(10, (A - rssi) / (10 * N));
-        return distance;
+        return Math.pow(10, (A - rssi) / (10 * N));
+    }
+
+    private double[] performTrilateration(double[][] positions, double[] distances) {
+        double x1 = positions[0][0], y1 = positions[0][1];
+        double x2 = positions[1][0], y2 = positions[1][1];
+        double x3 = positions[2][0], y3 = positions[2][1];
+        double r1 = distances[0], r2 = distances[1], r3 = distances[2];
+
+        double A = 2 * (x2 - x1);
+        double B = 2 * (y2 - y1);
+        double C = r1 * r1 - r2 * r2 - x1 * x1 + x2 * x2 - y1 * y1 + y2 * y2;
+        double D = 2 * (x3 - x2);
+        double E = 2 * (y3 - y2);
+        double F = r2 * r2 - r3 * r3 - x2 * x2 + x3 * x3 - y2 * y2 + y3 * y3;
+
+        double x = (C * E - F * B) / (E * A - B * D);
+        double y = (C * D - A * F) / (B * D - A * E);
+
+        // 변환 비율 적용
+        return new double[]{x, y};
     }
 
     private final Handler handler = new Handler() {
         private final AtomicBoolean hasBeacon = new AtomicBoolean(false);
-        private double previousDistance = -1; // Track previous distance
-        private long lastBeaconTime = System.currentTimeMillis(); // Track last time beacons were detected
+        private double previousDistance = -1;
+        private long lastBeaconTime = System.currentTimeMillis();
 
         @Override
         public void handleMessage(Message msg) {
             final StringBuilder sb = new StringBuilder();
 
-            // Reset hasBeacon to false before checking
             hasBeacon.set(false);
 
-            // Create a map to store RSSI values for each beacon
             Map<String, List<Integer>> beaconRSSIMap = new HashMap<>();
 
-            // Flag to check if any beacon with major 10011 was found
             boolean foundBeacon = false;
 
-            // Iterate through the list of beacons
             for (Beacon beacon : beaconList) {
-                String uuid = beacon.getId1().toString();
+                String address = beacon.getBluetoothAddress();
                 int major = beacon.getId2().toInt();
                 int minor = beacon.getId3().toInt();
-                String address = beacon.getBluetoothAddress();
                 int rssi = beacon.getRssi();
 
-                // Only process beacons with major and minor value 10011
                 if (major == TARGET_MAJOR_VALUE && minor == TARGET_MINOR_VALUE) {
                     foundBeacon = true;
 
-                    // Collect RSSI values for each beacon
                     if (!beaconRSSIMap.containsKey(address)) {
                         beaconRSSIMap.put(address, new ArrayList<>());
                     }
@@ -183,56 +230,86 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
                 }
             }
 
-            // If no valid beacons were found, update the last beacon detection time
             if (!foundBeacon) {
                 long currentTime = System.currentTimeMillis();
-                if (currentTime - lastBeaconTime > 1000) { // 1 second timeout
+                if (currentTime - lastBeaconTime > 1000) {
                     sb.append("No beacons with major 10011 and minor 10011 found.\n");
                 }
             } else {
-                // Process each beacon to calculate average and filter RSSI values
+                double[][] positions = new double[3][2];
+                double[] distances = new double[3];
+                int index = 0;
+
                 for (Map.Entry<String, List<Integer>> entry : beaconRSSIMap.entrySet()) {
                     String address = entry.getKey();
                     List<Integer> rssiValues = entry.getValue();
 
-                    // Double-filtering to remove outliers
                     List<Integer> filteredRSSI = doubleFilterRSSIValues(rssiValues, RSSI_FILTER_THRESHOLD);
 
                     if (!filteredRSSI.isEmpty()) {
-                        // Calculate distance using the filtered RSSI
                         double distance = calculateDistance(calculateAverageRSSI(filteredRSSI));
 
-                        // Check for sudden distance increases
                         if (previousDistance != -1 && Math.abs(distance - previousDistance) > MAX_DISTANCE_INCREASE) {
-                            // If sudden increase detected, skip this distance
                             continue;
                         }
 
+                        if (BEACON_POSITIONS.containsKey(address)) {
+                            positions[index] = BEACON_POSITIONS.get(address);
+                            distances[index] = distance;
+                            index++;
+                        }
+
                         sb.append("Beacon Bluetooth Id : ").append(address).append("\n");
-                        sb.append("Beacon UUID : ").append(entry.getKey()).append("\n");
                         sb.append("Major: ").append(TARGET_MAJOR_VALUE).append(" Minor: ").append(TARGET_MINOR_VALUE).append("\n");
                         sb.append("Distance : ").append(String.format("%.3f", distance)).append("m\n");
                         hasBeacon.set(true);
 
-                        // Update previous distance
                         previousDistance = distance;
                     }
                 }
 
-                // Update the last beacon detection time
+                if (index == 1) {
+                    positions[1] = BEACON_POSITIONS.get("beacon2");
+                    distances[1] = 3.0;
+                    index++;
+
+                    positions[2] = BEACON_POSITIONS.get("beacon3");
+                    distances[2] = 4.0;
+                    index++;
+                }
+
+                if (index == 3) {
+                    double[] position = performTrilateration(positions, distances);
+                    sb.append("\nEstimated Position:\n");
+                    sb.append("X: ").append(String.format("%.3f", position[0])).append("m\n");
+                    sb.append("Y: ").append(String.format("%.3f", position[1])).append("m\n");
+
+                    runOnUiThread(() -> {
+                        float mapWidth = customView.getWidth();
+                        float mapHeight = customView.getHeight();
+                        // 50x50 맵에서 사용자의 위치를 변환
+                        float mapX = (float) (position[0] / 50.0 * mapWidth);
+                        float mapY = (float) (position[1] / 50.0 * mapHeight);
+                        customView.updateUserPosition(mapX, mapY);
+                    });
+                }
+
                 lastBeaconTime = System.currentTimeMillis();
             }
 
-            // Ensure the UI update is on the main thread
             runOnUiThread(() -> {
-                if (hasBeacon.get()) {
-                    textView.setText(sb.toString());
+                TextView textView = findViewById(R.id.TextView);
+                if (textView != null) {
+                    if (hasBeacon.get()) {
+                        textView.setText(sb.toString());
+                    } else {
+                        textView.setText("No beacons with major 10011 and minor 10011 found.");
+                    }
                 } else {
-                    textView.setText("No beacons with major 10011 and minor 10011 found.");
+                    Log.e(TAG, "TextView is null");
                 }
             });
 
-            // Schedule the handler to call itself again in 1 second
             sendEmptyMessageDelayed(0, 1000);
         }
     };
@@ -241,9 +318,10 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == PERMISSION_REQUEST_COARSE_LOCATION) {
+        if (requestCode == PERMISSION_REQUEST_FINE_LOCATION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG, "Coarse location permission granted");
+                Log.d(TAG, "Fine location permission granted");
+                startLocationUpdates();
             } else {
                 showPermissionDeniedDialog();
             }
@@ -251,10 +329,10 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
     }
 
     private void showPermissionDeniedDialog() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Functionality limited");
-        builder.setMessage("Since location access has not been granted, this app will not be able to discover beacons.");
-        builder.setPositiveButton(android.R.string.ok, null);
-        builder.show();
+        new AlertDialog.Builder(this)
+                .setTitle("Functionality limited")
+                .setMessage("Since location access has not been granted, this app will not be able to discover beacons or use location services.")
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
     }
 }
