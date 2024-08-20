@@ -22,6 +22,7 @@ id age_restriction_submessage
 id button
 id captureButton
 id cart_button
+id confirm_button
 id custom_view
 id decreaseButton
 id deleteButton

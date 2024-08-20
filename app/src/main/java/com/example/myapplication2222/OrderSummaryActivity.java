@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,12 +29,16 @@ import java.util.List;
 
 public class OrderSummaryActivity extends AppCompatActivity implements KartriderAdapter.OnProductClickListener {
 
+    private static final int REQUEST_CODE_OCR = 1; // OcrActivity 요청 코드
+
     private RecyclerView recyclerView;
     private KartriderAdapter productAdapter;
     private TextView totalQuantityTextView, totalPriceTextView;
     private FirebaseFirestore firestore;
     private CollectionReference cartCollectionRef;
     private CollectionReference inventoryCollectionRef;
+    private boolean isAdult = false; // 성인 인증 상태를 저장하는 변수
+    private boolean isDialogShowing = false; // 다이얼로그 표시 상태
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,7 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         ArrayList<Kartrider> productList = intent.getParcelableArrayListExtra("PRODUCT_LIST");
         int totalPrice = intent.getIntExtra("TOTAL_PRICE", 0);
         int totalQuantity = intent.getIntExtra("TOTAL_QUANTITY", 0);
+        isAdult = intent.getBooleanExtra("IS_ADULT", false); // 성인 인증 상태 추가
 
         // ProductAdapter 초기화
         productAdapter = new KartriderAdapter(productList != null ? productList : new ArrayList<>(), this, this, true); // true 플래그 추가
@@ -112,27 +118,44 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
     }
 
     private void handlePayment() {
-        // 장바구니의 모든 상품을 가져와서 재고 업데이트 후 삭제
-        cartCollectionRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                QuerySnapshot querySnapshot = task.getResult();
-                if (querySnapshot != null) {
-                    ArrayList<Kartrider> cartProducts = new ArrayList<>();
-                    for (DocumentSnapshot document : querySnapshot.getDocuments()) {
-                        Kartrider cartProduct = document.toObject(Kartrider.class);
-                        if (cartProduct != null) {
-                            cartProduct.setId(document.getId()); // ensure the ID is set
-                            cartProducts.add(cartProduct);
-                        }
-                    }
-
-                    // 미성년자 구매 불가 상품 확인
-                    checkAgeRestrictedProducts(cartProducts);
-                }
-            } else {
-                Toast.makeText(OrderSummaryActivity.this, "장바구니 데이터 로드 실패", Toast.LENGTH_SHORT).show();
+        if (isAdult) {
+            // 성인 인증이 완료되었으므로 결제 처리
+            processPayment();
+        } else {
+            if (!isDialogShowing) {
+                // 성인 인증이 되지 않았으므로 OcrActivity로 이동하기 전에 다이얼로그 표시
+                showAgeRestrictionDialog();
             }
-        });
+        }
+    }
+
+    private void processPayment() {
+        if (isAdult) {
+            // 장바구니의 모든 상품을 가져와서 미성년자 구매 불가 품목 확인
+            cartCollectionRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    QuerySnapshot querySnapshot = task.getResult();
+                    if (querySnapshot != null) {
+                        ArrayList<Kartrider> cartProducts = new ArrayList<>();
+                        for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                            Kartrider cartProduct = document.toObject(Kartrider.class);
+                            if (cartProduct != null) {
+                                cartProduct.setId(document.getId()); // ensure the ID is set
+                                cartProducts.add(cartProduct);
+                            }
+                        }
+
+                        // 미성년자 구매 불가 상품 확인
+                        checkAgeRestrictedProducts(cartProducts);
+                    }
+                } else {
+                    Toast.makeText(OrderSummaryActivity.this, "장바구니 데이터 로드 실패", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            // 성인 인증이 되지 않았을 때는 결제 처리하지 않음
+            showAgeRestrictionDialog();
+        }
     }
 
     private void checkAgeRestrictedProducts(List<Kartrider> cartProducts) {
@@ -158,71 +181,56 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
             if (containsRestricted[0]) {
                 showAgeRestrictionDialog();
             } else {
-                updateInventoryAndClearCart(cartProducts);
+                // 성인 인증이 완료되었고, 미성년자 구매 불가 상품이 없으므로 결제 완료 화면으로 이동
+                navigateToPaymentSuccess();
             }
         });
     }
 
     private void showAgeRestrictionDialog() {
+        isDialogShowing = true;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(R.layout.dialog_age_verification)
-                .setPositiveButton("확인", (dialog, which) -> dialog.dismiss())
-                .show();
-    }
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_age_verification, null);
+        builder.setView(dialogView);
 
-    private void updateInventoryAndClearCart(List<Kartrider> cartProducts) {
-        ArrayList<Task<Void>> updateTasks = new ArrayList<>();
+        AlertDialog dialog = builder.create();
+        dialog.show();
 
-        for (Kartrider cartProduct : cartProducts) {
-            Task<Void> updateTask = updateInventory(cartProduct);
-            updateTasks.add(updateTask);
-        }
-
-        Tasks.whenAllComplete(updateTasks).addOnCompleteListener(allTasks -> {
-            if (allTasks.isSuccessful()) {
-                cartCollectionRef.get().addOnCompleteListener(deleteTask -> {
-                    if (deleteTask.isSuccessful()) {
-                        for (DocumentSnapshot document : deleteTask.getResult().getDocuments()) {
-                            cartCollectionRef.document(document.getId()).delete();
-                        }
-
-                        new Handler().postDelayed(() -> {
-                            Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }, 1000); // 1초 지연
-                    } else {
-                        Toast.makeText(OrderSummaryActivity.this, "장바구니 초기화 실패", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            } else {
-                Toast.makeText(OrderSummaryActivity.this, "재고 업데이트 실패", Toast.LENGTH_SHORT).show();
-            }
+        Button confirmButton = dialogView.findViewById(R.id.confirm_button);
+        confirmButton.setOnClickListener(v -> {
+            // OcrActivity를 시작하여 신분증 스캔 및 성인 인증을 수행합니다.
+            Intent intent = new Intent(OrderSummaryActivity.this, OcrActivity.class);
+            startActivityForResult(intent, REQUEST_CODE_OCR);
+            dialog.dismiss(); // 다이얼로그를 닫습니다.
         });
     }
 
-    private Task<Void> updateInventory(Kartrider cartProduct) {
-        if (cartProduct != null && cartProduct.getId() != null) {
-            return inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(task -> {
-                if (task.isSuccessful() && task.getResult() != null) {
-                    DocumentSnapshot inventoryDoc = task.getResult();
-                    if (inventoryDoc.exists()) {
-                        Long stockLong = inventoryDoc.getLong("stock");
-                        if (stockLong != null) {
-                            int currentStock = stockLong.intValue();
-                            int purchasedQuantity = cartProduct.getQuantity();
-                            int updatedStock = currentStock - purchasedQuantity;
-                            if (updatedStock < 0) {
-                                updatedStock = 0;
-                            }
-                            return inventoryCollectionRef.document(cartProduct.getId()).update("stock", updatedStock);
-                        }
-                    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE_OCR) {
+            if (resultCode == RESULT_OK) {
+                isAdult = data.getBooleanExtra("IS_ADULT", false);
+                if (isAdult) {
+                    // 성인 인증이 완료되면 결제 처리
+                    processPayment();
+                } else {
+                    Toast.makeText(this, "성인 인증에 실패했습니다.", Toast.LENGTH_SHORT).show();
                 }
-                return Tasks.forException(new Exception("재고 업데이트 실패"));
-            });
+            }
+            // 다이얼로그가 이미 닫혔으므로 상태를 초기화합니다.
+            isDialogShowing = false;
         }
-        return Tasks.forException(new Exception("상품 정보 오류"));
+    }
+
+    private void navigateToPaymentSuccess() {
+        // 결제 성공 화면으로 이동합니다.
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
+            startActivity(intent);
+            finish();
+        }, 1000); // 1초 지연
     }
 
     @Override

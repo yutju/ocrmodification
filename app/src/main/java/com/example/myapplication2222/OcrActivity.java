@@ -1,6 +1,7 @@
 package com.example.myapplication2222;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -105,18 +106,15 @@ public class OcrActivity extends AppCompatActivity {
     }
 
     private void bindPreview(ProcessCameraProvider cameraProvider) {
-        // PreviewView의 해상도를 얻기 위한 post 처리
         previewView.post(() -> {
             previewWidth = previewView.getMeasuredWidth();
             previewHeight = previewView.getMeasuredHeight();
 
-            // 프리뷰 설정
             Preview preview = new Preview.Builder()
                     .setTargetResolution(new Size(previewWidth, previewHeight))
                     .build();
             preview.setSurfaceProvider(previewView.getSurfaceProvider());
 
-            // 이미지 캡처 설정
             imageCapture = new ImageCapture.Builder()
                     .setTargetResolution(new Size(previewWidth, previewHeight))
                     .setTargetRotation(previewView.getDisplay().getRotation())
@@ -197,13 +195,12 @@ public class OcrActivity extends AppCompatActivity {
                         String dob = findDateOfBirth(recognizedText, dobPatterns);
 
                         if (dob != null) {
-                            if (isMinor(dob)) {
-                                runOnUiThread(() -> resultTextView.setText("미성년자입니다."));
-                            } else {
-                                runOnUiThread(() -> resultTextView.setText("성인입니다."));
-                            }
+                            boolean isAdult = !isMinor(dob);
+                            runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
+                            sendResult(isAdult);
                         } else {
                             runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
+                            sendResult(false);
                         }
                     })
                     .addOnFailureListener(e -> {
@@ -257,6 +254,13 @@ public class OcrActivity extends AppCompatActivity {
             age--;
         }
         return age < 19;
+    }
+
+    private void sendResult(boolean isAdult) {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("IS_ADULT", isAdult);
+        setResult(RESULT_OK, resultIntent);
+        finish();
     }
 
     @Override

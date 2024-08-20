@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\xml\\backup_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_item_kartrider.xml.flat",
         "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\item_kartrider.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\xml\\backup_rules.xml"
     },
     {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_identification.png.flat",
@@ -14,10 +14,6 @@
     {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.myapplication2222.app-debug-49:/layout_activity_ocr.xml.flat",
-        "source": "com.example.myapplication2222.app-main-51:/layout/activity_ocr.xml"
     },
     {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_order_summary.xml.flat",
@@ -74,6 +70,10 @@
     {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_inventory.xml.flat",
         "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_inventory.xml"
+    },
+    {
+        "merged": "com.example.myapplication2222.app-debug-49:/layout_dialog_age_verification.xml.flat",
+        "source": "com.example.myapplication2222.app-main-51:/layout/dialog_age_verification.xml"
     },
     {
         "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_ocr.xml.flat",

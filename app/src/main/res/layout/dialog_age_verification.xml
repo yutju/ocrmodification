@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
     android:padding="16dp"
     android:gravity="center">
 
@@ -34,4 +33,13 @@
         android:layout_below="@id/age_restriction_message"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_below="@id/age_restriction_submessage"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
