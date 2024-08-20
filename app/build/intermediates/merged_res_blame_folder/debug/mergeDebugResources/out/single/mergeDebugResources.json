@@ -1,130 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_item_kartrider.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\item_kartrider.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_ocr.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_ocr.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_identification.png.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\identification.png"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_identification.png.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\identification.png"
+        "merged": "com.example.myapplication2222.app-debug-49:/layout_activity_ocr.xml.flat",
+        "source": "com.example.myapplication2222.app-main-51:/layout/activity_ocr.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_order_summary.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_order_summary.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_payment_success.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_payment_success.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_item_background.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\item_background.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_dialog_age_verification.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\dialog_age_verification.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_map.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_map.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_ic_age_restriction.png.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\ic_age_restriction.png"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_order_summary.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_order_summary.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_mart_img_example.png.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\mart_img_example.png"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_item_kartrider.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\item_kartrider.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_inventory.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_inventory.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_ocr.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_ocr.xml"
     },
     {
-        "merged": "com.example.myapplication2222.app-debug-43:/layout_activity_map.xml.flat",
-        "source": "com.example.myapplication2222.app-main-45:/layout/activity_map.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_item_background.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\item_background.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_cart.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_smartshoppingcart.png.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\smartshoppingcart.png"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_dialog_age_verification.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\dialog_age_verification.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_item_inventory.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\item_inventory.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_payment_success.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_payment_success.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_smartshoppingcart.png.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\smartshoppingcart.png"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\drawable_mart_img_example.png.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\drawable\\mart_img_example.png"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\drawable_ic_age_restriction.png.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\drawable\\ic_age_restriction.png"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_cart.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_cart.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_activity_map.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\activity_map.xml"
     },
     {
-        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-43:\\layout_activity_inventory.xml.flat",
-        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-45:\\layout\\activity_inventory.xml"
+        "merged": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-debug-49:\\layout_item_inventory.xml.flat",
+        "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\daemon\\8.7\\com.example.myapplication2222.app-main-51:\\layout\\item_inventory.xml"
     }
 ]

@@ -3,18 +3,24 @@ package com.example.myapplication2222;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.util.Size;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.camera.core.AspectRatio;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
@@ -23,188 +29,253 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.LifecycleOwner;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.google.mlkit.vision.common.InputImage;
+import com.google.mlkit.vision.text.Text;
+import com.google.mlkit.vision.text.TextRecognition;
+import com.google.mlkit.vision.text.TextRecognizer;
+import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class OcrActivity extends AppCompatActivity {
 
-    private static final int REQUEST_CAMERA_PERMISSION = 200;
-    private static final String TAG = "OcrActivity";
-
-    private OcrProcessor ocrProcessor;
-    private ImageView imageView;
+    private static final int PERMISSION_REQUEST_CODE = 2001;
     private TextView resultTextView;
+    private ImageView imageView;
     private ProgressBar progressBar;
-    private Button captureButton;
     private PreviewView previewView;
     private ImageCapture imageCapture;
+    private ExecutorService cameraExecutor;
+    private File photoFile;
+    private ProcessCameraProvider cameraProvider;
+    private int previewWidth, previewHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocr);
 
-        imageView = findViewById(R.id.imageView);
+        Button captureButton = findViewById(R.id.captureButton);
+        Button recaptureButton = findViewById(R.id.recaptureButton);
         resultTextView = findViewById(R.id.resultTextView);
+        imageView = findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
-        captureButton = findViewById(R.id.captureButton);
         previewView = findViewById(R.id.previewView);
 
-        String dataPath = getFilesDir() + "/tesseract/";
-        ocrProcessor = new OcrProcessor(this, dataPath);
+        cameraExecutor = Executors.newSingleThreadExecutor();
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
-        } else {
+        if (allPermissionsGranted()) {
             startCamera();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
         }
 
-        captureButton.setOnClickListener(v -> {
-            if (imageCapture != null) {
-                captureImage();
-            }
-        });
+        captureButton.setOnClickListener(v -> takePhoto());
+        recaptureButton.setOnClickListener(v -> startCamera());
+    }
+
+    private boolean allPermissionsGranted() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
     private void startCamera() {
         final ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
-
         cameraProviderFuture.addListener(() -> {
             try {
-                ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
-
-                Preview preview = new Preview.Builder().build();
-                preview.setSurfaceProvider(previewView.getSurfaceProvider());
-
-                CameraSelector cameraSelector = new CameraSelector.Builder()
-                        .requireLensFacing(CameraSelector.LENS_FACING_BACK)
-                        .build();
-
-                imageCapture = new ImageCapture.Builder()
-                        .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
-                        .build();
-
-                cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture);
-
+                cameraProvider = cameraProviderFuture.get();
+                bindPreview(cameraProvider);
             } catch (ExecutionException | InterruptedException e) {
-                Log.e(TAG, "Use case binding failed", e);
+                Log.e("OcrActivity", "Camera initialization failed", e);
             }
         }, ContextCompat.getMainExecutor(this));
     }
 
-    private void captureImage() {
-        File photoFile = new File(getExternalFilesDir(null), "photo.jpg");
+    private void bindPreview(ProcessCameraProvider cameraProvider) {
+        // PreviewView의 해상도를 얻기 위한 post 처리
+        previewView.post(() -> {
+            previewWidth = previewView.getMeasuredWidth();
+            previewHeight = previewView.getMeasuredHeight();
 
+            // 프리뷰 설정
+            Preview preview = new Preview.Builder()
+                    .setTargetResolution(new Size(previewWidth, previewHeight))
+                    .build();
+            preview.setSurfaceProvider(previewView.getSurfaceProvider());
+
+            // 이미지 캡처 설정
+            imageCapture = new ImageCapture.Builder()
+                    .setTargetResolution(new Size(previewWidth, previewHeight))
+                    .setTargetRotation(previewView.getDisplay().getRotation())
+                    .build();
+
+            CameraSelector cameraSelector = new CameraSelector.Builder()
+                    .requireLensFacing(CameraSelector.LENS_FACING_BACK)
+                    .build();
+
+            cameraProvider.unbindAll();
+            cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview, imageCapture);
+        });
+    }
+
+    private void takePhoto() {
+        if (imageCapture == null) return;
+
+        photoFile = new File(getExternalFilesDir(null), "photo.jpg");
         ImageCapture.OutputFileOptions outputOptions = new ImageCapture.OutputFileOptions.Builder(photoFile).build();
-        imageCapture.takePicture(outputOptions, ContextCompat.getMainExecutor(this), new ImageCapture.OnImageSavedCallback() {
+
+        imageCapture.takePicture(outputOptions, cameraExecutor, new ImageCapture.OnImageSavedCallback() {
             @Override
             public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
-                Log.d(TAG, "Image capture succeeded: " + photoFile.getAbsolutePath());
-                processImage(photoFile);
+                runOnUiThread(() -> {
+                    Toast.makeText(OcrActivity.this, "사진이 저장되었습니다.", Toast.LENGTH_SHORT).show();
+                    updateImageView(Uri.fromFile(photoFile));
+                    cameraProvider.unbindAll();
+                });
+                Log.d("OcrActivity", "Photo saved at: " + photoFile.getAbsolutePath());
+                processImage(Uri.fromFile(photoFile));
             }
 
             @Override
             public void onError(@NonNull ImageCaptureException exception) {
-                Log.e(TAG, "Image capture failed", exception);
+                runOnUiThread(() -> Toast.makeText(OcrActivity.this, "사진 저장 실패", Toast.LENGTH_SHORT).show());
+                Log.e("OcrActivity", "Photo capture failed", exception);
             }
         });
     }
 
-    private void processImage(File file) {
+    private void updateImageView(Uri photoUri) {
         try {
-            Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.fromFile(file));
-            if (imageBitmap != null) {
-                runOnUiThread(() -> {
-                    imageView.setImageBitmap(imageBitmap);
-                    imageView.setVisibility(View.VISIBLE);
-                });
-
-                progressBar.setVisibility(View.VISIBLE);
-                resultTextView.setText("");
-                imageView.setVisibility(View.VISIBLE);
-
-                new Thread(() -> {
-                    try {
-                        Bitmap preprocessedBitmap = ocrProcessor.preprocessImage(imageBitmap);
-                        String extractedText = ocrProcessor.extractText(preprocessedBitmap);
-                        runOnUiThread(() -> {
-                            progressBar.setVisibility(View.GONE);
-                            if (extractedText != null && !extractedText.isEmpty()) {
-                                resultTextView.setText(extractedText);
-                                IdentityInfo identityInfo = ocrProcessor.extractIdentityInfo(preprocessedBitmap);
-                                displayIdentityInfo(identityInfo);
-                            } else {
-                                resultTextView.setText("텍스트를 인식하지 못했습니다.");
-                            }
-                        });
-                    } catch (Exception e) {
-                        runOnUiThread(() -> {
-                            progressBar.setVisibility(View.GONE);
-                            resultTextView.setText("OCR 처리 중 오류가 발생했습니다.");
-                            Toast.makeText(OcrActivity.this, "OCR 처리 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show();
-                        });
-                        e.printStackTrace();
-                    }
-                }).start();
-            }
+            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(photoUri));
+            Bitmap rotatedBitmap = rotateBitmap(bitmap, 90); // 이미지를 90도 회전
+            imageView.setImageBitmap(rotatedBitmap);
         } catch (IOException e) {
             e.printStackTrace();
+            Toast.makeText(OcrActivity.this, "이미지 로드 실패", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void displayIdentityInfo(IdentityInfo identityInfo) {
-        if (identityInfo != null) {
-            String info = "이름: " + (identityInfo.getName() != null ? identityInfo.getName() : "정보 없음") +
-                    "\n생년월일: " + (identityInfo.getBirthDate() != null ? identityInfo.getBirthDate() : "정보 없음") +
-                    "\n주민등록번호: " + (identityInfo.getIdNumber() != null ? identityInfo.getIdNumber() : "정보 없음");
+    private Bitmap rotateBitmap(Bitmap bitmap, int degrees) {
+        if (degrees == 0) {
+            return bitmap;
+        }
+        Matrix matrix = new Matrix();
+        matrix.postRotate(degrees);
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+    }
 
-            resultTextView.append("\n" + info);
-            checkAge(identityInfo.getBirthDate());
+    private void processImage(Uri imageUri) {
+        try {
+            InputImage image = InputImage.fromFilePath(this, imageUri);
+            TextRecognizer recognizer =
+                    TextRecognition.getClient(new KoreanTextRecognizerOptions.Builder().build());
+
+            recognizer.process(image)
+                    .addOnSuccessListener(text -> {
+                        String recognizedText = text.getText();
+                        Log.d("OcrActivity", "Recognized text: " + recognizedText);
+
+                        String[] dobPatterns = {
+                                "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b",
+                                "\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b",
+                                "\\b(\\d{6})\\b"  // 추가된 패턴
+                        };
+
+                        String dob = findDateOfBirth(recognizedText, dobPatterns);
+
+                        if (dob != null) {
+                            if (isMinor(dob)) {
+                                runOnUiThread(() -> resultTextView.setText("미성년자입니다."));
+                            } else {
+                                runOnUiThread(() -> resultTextView.setText("성인입니다."));
+                            }
+                        } else {
+                            runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
+                        }
+                    })
+                    .addOnFailureListener(e -> {
+                        runOnUiThread(() -> Toast.makeText(OcrActivity.this, "텍스트 인식 실패", Toast.LENGTH_SHORT).show());
+                        Log.e("OcrActivity", "Text recognition failed", e);
+                    });
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "이미지 처리 실패", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void checkAge(String birthDate) {
-        if (birthDate == null) {
-            resultTextView.append("\n연도 정보를 찾을 수 없습니다.");
-            return;
-        }
-
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-
-        if (birthDate.matches("\\d{4}-\\d{2}-\\d{2}")) {
-            int birthYear = Integer.parseInt(birthDate.split("-")[0]);
-            int age = currentYear - birthYear;
-
-            if (age >= 18) {
-                resultTextView.append("\n성인입니다.");
-            } else {
-                resultTextView.append("\n미성년자입니다.");
+    private String findDateOfBirth(String text, String[] patterns) {
+        for (String pattern : patterns) {
+            Pattern regex = Pattern.compile(pattern);
+            Matcher matcher = regex.matcher(text);
+            if (matcher.find()) {
+                return matcher.group();
             }
-        } else {
-            resultTextView.append("\n유효한 생년월일 형식이 아닙니다.");
         }
+        return null;
+    }
+
+    private boolean isMinor(String dobString) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        Date dob;
+        try {
+            if (dobString.length() == 6) {
+                dob = new SimpleDateFormat("yyMMdd", Locale.getDefault()).parse(dobString);
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(dob);
+                int year = cal.get(Calendar.YEAR);
+                int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+                if (year < currentYear - 100) {
+                    year += 100;
+                }
+                cal.set(Calendar.YEAR, year);
+                dob = cal.getTime();
+            } else {
+                dob = sdf.parse(dobString.replaceAll("[^0-9]", "-"));
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        Calendar dobCal = Calendar.getInstance();
+        dobCal.setTime(dob);
+        int age = Calendar.getInstance().get(Calendar.YEAR) - dobCal.get(Calendar.YEAR);
+        if (Calendar.getInstance().get(Calendar.DAY_OF_YEAR) < dobCal.get(Calendar.DAY_OF_YEAR)) {
+            age--;
+        }
+        return age < 19;
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ocrProcessor.release(); // Release resources when activity is destroyed
+        if (cameraExecutor != null) {
+            cameraExecutor.shutdown();
+        }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CAMERA_PERMISSION) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            if (allPermissionsGranted()) {
                 startCamera();
-                Toast.makeText(this, "카메라 권한이 허용되었습니다.", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "카메라 권한이 거부되었습니다.", Toast.LENGTH_SHORT).show();
+                runOnUiThread(() -> Toast.makeText(this, "권한이 필요합니다.", Toast.LENGTH_SHORT).show());
+                finish();
             }
         }
     }

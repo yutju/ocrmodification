@@ -48,6 +48,7 @@ id product_info_text
 id progressBar
 id quantityTextView
 id quantity_text
+id recaptureButton
 id recycler_view
 id recycler_view_order_summary
 id relativeLayout

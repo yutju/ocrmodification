@@ -1,4 +1,4 @@
-package com.example.myapplication2222;
+/*package com.example.myapplication2222;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.util.Log;
 
+import com.example.myapplication2222.IdentityInfo;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.io.File;
@@ -154,3 +155,4 @@ public class OcrProcessor {
         return Bitmap.createBitmap(bitmap, rect.left, rect.top, rect.width(), rect.height());
     }
 }
+*/

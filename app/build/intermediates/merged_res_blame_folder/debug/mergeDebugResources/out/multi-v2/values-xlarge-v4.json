@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplication2222.app-mergeDebugResources-41:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.example.myapplication2222.app-mergeDebugResources-47:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\b8171cf630e5e86674b4df716d7cd537\\transformed\\appcompat-1.5.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\c955f1a46d2a5f0ba146ea1ed7df293c\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

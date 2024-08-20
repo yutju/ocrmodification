@@ -9,10 +9,9 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
 
-    <!-- 기능 선언 -->
-    <uses-feature android:name="android.hardware.camera.autofocus" />
     <!-- 블루투스 LE 기능을 사용하는 경우 명시 -->
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 
@@ -44,7 +43,10 @@
         <activity android:name=".OrderSummaryActivity" />
         <activity android:name=".PaymentSuccessActivity" />
         <activity android:name=".InventoryActivity" />
-
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="ocr" />
+        <!-- To use multiple models: android:value="ocr,model2,model3" -->
         <!-- BeaconService 명시적 선언 추가 -->
         <service
             android:name="org.altbeacon.beacon.service.BeaconService"
