@@ -1,13 +1,13 @@
 package com.example.myapplication2222;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.CollectionReference;
@@ -21,6 +21,9 @@ import java.util.List;
 public class PaymentSuccessActivity extends AppCompatActivity {
 
     private static final int DELAY_MILLIS = 2000; // 2초 지연 시간
+    private static final String PREFS_NAME = "MyPrefs";
+    private static final String KEY_IS_ADULT = "is_adult";
+
     private FirebaseFirestore firestore;
     private CollectionReference cartCollectionRef;
     private CollectionReference inventoryCollectionRef;
@@ -38,9 +41,12 @@ public class PaymentSuccessActivity extends AppCompatActivity {
         clearCart();
         updateInventory();
 
-        // 일정 시간 후에 초기 화면으로 돌아가는 코드
+        // 성인 인증 상태 초기화
+        resetAdultStatus();
+
+        // 일정 시간 후에 MainActivity로 돌아가는 코드
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(PaymentSuccessActivity.this, MainActivity.class); // 초기 화면으로 이동
+            Intent intent = new Intent(PaymentSuccessActivity.this, MainActivity.class); // MainActivity로 이동
             startActivity(intent);
             finish(); // 현재 Activity 종료
         }, DELAY_MILLIS);
@@ -59,6 +65,7 @@ public class PaymentSuccessActivity extends AppCompatActivity {
             }
         });
     }
+
     private void updateInventory() {
         cartCollectionRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -111,7 +118,10 @@ public class PaymentSuccessActivity extends AppCompatActivity {
         });
     }
 
-
-
-
+    private void resetAdultStatus() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(KEY_IS_ADULT, false); // 인증 상태를 초기화
+        editor.apply();
+    }
 }

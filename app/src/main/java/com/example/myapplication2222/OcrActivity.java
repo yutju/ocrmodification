@@ -21,7 +21,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.camera.core.AspectRatio;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
@@ -35,8 +34,8 @@ import androidx.lifecycle.LifecycleOwner;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.text.Text;
-import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
+import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
 
 import java.io.File;
@@ -70,6 +69,7 @@ public class OcrActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocr);
 
+        // Initialize UI components
         Button captureButton = findViewById(R.id.captureButton);
         Button recaptureButton = findViewById(R.id.recaptureButton);
         resultTextView = findViewById(R.id.resultTextView);
@@ -77,24 +77,29 @@ public class OcrActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         previewView = findViewById(R.id.previewView);
 
+        // Initialize the camera executor
         cameraExecutor = Executors.newSingleThreadExecutor();
 
+        // Check for camera permissions
         if (allPermissionsGranted()) {
             startCamera();
         } else {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
         }
 
+        // Set button listeners
         captureButton.setOnClickListener(v -> takePhoto());
         recaptureButton.setOnClickListener(v -> startCamera());
     }
 
+    // Check if all necessary permissions are granted
     private boolean allPermissionsGranted() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
+    // Start the camera and bind to the lifecycle
     private void startCamera() {
-        final ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
+        ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(() -> {
             try {
                 cameraProvider = cameraProviderFuture.get();
@@ -105,6 +110,7 @@ public class OcrActivity extends AppCompatActivity {
         }, ContextCompat.getMainExecutor(this));
     }
 
+    // Bind the preview and image capture to the camera lifecycle
     private void bindPreview(ProcessCameraProvider cameraProvider) {
         previewView.post(() -> {
             previewWidth = previewView.getMeasuredWidth();
@@ -129,6 +135,7 @@ public class OcrActivity extends AppCompatActivity {
         });
     }
 
+    // Capture a photo and save it
     private void takePhoto() {
         if (imageCapture == null) return;
 
@@ -155,10 +162,11 @@ public class OcrActivity extends AppCompatActivity {
         });
     }
 
+    // Update the ImageView with the captured photo
     private void updateImageView(Uri photoUri) {
         try {
             Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(photoUri));
-            Bitmap rotatedBitmap = rotateBitmap(bitmap, 90); // 이미지를 90도 회전
+            Bitmap rotatedBitmap = rotateBitmap(bitmap, 90); // Rotate the image by 90 degrees
             imageView.setImageBitmap(rotatedBitmap);
         } catch (IOException e) {
             e.printStackTrace();
@@ -166,6 +174,7 @@ public class OcrActivity extends AppCompatActivity {
         }
     }
 
+    // Rotate the bitmap by the specified degrees
     private Bitmap rotateBitmap(Bitmap bitmap, int degrees) {
         if (degrees == 0) {
             return bitmap;
@@ -175,21 +184,22 @@ public class OcrActivity extends AppCompatActivity {
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
+    // Process the captured image and perform OCR
     private void processImage(Uri imageUri) {
         try {
             InputImage image = InputImage.fromFilePath(this, imageUri);
-            TextRecognizer recognizer =
-                    TextRecognition.getClient(new KoreanTextRecognizerOptions.Builder().build());
+            TextRecognizer recognizer = TextRecognition.getClient(new KoreanTextRecognizerOptions.Builder().build());
 
             recognizer.process(image)
                     .addOnSuccessListener(text -> {
                         String recognizedText = text.getText();
                         Log.d("OcrActivity", "Recognized text: " + recognizedText);
 
+                        // Define patterns for date of birth
                         String[] dobPatterns = {
                                 "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b",
                                 "\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b",
-                                "\\b(\\d{6})\\b"  // 추가된 패턴
+                                "\\b(\\d{6})\\b"  // Add more patterns as needed
                         };
 
                         String dob = findDateOfBirth(recognizedText, dobPatterns);
@@ -213,6 +223,7 @@ public class OcrActivity extends AppCompatActivity {
         }
     }
 
+    // Find the date of birth in the recognized text based on regex patterns
     private String findDateOfBirth(String text, String[] patterns) {
         for (String pattern : patterns) {
             Pattern regex = Pattern.compile(pattern);
@@ -224,6 +235,7 @@ public class OcrActivity extends AppCompatActivity {
         return null;
     }
 
+    // Check if the date of birth indicates a minor
     private boolean isMinor(String dobString) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         Date dob;
@@ -256,6 +268,7 @@ public class OcrActivity extends AppCompatActivity {
         return age < 19;
     }
 
+    // Send the result back to the calling activity
     private void sendResult(boolean isAdult) {
         Intent resultIntent = new Intent();
         resultIntent.putExtra("IS_ADULT", isAdult);

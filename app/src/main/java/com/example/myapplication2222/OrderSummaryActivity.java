@@ -1,6 +1,7 @@
 package com.example.myapplication2222;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,6 +31,8 @@ import java.util.List;
 public class OrderSummaryActivity extends AppCompatActivity implements KartriderAdapter.OnProductClickListener {
 
     private static final int REQUEST_CODE_OCR = 1; // OcrActivity 요청 코드
+    private static final String PREFS_NAME = "MyPrefs";
+    private static final String KEY_IS_ADULT = "is_adult";
 
     private RecyclerView recyclerView;
     private KartriderAdapter productAdapter;
@@ -37,13 +40,17 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
     private FirebaseFirestore firestore;
     private CollectionReference cartCollectionRef;
     private CollectionReference inventoryCollectionRef;
-    private boolean isAdult = false; // 성인 인증 상태를 저장하는 변수
+    private boolean isAdult; // 성인 인증 상태를 저장하는 변수
     private boolean isDialogShowing = false; // 다이얼로그 표시 상태
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_summary);
+
+        // SharedPreferences에서 성인 인증 상태 로드
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        isAdult = prefs.getBoolean(KEY_IS_ADULT, false);
 
         // RecyclerView 초기화
         recyclerView = findViewById(R.id.recycler_view_order_summary);
@@ -54,7 +61,6 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         ArrayList<Kartrider> productList = intent.getParcelableArrayListExtra("PRODUCT_LIST");
         int totalPrice = intent.getIntExtra("TOTAL_PRICE", 0);
         int totalQuantity = intent.getIntExtra("TOTAL_QUANTITY", 0);
-        isAdult = intent.getBooleanExtra("IS_ADULT", false); // 성인 인증 상태 추가
 
         // ProductAdapter 초기화
         productAdapter = new KartriderAdapter(productList != null ? productList : new ArrayList<>(), this, this, true); // true 플래그 추가
@@ -122,66 +128,62 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
             // 성인 인증이 완료되었으므로 결제 처리
             processPayment();
         } else {
+            // 성인 인증이 필요할 때만 다이얼로그를 표시
             if (!isDialogShowing) {
-                // 성인 인증이 되지 않았으므로 OcrActivity로 이동하기 전에 다이얼로그 표시
                 showAgeRestrictionDialog();
             }
         }
     }
 
     private void processPayment() {
-        if (isAdult) {
-            // 장바구니의 모든 상품을 가져와서 미성년자 구매 불가 품목 확인
-            cartCollectionRef.get().addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
-                    QuerySnapshot querySnapshot = task.getResult();
-                    if (querySnapshot != null) {
-                        ArrayList<Kartrider> cartProducts = new ArrayList<>();
-                        for (DocumentSnapshot document : querySnapshot.getDocuments()) {
-                            Kartrider cartProduct = document.toObject(Kartrider.class);
-                            if (cartProduct != null) {
-                                cartProduct.setId(document.getId()); // ensure the ID is set
-                                cartProducts.add(cartProduct);
-                            }
+        // 장바구니의 모든 상품을 가져와서 미성년자 구매 불가 품목 확인
+        cartCollectionRef.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                QuerySnapshot querySnapshot = task.getResult();
+                if (querySnapshot != null) {
+                    ArrayList<Kartrider> cartProducts = new ArrayList<>();
+                    for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                        Kartrider cartProduct = document.toObject(Kartrider.class);
+                        if (cartProduct != null) {
+                            cartProduct.setId(document.getId()); // ensure the ID is set
+                            cartProducts.add(cartProduct);
                         }
-
-                        // 미성년자 구매 불가 상품 확인
-                        checkAgeRestrictedProducts(cartProducts);
                     }
-                } else {
-                    Toast.makeText(OrderSummaryActivity.this, "장바구니 데이터 로드 실패", Toast.LENGTH_SHORT).show();
+
+                    // 미성년자 구매 불가 상품 확인
+                    checkAgeRestrictedProducts(cartProducts);
                 }
-            });
-        } else {
-            // 성인 인증이 되지 않았을 때는 결제 처리하지 않음
-            showAgeRestrictionDialog();
-        }
+            } else {
+                Toast.makeText(OrderSummaryActivity.this, "장바구니 데이터 로드 실패", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void checkAgeRestrictedProducts(List<Kartrider> cartProducts) {
-        List<Task<Void>> checkTasks = new ArrayList<>();
+        List<Task<DocumentSnapshot>> checkTasks = new ArrayList<>();
         boolean[] containsRestricted = {false}; // 배열로 변경하여 람다에서 수정 가능하게 함
 
         for (Kartrider cartProduct : cartProducts) {
             if (cartProduct != null && cartProduct.getId() != null) {
-                Task<Void> checkTask = inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(task -> {
+                Task<DocumentSnapshot> checkTask = inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(task -> {
                     if (task.isSuccessful() && task.getResult() != null) {
                         DocumentSnapshot inventoryDoc = task.getResult();
                         if (inventoryDoc.exists() && "No".equals(inventoryDoc.getString("allow"))) {
                             containsRestricted[0] = true;
                         }
                     }
-                    return null;
+                    return task;
                 });
                 checkTasks.add(checkTask);
             }
         }
 
         Tasks.whenAllComplete(checkTasks).addOnCompleteListener(allTasks -> {
-            if (containsRestricted[0]) {
+            if (containsRestricted[0] && !isAdult) {
+                // 미성년자 구매 불가 품목이 있는데 성인 인증이 되지 않았을 경우
                 showAgeRestrictionDialog();
             } else {
-                // 성인 인증이 완료되었고, 미성년자 구매 불가 상품이 없으므로 결제 완료 화면으로 이동
+                // 미성년자 구매 불가 품목이 없거나, 성인 인증이 완료된 경우
                 navigateToPaymentSuccess();
             }
         });
@@ -212,8 +214,14 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         if (requestCode == REQUEST_CODE_OCR) {
             if (resultCode == RESULT_OK) {
                 isAdult = data.getBooleanExtra("IS_ADULT", false);
+                SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean(KEY_IS_ADULT, isAdult);
+                editor.apply();
+
                 if (isAdult) {
-                    // 성인 인증이 완료되면 결제 처리
+                    // 성인 인증이 완료되었으면 인증 완료 메시지 표시 후 결제 처리
+                    Toast.makeText(this, "성인 인증이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                     processPayment();
                 } else {
                     Toast.makeText(this, "성인 인증에 실패했습니다.", Toast.LENGTH_SHORT).show();
@@ -224,18 +232,24 @@ public class OrderSummaryActivity extends AppCompatActivity implements Kartrider
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 성인 인증 상태를 재확인
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        isAdult = prefs.getBoolean(KEY_IS_ADULT, false);
+    }
+
     private void navigateToPaymentSuccess() {
-        // 결제 성공 화면으로 이동합니다.
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
-            startActivity(intent);
-            finish();
-        }, 1000); // 1초 지연
+        Intent intent = new Intent(OrderSummaryActivity.this, PaymentSuccessActivity.class);
+        startActivity(intent);
+        finish(); // 현재 Activity 종료
     }
 
     @Override
     public void onProductDeleteClick(int position) {
         // 상품 삭제 처리 로직 추가
+        Toast.makeText(this, "상품 삭제 클릭: " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
