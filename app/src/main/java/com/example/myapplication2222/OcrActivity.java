@@ -54,6 +54,8 @@ import java.util.concurrent.Executors;
 public class OcrActivity extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_CODE = 2001;
+    private static final int REQUEST_CODE_CAPTURE_IMAGE = 1001;
+
     private TextView resultTextView;
     private ImageView imageView;
     private ProgressBar progressBar;

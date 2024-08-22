@@ -86,5 +86,14 @@ public class Kartrider implements Parcelable {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-}
 
+    @Override
+    public String toString() {
+        return "Kartrider{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
+}

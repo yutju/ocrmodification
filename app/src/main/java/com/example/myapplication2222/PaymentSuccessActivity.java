@@ -5,28 +5,27 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-
+import com.google.firebase.firestore.WriteBatch;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentSuccessActivity extends AppCompatActivity {
 
-    private static final int DELAY_MILLIS = 2000; // 2초 지연 시간
+    private static final int DELAY_MILLIS = 2000; // 2 seconds delay
     private static final String PREFS_NAME = "MyPrefs";
     private static final String KEY_IS_ADULT = "is_adult";
 
     private FirebaseFirestore firestore;
     private CollectionReference cartCollectionRef;
     private CollectionReference inventoryCollectionRef;
+    private boolean isProcessing = true; // Track if processing is ongoing
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,83 +36,91 @@ public class PaymentSuccessActivity extends AppCompatActivity {
         cartCollectionRef = firestore.collection("kartrider");
         inventoryCollectionRef = firestore.collection("inventory");
 
-        // 장바구니 비우기 및 재고 업데이트
-        clearCart();
-        updateInventory();
-
-        // 성인 인증 상태 초기화
+        // Start the update inventory and clear cart process
+        updateInventoryAndClearCart();
+        // Reset adult status
         resetAdultStatus();
-
-        // 일정 시간 후에 MainActivity로 돌아가는 코드
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(PaymentSuccessActivity.this, MainActivity.class); // MainActivity로 이동
-            startActivity(intent);
-            finish(); // 현재 Activity 종료
-        }, DELAY_MILLIS);
     }
 
-    private void clearCart() {
-        cartCollectionRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                for (DocumentSnapshot document : task.getResult().getDocuments()) {
-                    cartCollectionRef.document(document.getId()).delete()
-                            .addOnSuccessListener(aVoid -> Log.d("PaymentSuccess", "Cart item deleted"))
-                            .addOnFailureListener(e -> Log.e("PaymentSuccess", "Failed to delete cart item", e));
-                }
-            } else {
-                Log.e("PaymentSuccess", "Failed to clear cart", task.getException());
-            }
-        });
-    }
-
-    private void updateInventory() {
+    private void updateInventoryAndClearCart() {
         cartCollectionRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 List<Task<Void>> updateTasks = new ArrayList<>();
+                WriteBatch batch = firestore.batch();
+
+                Log.d("PaymentSuccess", "Retrieved cart data successfully.");
+
                 for (DocumentSnapshot document : task.getResult().getDocuments()) {
                     Kartrider cartProduct = document.toObject(Kartrider.class);
                     if (cartProduct != null && cartProduct.getId() != null) {
-                        Task<Void> updateTask = inventoryCollectionRef.document(cartProduct.getId()).get().continueWithTask(inventoryTask -> {
-                            if (inventoryTask.isSuccessful() && inventoryTask.getResult() != null) {
-                                DocumentSnapshot inventoryDoc = inventoryTask.getResult();
+                        String productId = cartProduct.getId();
+                        int quantityInCart = cartProduct.getQuantity();
+
+                        Log.d("PaymentSuccess", "Processing product ID: " + productId + " with quantity: " + quantityInCart);
+
+                        DocumentReference inventoryDocRef = inventoryCollectionRef.document(productId);
+                        Task<DocumentSnapshot> inventoryTask = inventoryDocRef.get();
+                        updateTasks.add(inventoryTask.continueWithTask(inventorySnapshotTask -> {
+                            if (inventorySnapshotTask.isSuccessful()) {
+                                DocumentSnapshot inventoryDoc = inventorySnapshotTask.getResult();
                                 if (inventoryDoc.exists()) {
-                                    Long currentStockLong = inventoryDoc.getLong("stock"); // Firestore에서 가져온 재고 수량
-                                    int quantityInCart = cartProduct.getQuantity(); // 장바구니에서 가져온 수량 (int로 가져온다고 가정)
-
-                                    // Null 체크 및 변환
+                                    Long currentStockLong = inventoryDoc.getLong("stock");
                                     if (currentStockLong != null) {
-                                        int currentStock = currentStockLong.intValue(); // Long을 int로 변환
-
-                                        // 현재 재고와 장바구니 수량을 비교하여 재고 업데이트
+                                        int currentStock = currentStockLong.intValue();
                                         if (currentStock >= quantityInCart) {
-                                            return inventoryDoc.getReference().update("stock", currentStockLong - quantityInCart);
+                                            long updatedStock = currentStock - quantityInCart;
+                                            batch.update(inventoryDocRef, "stock", updatedStock);
+                                            Log.d("PaymentSuccess", "Stock updated for product ID: " + productId);
                                         } else {
-                                            // 재고 부족 상황 처리
-                                            Log.w("PaymentSuccess", "Stock not sufficient for: " + cartProduct.getName());
-                                            return Tasks.forException(new Exception("Stock not sufficient"));
+                                            Log.w("PaymentSuccess", "Insufficient stock for product ID: " + productId);
                                         }
                                     } else {
-                                        // 재고가 null인 경우 처리
-                                        Log.w("PaymentSuccess", "Current stock is null.");
-                                        return Tasks.forException(new Exception("Invalid stock"));
+                                        Log.w("PaymentSuccess", "Current stock is null for product ID: " + productId);
                                     }
+                                } else {
+                                    Log.w("PaymentSuccess", "Inventory document does not exist for product ID: " + productId);
                                 }
+                                // Add cart item deletion to batch
+                                batch.delete(cartCollectionRef.document(document.getId()));
+                                Log.d("PaymentSuccess", "Cart item scheduled for deletion with document ID: " + document.getId());
+                                return Tasks.forResult(null); // Continue the task chain
+                            } else {
+                                Log.e("PaymentSuccess", "Failed to get inventory document for product ID: " + productId, inventorySnapshotTask.getException());
+                                return Tasks.forException(inventorySnapshotTask.getException()); // Fail the chain
                             }
-                            return null;
-                        });
-                        updateTasks.add(updateTask);
+                        }));
+                    } else {
+                        Log.w("PaymentSuccess", "Cart product is null or has an invalid ID.");
                     }
                 }
 
-                Tasks.whenAllComplete(updateTasks).addOnCompleteListener(updateAllTasks -> {
-                    if (updateAllTasks.isSuccessful()) {
-                        Log.d("PaymentSuccess", "Inventory updated successfully");
+                // Wait for all inventory update tasks to complete
+                Tasks.whenAllComplete(updateTasks).addOnCompleteListener(allTasks -> {
+                    if (allTasks.isSuccessful()) {
+                        // Commit the batch write after all tasks are complete
+                        batch.commit().addOnCompleteListener(batchCommitTask -> {
+                            if (batchCommitTask.isSuccessful()) {
+                                Log.d("PaymentSuccess", "Batch commit successful.");
+                                isProcessing = false; // Processing is complete
+                                // Delay before starting MainActivity
+                                new Handler().postDelayed(() -> {
+                                    Intent intent = new Intent(PaymentSuccessActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }, DELAY_MILLIS);
+                            } else {
+                                Log.e("PaymentSuccess", "Failed to commit batch", batchCommitTask.getException());
+                                isProcessing = false; // Processing is complete even on failure
+                            }
+                        });
                     } else {
-                        Log.e("PaymentSuccess", "Failed to update inventory", updateAllTasks.getException());
+                        Log.e("PaymentSuccess", "Failed to update inventory and clear cart", allTasks.getException());
+                        isProcessing = false; // Processing is complete even on failure
                     }
                 });
             } else {
                 Log.e("PaymentSuccess", "Failed to retrieve cart data", task.getException());
+                isProcessing = false; // Processing is complete even on failure
             }
         });
     }
@@ -121,7 +128,25 @@ public class PaymentSuccessActivity extends AppCompatActivity {
     private void resetAdultStatus() {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(KEY_IS_ADULT, false); // 인증 상태를 초기화
+        editor.putBoolean(KEY_IS_ADULT, false); // Reset adult status
         editor.apply();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (isProcessing) {
+            // Additional logic to handle activity pausing during processing
+            Log.d("PaymentSuccess", "Activity paused during processing.");
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (isProcessing) {
+            // Additional logic to handle activity stopping during processing
+            Log.d("PaymentSuccess", "Activity stopped during processing.");
+        }
     }
 }
