@@ -3386,7 +3386,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id guideTextView
 id header_title
 id hide_ime_id
 id hideable
@@ -3507,7 +3506,6 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id ocr_button
 id off
 id on
 id onInterceptTouchReturnSwipe

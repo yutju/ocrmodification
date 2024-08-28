@@ -56,16 +56,7 @@
         android:layout_below="@id/cart_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
-
-    <Button
-        android:id="@+id/ocr_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="신분증 인식"
-        android:textSize="30sp"
-        android:layout_below="@id/stock_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+    
 
 </RelativeLayout>
 

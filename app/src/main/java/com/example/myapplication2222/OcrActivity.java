@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Size;
-import android.view.View;
+import android.view.Display;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -19,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
@@ -33,7 +33,6 @@ import androidx.lifecycle.LifecycleOwner;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.common.InputImage;
-import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
@@ -54,7 +53,6 @@ import java.util.concurrent.Executors;
 public class OcrActivity extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_CODE = 2001;
-    private static final int REQUEST_CODE_CAPTURE_IMAGE = 1001;
 
     private TextView resultTextView;
     private ImageView imageView;
@@ -64,14 +62,13 @@ public class OcrActivity extends AppCompatActivity {
     private ExecutorService cameraExecutor;
     private File photoFile;
     private ProcessCameraProvider cameraProvider;
-    private int previewWidth, previewHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocr);
 
-        // Initialize UI components
+        // UI 컴포넌트 초기화
         Button captureButton = findViewById(R.id.captureButton);
         Button recaptureButton = findViewById(R.id.recaptureButton);
         resultTextView = findViewById(R.id.resultTextView);
@@ -79,27 +76,55 @@ public class OcrActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         previewView = findViewById(R.id.previewView);
 
-        // Initialize the camera executor
+        // 카메라 실행자를 초기화
         cameraExecutor = Executors.newSingleThreadExecutor();
 
-        // Check for camera permissions
+        // 화면 크기에 맞춰 UI 컴포넌트 크기 조정
+        adjustLayoutForScreenSize();
+
+        // 카메라 권한 확인
         if (allPermissionsGranted()) {
             startCamera();
         } else {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
         }
 
-        // Set button listeners
+        // 버튼 리스너 설정
         captureButton.setOnClickListener(v -> takePhoto());
         recaptureButton.setOnClickListener(v -> startCamera());
     }
 
-    // Check if all necessary permissions are granted
+    // 화면 크기에 맞게 레이아웃 조정
+    private void adjustLayoutForScreenSize() {
+        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        android.graphics.Point size = new android.graphics.Point();
+        display.getSize(size);
+        int screenWidth = size.x;
+        int screenHeight = size.y;
+
+        // 16:9 비율로 높이 계산
+        int viewWidth = screenWidth / 2;
+        int viewHeight = (viewWidth * 9) / 16;
+
+        // PreviewView와 ImageView의 너비와 높이를 16:9 비율로 설정
+        ViewGroup.LayoutParams previewLayoutParams = previewView.getLayoutParams();
+        previewLayoutParams.width = viewWidth;
+        previewLayoutParams.height = viewHeight;
+        previewView.setLayoutParams(previewLayoutParams);
+
+        ViewGroup.LayoutParams imageViewLayoutParams = imageView.getLayoutParams();
+        imageViewLayoutParams.width = viewWidth;
+        imageViewLayoutParams.height = viewHeight;
+        imageView.setLayoutParams(imageViewLayoutParams);
+    }
+
+    // 필요한 모든 권한이 부여되었는지 확인
     private boolean allPermissionsGranted() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
-    // Start the camera and bind to the lifecycle
+    // 카메라 시작 및 생명 주기에 바인드
     private void startCamera() {
         ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(() -> {
@@ -107,25 +132,26 @@ public class OcrActivity extends AppCompatActivity {
                 cameraProvider = cameraProviderFuture.get();
                 bindPreview(cameraProvider);
             } catch (ExecutionException | InterruptedException e) {
-                Log.e("OcrActivity", "Camera initialization failed", e);
+                Log.e("OcrActivity", "카메라 초기화 실패", e);
             }
         }, ContextCompat.getMainExecutor(this));
     }
 
-    // Bind the preview and image capture to the camera lifecycle
+    // 프리뷰와 이미지 캡처를 카메라 생명주기에 바인딩
     private void bindPreview(ProcessCameraProvider cameraProvider) {
         previewView.post(() -> {
-            previewWidth = previewView.getMeasuredWidth();
-            previewHeight = previewView.getMeasuredHeight();
+            int previewWidth = previewView.getMeasuredWidth();
+            int previewHeight = previewView.getMeasuredHeight();
 
             Preview preview = new Preview.Builder()
                     .setTargetResolution(new Size(previewWidth, previewHeight))
                     .build();
             preview.setSurfaceProvider(previewView.getSurfaceProvider());
 
+            // 디바이스의 디스플레이 회전에 맞게 타겟 회전을 설정
             imageCapture = new ImageCapture.Builder()
                     .setTargetResolution(new Size(previewWidth, previewHeight))
-                    .setTargetRotation(previewView.getDisplay().getRotation())
+                    .setTargetRotation(previewView.getDisplay().getRotation()) // 회전을 디바이스에 맞춤
                     .build();
 
             CameraSelector cameraSelector = new CameraSelector.Builder()
@@ -137,7 +163,7 @@ public class OcrActivity extends AppCompatActivity {
         });
     }
 
-    // Capture a photo and save it
+    // 사진을 캡처하고 저장
     private void takePhoto() {
         if (imageCapture == null) return;
 
@@ -164,29 +190,18 @@ public class OcrActivity extends AppCompatActivity {
         });
     }
 
-    // Update the ImageView with the captured photo
+    // 캡처된 사진을 ImageView에 업데이트
     private void updateImageView(Uri photoUri) {
         try {
             Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(photoUri));
-            Bitmap rotatedBitmap = rotateBitmap(bitmap, 90); // Rotate the image by 90 degrees
-            imageView.setImageBitmap(rotatedBitmap);
+            imageView.setImageBitmap(bitmap); // 이미지 회전 없이 설정
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(OcrActivity.this, "이미지 로드 실패", Toast.LENGTH_SHORT).show();
         }
     }
 
-    // Rotate the bitmap by the specified degrees
-    private Bitmap rotateBitmap(Bitmap bitmap, int degrees) {
-        if (degrees == 0) {
-            return bitmap;
-        }
-        Matrix matrix = new Matrix();
-        matrix.postRotate(degrees);
-        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-    }
-
-    // Process the captured image and perform OCR
+    // 캡처된 이미지를 처리하고 OCR 수행
     private void processImage(Uri imageUri) {
         try {
             InputImage image = InputImage.fromFilePath(this, imageUri);
@@ -197,11 +212,11 @@ public class OcrActivity extends AppCompatActivity {
                         String recognizedText = text.getText();
                         Log.d("OcrActivity", "Recognized text: " + recognizedText);
 
-                        // Define patterns for date of birth
+                        // 생년월일 패턴 정의
                         String[] dobPatterns = {
                                 "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b",
                                 "\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b",
-                                "\\b(\\d{6})\\b"  // Add more patterns as needed
+                                "\\b(\\d{6})\\b"  // 필요한 경우 더 많은 패턴 추가
                         };
 
                         String dob = findDateOfBirth(recognizedText, dobPatterns);
@@ -216,61 +231,52 @@ public class OcrActivity extends AppCompatActivity {
                         }
                     })
                     .addOnFailureListener(e -> {
-                        runOnUiThread(() -> Toast.makeText(OcrActivity.this, "텍스트 인식 실패", Toast.LENGTH_SHORT).show());
-                        Log.e("OcrActivity", "Text recognition failed", e);
+                        Log.e("OcrActivity", "텍스트 인식 실패", e);
+                        runOnUiThread(() -> resultTextView.setText("텍스트 인식 실패"));
+                        sendResult(false);
                     });
+
         } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "이미지 처리 실패", Toast.LENGTH_SHORT).show();
+            Log.e("OcrActivity", "이미지 파일을 읽을 수 없습니다.", e);
         }
     }
 
-    // Find the date of birth in the recognized text based on regex patterns
+    // 텍스트에서 생년월일 찾기
     private String findDateOfBirth(String text, String[] patterns) {
         for (String pattern : patterns) {
-            Pattern regex = Pattern.compile(pattern);
-            Matcher matcher = regex.matcher(text);
-            if (matcher.find()) {
-                return matcher.group();
+            Pattern p = Pattern.compile(pattern);
+            Matcher m = p.matcher(text);
+            if (m.find()) {
+                String matchedDate = m.group();
+                if (pattern.contains("년") || pattern.contains("월") || pattern.contains("일")) {
+                    return matchedDate.replaceAll("[^0-9]", "");
+                }
+                return matchedDate;
             }
         }
         return null;
     }
 
-    // Check if the date of birth indicates a minor
-    private boolean isMinor(String dobString) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        Date dob;
+    // 생년월일을 기반으로 성인 여부 확인
+    private boolean isMinor(String dob) {
         try {
-            if (dobString.length() == 6) {
-                dob = new SimpleDateFormat("yyMMdd", Locale.getDefault()).parse(dobString);
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(dob);
-                int year = cal.get(Calendar.YEAR);
-                int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-                if (year < currentYear - 100) {
-                    year += 100;
-                }
-                cal.set(Calendar.YEAR, year);
-                dob = cal.getTime();
+            SimpleDateFormat sdf;
+            if (dob.length() == 6) {
+                sdf = new SimpleDateFormat("yyMMdd", Locale.getDefault());
             } else {
-                dob = sdf.parse(dobString.replaceAll("[^0-9]", "-"));
+                sdf = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
             }
+            Date dateOfBirth = sdf.parse(dob);
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.YEAR, -19);
+            return dateOfBirth.after(cal.getTime());
         } catch (ParseException e) {
-            e.printStackTrace();
+            Log.e("OcrActivity", "생년월일 파싱 오류", e);
             return false;
         }
-
-        Calendar dobCal = Calendar.getInstance();
-        dobCal.setTime(dob);
-        int age = Calendar.getInstance().get(Calendar.YEAR) - dobCal.get(Calendar.YEAR);
-        if (Calendar.getInstance().get(Calendar.DAY_OF_YEAR) < dobCal.get(Calendar.DAY_OF_YEAR)) {
-            age--;
-        }
-        return age < 19;
     }
 
-    // Send the result back to the calling activity
+    // 결과를 메인 액티비티에 전달
     private void sendResult(boolean isAdult) {
         Intent resultIntent = new Intent();
         resultIntent.putExtra("IS_ADULT", isAdult);
@@ -278,14 +284,7 @@ public class OcrActivity extends AppCompatActivity {
         finish();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (cameraExecutor != null) {
-            cameraExecutor.shutdown();
-        }
-    }
-
+    // 권한 요청 결과 처리
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -293,9 +292,18 @@ public class OcrActivity extends AppCompatActivity {
             if (allPermissionsGranted()) {
                 startCamera();
             } else {
-                runOnUiThread(() -> Toast.makeText(this, "권한이 필요합니다.", Toast.LENGTH_SHORT).show());
+                Toast.makeText(this, "카메라 권한이 필요합니다.", Toast.LENGTH_SHORT).show();
                 finish();
             }
+        }
+    }
+
+    // 액티비티가 파괴될 때 카메라 리소스 해제
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (cameraExecutor != null) {
+            cameraExecutor.shutdown();
         }
     }
 }

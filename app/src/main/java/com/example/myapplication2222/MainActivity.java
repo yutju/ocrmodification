@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button mapButton = findViewById(R.id.map_button);
         Button cartButton = findViewById(R.id.cart_button);
         Button stockButton = findViewById(R.id.stock_button);
-        Button ocrButton = findViewById(R.id.ocr_button);
+
 
         // 지도 버튼에 클릭 리스너를 설정합니다.
         mapButton.setOnClickListener(new View.OnClickListener() {
@@ -46,15 +46,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 신분증 인식 버튼에 클릭 리스너를 설정합니다.
-        ocrButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // ocr 화면으로 이동하는 Intent를 생성합니다.
-                Intent intent = new Intent(MainActivity.this, OcrActivity.class);
-                startActivity(intent); // 액티비티 전환
-            }
-        });
+
 
     }
 }

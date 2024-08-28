@@ -26,14 +26,12 @@ id confirm_button
 id custom_view
 id decreaseButton
 id deleteButton
-id guideTextView
 id imageView
 id increaseButton
 id inventoryRecyclerView
 id map_button
 id map_image
 id nameTextView
-id ocr_button
 id order_info_confirmation
 id order_info_text
 id order_summary_banner
