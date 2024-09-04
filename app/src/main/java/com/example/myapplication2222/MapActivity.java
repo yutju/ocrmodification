@@ -107,14 +107,15 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
     private CustomView customView;
 
     private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
-    private static final double RSSI_FILTER_THRESHOLD = 1.0;
+    private static final double RSSI_FILTER_THRESHOLD = 1.0; // RSSI 값 차이 허용 임계값
     private static final int TARGET_MAJOR_VALUE = 10011;
     private static final int TARGET_MINOR_VALUE = 19641;
-    private static final double A = -69;
-    private static final double N = 2.0;
-    private static final int MOVING_AVERAGE_WINDOW_SIZE = 10; // 이동 평균 윈도우 크기 증가
-    private static final int GAUSSIAN_FILTER_WINDOW_SIZE = 10; // 가우시안 필터 윈도우 크기 증가
+    private static final double A = -65; // RSSI 상수
+    private static final double N = 2.0; // 거리 감쇠 지수
+    private static final int MOVING_AVERAGE_WINDOW_SIZE = 10; // 이동 평균 윈도우 크기
+    private static final int GAUSSIAN_FILTER_WINDOW_SIZE = 10; // 가우시안 필터 윈도우 크기
     private static final long SAMPLE_INTERVAL_MS = 1000; // 샘플링 간격 (1초)
+    private static final double DISTANCE_VARIATION_THRESHOLD = 1.0; // 거리 차이 허용 임계값 (미터)
 
     private MovingAverage movingAverage; // 이동 평균 인스턴스
     private GaussianFilter gaussianFilter; // 가우시안 필터 인스턴스
@@ -242,6 +243,18 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
             return -1.0;
         }
         return Math.pow(10, (A - rssi) / (10 * N));
+    }
+
+    private double filterDistanceVariation(List<Double> distances) {
+        if (distances.isEmpty()) return 0;
+        double average = calculateAverageRSSI(distances);
+        List<Double> filteredDistances = new ArrayList<>();
+        for (double distance : distances) {
+            if (Math.abs(distance - average) <= DISTANCE_VARIATION_THRESHOLD) {
+                filteredDistances.add(distance);
+            }
+        }
+        return calculateAverageRSSI(filteredDistances);
     }
 
     private final Handler handler = new Handler() {
