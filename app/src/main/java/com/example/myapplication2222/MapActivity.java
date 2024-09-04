@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -17,13 +16,13 @@ import android.os.Message;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
 import org.altbeacon.beacon.BeaconManager;
 import org.altbeacon.beacon.BeaconParser;
-import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 
 import java.util.ArrayList;
@@ -33,32 +32,94 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// 이동 평균 계산을 위한 클래스
+class MovingAverage {
+    private final int windowSize;
+    private final List<Integer> values;
+    private int sum;
+
+    public MovingAverage(int windowSize) {
+        this.windowSize = windowSize;
+        this.values = new ArrayList<>(windowSize);
+        this.sum = 0;
+    }
+
+    public double addValue(int value) {
+        if (values.size() == windowSize) {
+            sum -= values.remove(0);
+        }
+        values.add(value);
+        sum += value;
+        return (double) sum / values.size();
+    }
+}
+
+// 가우시안 필터 클래스
+class GaussianFilter {
+    private final int windowSize;
+    private final List<Double> values;
+    private final double[] kernel;
+
+    public GaussianFilter(int windowSize) {
+        this.windowSize = windowSize;
+        this.values = new ArrayList<>(windowSize);
+        this.kernel = createGaussianKernel(windowSize);
+    }
+
+    private double[] createGaussianKernel(int size) {
+        double[] kernel = new double[size];
+        double sigma = size / 6.0;
+        double mean = size / 2.0;
+        double sum = 0.0;
+        for (int i = 0; i < size; i++) {
+            double x = i - mean;
+            kernel[i] = Math.exp(-(x * x) / (2 * sigma * sigma));
+            sum += kernel[i];
+        }
+        for (int i = 0; i < size; i++) {
+            kernel[i] /= sum;
+        }
+        return kernel;
+    }
+
+    public double applyFilter(double newValue) {
+        if (values.size() == windowSize) {
+            values.remove(0);
+        }
+        values.add(newValue);
+        double result = 0.0;
+        int n = values.size();
+        for (int i = 0; i < n; i++) {
+            result += values.get(i) * kernel[i];
+        }
+        return result;
+    }
+}
+
 public class MapActivity extends AppCompatActivity implements BeaconConsumer {
 
     private static final String TAG = "Beacontest";
     private BeaconManager beaconManager;
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private double gpsLat = 0.0;
-    private double gpsLon = 0.0;
-
+    private Location currentLocation; // 현재 GPS 위치
     private List<Beacon> beaconList = new ArrayList<>();
     private CustomView customView;
 
     private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
     private static final double RSSI_FILTER_THRESHOLD = 1.0;
     private static final int TARGET_MAJOR_VALUE = 10011;
-    private static final int TARGET_MINOR_VALUE = 10011;
+    private static final int TARGET_MINOR_VALUE = 19641;
     private static final double A = -69;
     private static final double N = 2.0;
-    private static final double MAX_DISTANCE_INCREASE = 1.0;
+    private static final int MOVING_AVERAGE_WINDOW_SIZE = 10; // 이동 평균 윈도우 크기 증가
+    private static final int GAUSSIAN_FILTER_WINDOW_SIZE = 10; // 가우시안 필터 윈도우 크기 증가
+    private static final long SAMPLE_INTERVAL_MS = 1000; // 샘플링 간격 (1초)
 
-    // 비콘 위치를 50x50 단위로 설정
-    private static final Map<String, double[]> BEACON_POSITIONS = new HashMap<String, double[]>() {{
-        put("beacon1", new double[]{25.0, 50.0});
-        put("beacon2", new double[]{0.0, 0.0});
-        put("beacon3", new double[]{50.0, 0.0});
-    }};
+    private MovingAverage movingAverage; // 이동 평균 인스턴스
+    private GaussianFilter gaussianFilter; // 가우시안 필터 인스턴스
+
+    private Button runButton;  // 버튼 추가
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +136,7 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                gpsLat = location.getLatitude();
-                gpsLon = location.getLongitude();
-                Log.d(TAG, "Location updated: Lat=" + gpsLat + " Lon=" + gpsLon);
+                currentLocation = location; // GPS 위치 업데이트
             }
 
             @Override
@@ -99,6 +158,16 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         } else {
             startLocationUpdates();
         }
+
+        movingAverage = new MovingAverage(MOVING_AVERAGE_WINDOW_SIZE); // 이동 평균 초기화
+        gaussianFilter = new GaussianFilter(GAUSSIAN_FILTER_WINDOW_SIZE); // 가우시안 필터 초기화
+
+        // Button을 레이아웃에서 찾고, 클릭 리스너 설정
+        runButton = findViewById(R.id.button);  // Button의 ID는 activity_map.xml에서 설정된 ID와 일치해야 합니다.
+        runButton.setOnClickListener(v -> {
+            // 버튼 클릭 시 비콘 탐지 시작
+            handler.sendEmptyMessage(0);
+        });
     }
 
     private void startLocationUpdates() {
@@ -142,22 +211,18 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         }
     }
 
-    public void OnButtonClicked(View view) {
-        handler.sendEmptyMessage(0);
-    }
-
-    private double calculateAverageRSSI(List<Integer> rssiValues) {
+    private double calculateAverageRSSI(List<Double> rssiValues) {
         if (rssiValues.isEmpty()) return 0;
-        int sum = 0;
-        for (int value : rssiValues) {
+        double sum = 0;
+        for (double value : rssiValues) {
             sum += value;
         }
-        return (double) sum / rssiValues.size();
+        return sum / rssiValues.size();
     }
 
-    private List<Integer> filterRSSIValues(List<Integer> rssiValues, double average, double threshold) {
-        List<Integer> filtered = new ArrayList<>();
-        for (int value : rssiValues) {
+    private List<Double> filterRSSIValues(List<Double> rssiValues, double average, double threshold) {
+        List<Double> filtered = new ArrayList<>();
+        for (double value : rssiValues) {
             if (Math.abs(value - average) <= threshold) {
                 filtered.add(value);
             }
@@ -165,9 +230,9 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return filtered;
     }
 
-    private List<Integer> doubleFilterRSSIValues(List<Integer> rssiValues, double threshold) {
+    private List<Double> doubleFilterRSSIValues(List<Double> rssiValues, double threshold) {
         double initialAverage = calculateAverageRSSI(rssiValues);
-        List<Integer> filteredOnce = filterRSSIValues(rssiValues, initialAverage, threshold);
+        List<Double> filteredOnce = filterRSSIValues(rssiValues, initialAverage, threshold);
         double newAverage = calculateAverageRSSI(filteredOnce);
         return filterRSSIValues(filteredOnce, newAverage, threshold);
     }
@@ -179,29 +244,8 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return Math.pow(10, (A - rssi) / (10 * N));
     }
 
-    private double[] performTrilateration(double[][] positions, double[] distances) {
-        double x1 = positions[0][0], y1 = positions[0][1];
-        double x2 = positions[1][0], y2 = positions[1][1];
-        double x3 = positions[2][0], y3 = positions[2][1];
-        double r1 = distances[0], r2 = distances[1], r3 = distances[2];
-
-        double A = 2 * (x2 - x1);
-        double B = 2 * (y2 - y1);
-        double C = r1 * r1 - r2 * r2 - x1 * x1 + x2 * x2 - y1 * y1 + y2 * y2;
-        double D = 2 * (x3 - x2);
-        double E = 2 * (y3 - y2);
-        double F = r2 * r2 - r3 * r3 - x2 * x2 + x3 * x3 - y2 * y2 + y3 * y3;
-
-        double x = (C * E - F * B) / (E * A - B * D);
-        double y = (C * D - A * F) / (B * D - A * E);
-
-        // 변환 비율 적용
-        return new double[]{x, y};
-    }
-
     private final Handler handler = new Handler() {
         private final AtomicBoolean hasBeacon = new AtomicBoolean(false);
-        private double previousDistance = -1;
         private long lastBeaconTime = System.currentTimeMillis();
 
         @Override
@@ -232,66 +276,52 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
 
             if (!foundBeacon) {
                 long currentTime = System.currentTimeMillis();
-                if (currentTime - lastBeaconTime > 1000) {
-                    sb.append("No beacons with major 10011 and minor 10011 found.\n");
+                if (currentTime - lastBeaconTime > SAMPLE_INTERVAL_MS) {
+                    sb.append("No beacons with major 10011 and minor 19641 found.\n");
                 }
             } else {
-                double[][] positions = new double[3][2];
-                double[] distances = new double[3];
-                int index = 0;
-
                 for (Map.Entry<String, List<Integer>> entry : beaconRSSIMap.entrySet()) {
                     String address = entry.getKey();
                     List<Integer> rssiValues = entry.getValue();
 
-                    List<Integer> filteredRSSI = doubleFilterRSSIValues(rssiValues, RSSI_FILTER_THRESHOLD);
+                    // 이동 평균과 가우시안 필터를 적용하여 RSSI 필터링
+                    List<Double> smoothedRSSI = new ArrayList<>();
+                    for (int rssi : rssiValues) {
+                        double smoothedValue = movingAverage.addValue(rssi);
+                        smoothedRSSI.add(gaussianFilter.applyFilter(smoothedValue));
+                    }
 
-                    if (!filteredRSSI.isEmpty()) {
-                        double distance = calculateDistance(calculateAverageRSSI(filteredRSSI));
+                    smoothedRSSI = new ArrayList<>(doubleFilterRSSIValues(smoothedRSSI, RSSI_FILTER_THRESHOLD));
 
-                        if (previousDistance != -1 && Math.abs(distance - previousDistance) > MAX_DISTANCE_INCREASE) {
-                            continue;
-                        }
-
-                        if (BEACON_POSITIONS.containsKey(address)) {
-                            positions[index] = BEACON_POSITIONS.get(address);
-                            distances[index] = distance;
-                            index++;
-                        }
+                    if (!smoothedRSSI.isEmpty()) {
+                        double averageRSSI = calculateAverageRSSI(smoothedRSSI);
+                        double distance = calculateDistance(averageRSSI);
 
                         sb.append("Beacon Bluetooth Id : ").append(address).append("\n");
                         sb.append("Major: ").append(TARGET_MAJOR_VALUE).append(" Minor: ").append(TARGET_MINOR_VALUE).append("\n");
                         sb.append("Distance : ").append(String.format("%.3f", distance)).append("m\n");
                         hasBeacon.set(true);
 
-                        previousDistance = distance;
+                        runOnUiThread(() -> {
+                            float mapWidth = customView.getWidth();
+                            float mapHeight = customView.getHeight();
+
+                            // 비콘을 화면의 중앙에 위치
+                            float beaconX = mapWidth / 2;
+                            float beaconY = mapHeight / 2;
+
+                            // 마트 크기에 맞춰서 원의 반경을 조정
+                            // 최대 마트 크기를 5m로 가정하고, 뷰의 크기에 맞게 스케일링
+                            float maxMapDimension = Math.min(mapWidth, mapHeight); // 뷰의 최소 크기 사용
+                            float maxStoreDimension = 5.0f; // 마트의 최대 크기 (5m)
+
+                            // 스케일링을 통해 반경 계산
+                            float radius = (float) (distance / maxStoreDimension * maxMapDimension);
+
+                            customView.updateBeaconPosition(beaconX, beaconY, radius);
+                        });
+
                     }
-                }
-
-                if (index == 1) {
-                    positions[1] = BEACON_POSITIONS.get("beacon2");
-                    distances[1] = 3.0;
-                    index++;
-
-                    positions[2] = BEACON_POSITIONS.get("beacon3");
-                    distances[2] = 4.0;
-                    index++;
-                }
-
-                if (index == 3) {
-                    double[] position = performTrilateration(positions, distances);
-                    sb.append("\nEstimated Position:\n");
-                    sb.append("X: ").append(String.format("%.3f", position[0])).append("m\n");
-                    sb.append("Y: ").append(String.format("%.3f", position[1])).append("m\n");
-
-                    runOnUiThread(() -> {
-                        float mapWidth = customView.getWidth();
-                        float mapHeight = customView.getHeight();
-                        // 50x50 맵에서 사용자의 위치를 변환
-                        float mapX = (float) (position[0] / 50.0 * mapWidth);
-                        float mapY = (float) (position[1] / 50.0 * mapHeight);
-                        customView.updateUserPosition(mapX, mapY);
-                    });
                 }
 
                 lastBeaconTime = System.currentTimeMillis();
@@ -303,14 +333,14 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
                     if (hasBeacon.get()) {
                         textView.setText(sb.toString());
                     } else {
-                        textView.setText("No beacons with major 10011 and minor 10011 found.");
+                        textView.setText("No beacons with major 10011 and minor 19641 found.");
                     }
                 } else {
                     Log.e(TAG, "TextView is null");
                 }
             });
 
-            sendEmptyMessageDelayed(0, 1000);
+            sendEmptyMessageDelayed(0, SAMPLE_INTERVAL_MS);
         }
     };
 
@@ -333,6 +363,19 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
                 .setTitle("Functionality limited")
                 .setMessage("Since location access has not been granted, this app will not be able to discover beacons or use location services.")
                 .setPositiveButton(android.R.string.ok, null)
+                .setOnDismissListener(dialog -> {})
                 .show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // handler.sendEmptyMessage(0); // 이제 버튼으로 탐지를 시작하므로, 이 부분은 삭제합니다.
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        handler.removeMessages(0);
     }
 }

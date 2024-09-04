@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 사용자 위치를 표시할 CustomView -->
+    <!-- 사용자 위치를 표시할 CustomView, 지도 위에 오버레이 -->
     <com.example.myapplication2222.CustomView
         android:id="@+id/custom_view"
         android:layout_width="0dp"
