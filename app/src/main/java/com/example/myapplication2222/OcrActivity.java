@@ -212,22 +212,35 @@ public class OcrActivity extends AppCompatActivity {
                         String recognizedText = text.getText();
                         Log.d("OcrActivity", "Recognized text: " + recognizedText);
 
-                        // 생년월일 패턴 정의
-                        String[] dobPatterns = {
-                                "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b",
-                                "\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b",
-                                "\\b(\\d{6})\\b"  // 필요한 경우 더 많은 패턴 추가
-                        };
+                        // 생년월일 및 면허증 패턴 정의
+                        String dobPattern = "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b" +
+                                "|\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b" +
+                                "|\\b(\\d{6})\\b";  // 필요한 경우 더 많은 패턴 추가
 
-                        String dob = findDateOfBirth(recognizedText, dobPatterns);
+                        String licenseNumberPattern = "\\b\\d{2}-\\d{2}-\\d{6}-\\d{2}\\b";
 
-                        if (dob != null) {
-                            boolean isAdult = !isMinor(dob);
-                            runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
-                            sendResult(isAdult);
+                        if (containsLicenseNumber(recognizedText, licenseNumberPattern)) {
+                            // 자동차운전면허증일 경우 생년월일만 추출
+                            String dob = findDateOfBirth(recognizedText, new String[]{dobPattern});
+                            if (dob != null) {
+                                boolean isAdult = !isMinor(dob);
+                                runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
+                                sendResult(isAdult);
+                            } else {
+                                runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
+                                sendResult(false);
+                            }
                         } else {
-                            runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
-                            sendResult(false);
+                            // 면허증이 아닌 경우 생년월일 추출
+                            String dob = findDateOfBirth(recognizedText, new String[]{dobPattern});
+                            if (dob != null) {
+                                boolean isAdult = !isMinor(dob);
+                                runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
+                                sendResult(isAdult);
+                            } else {
+                                runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
+                                sendResult(false);
+                            }
                         }
                     })
                     .addOnFailureListener(e -> {
@@ -255,6 +268,13 @@ public class OcrActivity extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    // 텍스트에서 면허증 번호가 포함되어 있는지 확인
+    private boolean containsLicenseNumber(String text, String pattern) {
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(text);
+        return m.find();
     }
 
     // 생년월일을 기반으로 성인 여부 확인

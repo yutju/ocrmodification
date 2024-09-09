@@ -110,7 +110,7 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
     private static final double RSSI_FILTER_THRESHOLD = 1.0; // RSSI 값 차이 허용 임계값
     private static final int TARGET_MAJOR_VALUE = 10011;
     private static final int TARGET_MINOR_VALUE = 19641;
-    private static final double A = -65; // RSSI 상수
+    private static final double A = -70; // RSSI 상수
     private static final double N = 2.0; // 거리 감쇠 지수
     private static final int MOVING_AVERAGE_WINDOW_SIZE = 10; // 이동 평균 윈도우 크기
     private static final int GAUSSIAN_FILTER_WINDOW_SIZE = 10; // 가우시안 필터 윈도우 크기
