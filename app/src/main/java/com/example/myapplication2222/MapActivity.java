@@ -109,7 +109,6 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
     private static final int PERMISSION_REQUEST_FINE_LOCATION = 1;
     private static final double RSSI_FILTER_THRESHOLD = 1.0; // RSSI 값 차이 허용 임계값
     private static final int TARGET_MAJOR_VALUE = 10011;
-    private static final int TARGET_MINOR_VALUE = 19641;
     private static final double A = -70; // RSSI 상수
     private static final double N = 2.0; // 거리 감쇠 지수
     private static final int MOVING_AVERAGE_WINDOW_SIZE = 10; // 이동 평균 윈도우 크기
@@ -257,6 +256,41 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         return calculateAverageRSSI(filteredDistances);
     }
 
+    private Location calculateLocation(List<BeaconDistance> beaconDistances) {
+        if (beaconDistances.size() < 3) {
+            return null; // 최소 3개의 비콘이 필요함
+        }
+
+        // 삼변측량 알고리즘을 사용하여 위치 계산
+        double x1 = beaconDistances.get(0).getX();
+        double y1 = beaconDistances.get(0).getY();
+        double d1 = beaconDistances.get(0).getDistance();
+
+        double x2 = beaconDistances.get(1).getX();
+        double y2 = beaconDistances.get(1).getY();
+        double d2 = beaconDistances.get(1).getDistance();
+
+        double x3 = beaconDistances.get(2).getX();
+        double y3 = beaconDistances.get(2).getY();
+        double d3 = beaconDistances.get(2).getDistance();
+
+        double A = 2 * (x2 - x1);
+        double B = 2 * (y2 - y1);
+        double C = 2 * (x3 - x1);
+        double D = 2 * (y3 - y1);
+
+        double E = (d1 * d1 - d2 * d2) - (x1 * x1 - x2 * x2) - (y1 * y1 - y2 * y2);
+        double F = (d1 * d1 - d3 * d3) - (x1 * x1 - x3 * x3) - (y1 * y1 - y3 * y3);
+
+        double x = (E - F * B / D) / (A - C * B / D);
+        double y = (E - A * x) / B;
+
+        Location location = new Location("calculatedLocation");
+        location.setLatitude(x);
+        location.setLongitude(y);
+        return location;
+    }
+
     private final Handler handler = new Handler() {
         private final AtomicBoolean hasBeacon = new AtomicBoolean(false);
         private long lastBeaconTime = System.currentTimeMillis();
@@ -264,20 +298,21 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         @Override
         public void handleMessage(Message msg) {
             final StringBuilder sb = new StringBuilder();
-
             hasBeacon.set(false);
 
-            Map<String, List<Integer>> beaconRSSIMap = new HashMap<>();
-
+            final Map<String, List<Integer>> beaconRSSIMap = new HashMap<>();
             boolean foundBeacon = false;
 
-            for (Beacon beacon : beaconList) {
-                String address = beacon.getBluetoothAddress();
-                int major = beacon.getId2().toInt();
-                int minor = beacon.getId3().toInt();
-                int rssi = beacon.getRssi();
+            // beaconList를 final로 설정
+            final List<Beacon> beaconListLocal = new ArrayList<>(beaconList);
 
-                if (major == TARGET_MAJOR_VALUE && minor == TARGET_MINOR_VALUE) {
+            for (Beacon beacon : beaconListLocal) {
+                final String address = beacon.getBluetoothAddress();
+                final int major = beacon.getId2().toInt();
+                final int minor = beacon.getId3().toInt();  // minor 값을 가져옵니다.
+                final int rssi = beacon.getRssi();
+
+                if (major == TARGET_MAJOR_VALUE) {
                     foundBeacon = true;
 
                     if (!beaconRSSIMap.containsKey(address)) {
@@ -288,65 +323,105 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
             }
 
             if (!foundBeacon) {
-                long currentTime = System.currentTimeMillis();
+                final long currentTime = System.currentTimeMillis();
                 if (currentTime - lastBeaconTime > SAMPLE_INTERVAL_MS) {
-                    sb.append("No beacons with major 10011 and minor 19641 found.\n");
+                    sb.append("No beacons with major 10011 found.\n");
                 }
             } else {
+                final List<BeaconDistance> beaconDistances = new ArrayList<>();
+
                 for (Map.Entry<String, List<Integer>> entry : beaconRSSIMap.entrySet()) {
-                    String address = entry.getKey();
-                    List<Integer> rssiValues = entry.getValue();
+                    final String address = entry.getKey();
+                    final List<Integer> rssiValues = entry.getValue();
 
                     // 이동 평균과 가우시안 필터를 적용하여 RSSI 필터링
-                    List<Double> smoothedRSSI = new ArrayList<>();
+                    final List<Double> smoothedRSSI = new ArrayList<>();
                     for (int rssi : rssiValues) {
-                        double smoothedValue = movingAverage.addValue(rssi);
+                        final double smoothedValue = movingAverage.addValue(rssi);
                         smoothedRSSI.add(gaussianFilter.applyFilter(smoothedValue));
                     }
 
-                    smoothedRSSI = new ArrayList<>(doubleFilterRSSIValues(smoothedRSSI, RSSI_FILTER_THRESHOLD));
+                    final List<Double> filteredRSSI = new ArrayList<>(doubleFilterRSSIValues(smoothedRSSI, RSSI_FILTER_THRESHOLD));
 
-                    if (!smoothedRSSI.isEmpty()) {
-                        double averageRSSI = calculateAverageRSSI(smoothedRSSI);
-                        double distance = calculateDistance(averageRSSI);
+                    if (!filteredRSSI.isEmpty()) {
+                        final double averageRSSI = calculateAverageRSSI(filteredRSSI);
+                        final double distance = calculateDistance(averageRSSI);
 
-                        sb.append("Beacon Bluetooth Id : ").append(address).append("\n");
-                        sb.append("Major: ").append(TARGET_MAJOR_VALUE).append(" Minor: ").append(TARGET_MINOR_VALUE).append("\n");
-                        sb.append("Distance : ").append(String.format("%.3f", distance)).append("m\n");
-                        hasBeacon.set(true);
+                        // 비콘의 위치 및 색상 설정
+                        for (Beacon beacon : beaconListLocal) {
+                            final int minor = beacon.getId3().toInt(); // minor 값을 가져옵니다.
+                            final double beaconX;
+                            final double beaconY;
+                            final String color;
 
-                        runOnUiThread(() -> {
-                            float mapWidth = customView.getWidth();
-                            float mapHeight = customView.getHeight();
+                            // 비콘의 `minor` 값에 따라 색상 및 위치 설정
+                            if (minor == 1) {
+                                beaconX = 1;
+                                beaconY = 4;
+                                color = "red";
+                            } else if (minor == 2) {
+                                beaconX = 4;
+                                beaconY = 4;
+                                color = "yellow";
+                            } else if (minor == 3) {
+                                beaconX = 2.5;
+                                beaconY = 1;
+                                color = "green";
+                            } else {
+                                beaconX = 0; // Default
+                                beaconY = 0; // Default
+                                color = "gray"; // Default color if needed
+                            }
 
-                            // 비콘을 화면의 중앙에 위치
-                            float beaconX = mapWidth / 2;
-                            float beaconY = mapHeight / 2;
+                            beaconDistances.add(new BeaconDistance(beaconX, beaconY, distance));
 
-                            // 마트 크기에 맞춰서 원의 반경을 조정
-                            // 최대 마트 크기를 5m로 가정하고, 뷰의 크기에 맞게 스케일링
-                            float maxMapDimension = Math.min(mapWidth, mapHeight); // 뷰의 최소 크기 사용
-                            float maxStoreDimension = 5.0f; // 마트의 최대 크기 (5m)
+                            sb.append("Beacon Bluetooth Id : ").append(address).append("\n");
+                            sb.append("Major: ").append(TARGET_MAJOR_VALUE).append(" Minor: ").append(minor).append("\n");
+                            sb.append("Distance : ").append(String.format("%.3f", distance)).append("m\n");
+                            hasBeacon.set(true);
 
-                            // 스케일링을 통해 반경 계산
-                            float radius = (float) (distance / maxStoreDimension * maxMapDimension);
+                            runOnUiThread(() -> {
+                                final float mapWidth = customView.getWidth();
+                                final float mapHeight = customView.getHeight();
+                                final float beaconXScreen = (float) (beaconX / 5.0 * mapWidth);
+                                final float beaconYScreen = (float) (beaconY / 5.0 * mapHeight);
+                                final float maxMapDimension = Math.min(mapWidth, mapHeight);
+                                final float maxStoreDimension = 5.0f;
+                                final float radius = (float) (distance / maxStoreDimension * maxMapDimension);
 
-                            customView.updateBeaconPosition(beaconX, beaconY, radius);
-                        });
-
+                                customView.updateBeaconPosition(color, beaconXScreen, beaconYScreen, radius);
+                            });
+                        }
                     }
+                }
+
+                final Location calculatedLocation = calculateLocation(beaconDistances);
+                if (calculatedLocation != null) {
+                    sb.append("Calculated Location: Latitude: ").append(calculatedLocation.getLatitude()).append(", Longitude: ").append(calculatedLocation.getLongitude()).append("\n");
+
+                    runOnUiThread(() -> {
+                        // 비콘의 위치와 색상을 화면에 업데이트
+                        for (BeaconDistance beaconDistance : beaconDistances) {
+                            customView.updateBeaconPosition("blue", (float) beaconDistance.getX(), (float) beaconDistance.getY(), (float) beaconDistance.getDistance());
+                        }
+
+                        // 사용자 위치 업데이트
+                        if (calculatedLocation != null) {
+                            customView.updateUserPosition((float) calculatedLocation.getLatitude(), (float) calculatedLocation.getLongitude());
+                        }
+                    });
                 }
 
                 lastBeaconTime = System.currentTimeMillis();
             }
 
             runOnUiThread(() -> {
-                TextView textView = findViewById(R.id.TextView);
+                final TextView textView = findViewById(R.id.TextView);
                 if (textView != null) {
                     if (hasBeacon.get()) {
                         textView.setText(sb.toString());
                     } else {
-                        textView.setText("No beacons with major 10011 and minor 19641 found.");
+                        textView.setText("No beacons with major 10011 found.");
                     }
                 } else {
                     Log.e(TAG, "TextView is null");
@@ -357,38 +432,67 @@ public class MapActivity extends AppCompatActivity implements BeaconConsumer {
         }
     };
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (requestCode == PERMISSION_REQUEST_FINE_LOCATION) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG, "Fine location permission granted");
-                startLocationUpdates();
-            } else {
-                showPermissionDeniedDialog();
-            }
+
+
+
+    @Override
+public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    if (requestCode == PERMISSION_REQUEST_FINE_LOCATION) {
+        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "Fine location permission granted");
+            startLocationUpdates();
+        } else {
+            showPermissionDeniedDialog();
         }
     }
+}
 
-    private void showPermissionDeniedDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Functionality limited")
-                .setMessage("Since location access has not been granted, this app will not be able to discover beacons or use location services.")
-                .setPositiveButton(android.R.string.ok, null)
-                .setOnDismissListener(dialog -> {})
-                .show();
+private void showPermissionDeniedDialog() {
+    new AlertDialog.Builder(this)
+            .setTitle("Functionality limited")
+            .setMessage("Since location access has not been granted, this app will not be able to discover beacons or use location services.")
+            .setPositiveButton(android.R.string.ok, null)
+            .setOnDismissListener(dialog -> {})
+            .show();
+}
+
+@Override
+protected void onResume() {
+    super.onResume();
+    // handler.sendEmptyMessage(0); // 이제 버튼으로 탐지를 시작하므로, 이 부분은 삭제합니다.
+}
+
+@Override
+protected void onPause() {
+    super.onPause();
+    handler.removeMessages(0);
+}
+
+// 비콘과 거리 정보를 담는 클래스
+private static class BeaconDistance {
+    private double x;
+    private double y;
+    private double distance;
+
+    BeaconDistance(double x, double y, double distance) {
+        this.x = x;
+        this.y = y;
+        this.distance = distance;
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // handler.sendEmptyMessage(0); // 이제 버튼으로 탐지를 시작하므로, 이 부분은 삭제합니다.
+    public double getX() {
+        return x;
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        handler.removeMessages(0);
+    public double getY() {
+        return y;
     }
+
+    public double getDistance() {
+        return distance;
+    }
+}
 }
