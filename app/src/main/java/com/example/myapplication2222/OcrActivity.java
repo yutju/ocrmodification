@@ -220,8 +220,8 @@ public class OcrActivity extends AppCompatActivity {
                         String licenseNumberPattern = "\\b\\d{2}-\\d{2}-\\d{6}-\\d{2}\\b";
 
                         if (containsLicenseNumber(recognizedText, licenseNumberPattern)) {
-                            // 자동차운전면허증일 경우 생년월일만 추출
-                            String dob = findDateOfBirth(recognizedText, new String[]{dobPattern});
+                            // 자동차운전면허증일 경우 생년월일 제외
+                            String dob = extractDOBFromLicense(recognizedText);
                             if (dob != null) {
                                 boolean isAdult = !isMinor(dob);
                                 runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
@@ -232,7 +232,7 @@ public class OcrActivity extends AppCompatActivity {
                             }
                         } else {
                             // 면허증이 아닌 경우 생년월일 추출
-                            String dob = findDateOfBirth(recognizedText, new String[]{dobPattern});
+                            String dob = findDateOfBirth(recognizedText);
                             if (dob != null) {
                                 boolean isAdult = !isMinor(dob);
                                 runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
@@ -254,18 +254,23 @@ public class OcrActivity extends AppCompatActivity {
         }
     }
 
+    // 주민등록번호에서 생년월일 추출
+    private String extractDOBFromLicense(String text) {
+        Pattern pattern = Pattern.compile("(\\d{6})-\\d{7}");
+        Matcher matcher = pattern.matcher(text);
+        if (matcher.find()) {
+            return matcher.group(1); // 6자리 생년월일 반환
+        }
+        return null;
+    }
+
     // 텍스트에서 생년월일 찾기
-    private String findDateOfBirth(String text, String[] patterns) {
-        for (String pattern : patterns) {
-            Pattern p = Pattern.compile(pattern);
-            Matcher m = p.matcher(text);
-            if (m.find()) {
-                String matchedDate = m.group();
-                if (pattern.contains("년") || pattern.contains("월") || pattern.contains("일")) {
-                    return matchedDate.replaceAll("[^0-9]", "");
-                }
-                return matchedDate;
-            }
+    private String findDateOfBirth(String text) {
+        Pattern pattern = Pattern.compile("\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b" +
+                "|\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b");
+        Matcher matcher = pattern.matcher(text);
+        if (matcher.find()) {
+            return matcher.group(); // 생년월일 반환
         }
         return null;
     }
@@ -280,12 +285,7 @@ public class OcrActivity extends AppCompatActivity {
     // 생년월일을 기반으로 성인 여부 확인
     private boolean isMinor(String dob) {
         try {
-            SimpleDateFormat sdf;
-            if (dob.length() == 6) {
-                sdf = new SimpleDateFormat("yyMMdd", Locale.getDefault());
-            } else {
-                sdf = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
-            }
+            SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd", Locale.getDefault());
             Date dateOfBirth = sdf.parse(dob);
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.YEAR, -19);

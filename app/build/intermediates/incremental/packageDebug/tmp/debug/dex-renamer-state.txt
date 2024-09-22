@@ -1,4 +1,4 @@
-#Wed Sep 11 16:37:11 KST 2024
+#Sun Sep 22 13:04:46 KST 2024
 base.0=C\:\\Users\\gsh56\\AndroidStudioProjects\\ocrmodification0909\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\gsh56\\AndroidStudioProjects\\ocrmodification0909\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\gsh56\\AndroidStudioProjects\\ocrmodification0909\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
