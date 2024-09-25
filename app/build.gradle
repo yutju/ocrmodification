@@ -80,7 +80,7 @@ dependencies {
 
     // To recognize Korean script
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition-korean:16.0.1'
-
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.22.2'
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
 
 

@@ -8,10 +8,11 @@ color color_red
 color color_secondary
 color color_secondary_variant
 color color_white
+drawable face_match
+drawable face_no_match
 drawable ic_age_restriction
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable identification
 drawable item_background
 drawable mart_img_example
 drawable smartshoppingcart
@@ -22,10 +23,13 @@ id age_restriction_submessage
 id button
 id captureButton
 id cart_button
+id confirmFaceButton
 id confirm_button
 id custom_view
 id decreaseButton
 id deleteButton
+id faceImageView
+id faceResultTextView
 id imageView
 id increaseButton
 id inventoryRecyclerView

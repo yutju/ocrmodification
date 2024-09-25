@@ -3050,6 +3050,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable face_match
+drawable face_no_match
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_age_restriction
@@ -3076,7 +3078,6 @@ drawable ic_other_sign_in
 drawable ic_passkey
 drawable ic_password
 drawable ic_search_black_24
-drawable identification
 drawable indeterminate_static
 drawable item_background
 drawable m3_avd_hide_password
@@ -3293,6 +3294,7 @@ id closest
 id collapseActionView
 id compatible
 id compress
+id confirmFaceButton
 id confirm_button
 id constraint
 id container
@@ -3358,6 +3360,8 @@ id escape
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id faceImageView
+id faceResultTextView
 id fade
 id fill
 id fillCenter

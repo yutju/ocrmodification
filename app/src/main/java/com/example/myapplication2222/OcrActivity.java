@@ -7,10 +7,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Size;
 import android.view.Display;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -32,6 +32,8 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.TextRecognition;
@@ -50,12 +52,22 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.MultipartBody;
+
 public class OcrActivity extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_CODE = 2001;
-
     private TextView resultTextView;
+    private TextView faceResultTextView; // 얼굴 결과 TextView 추가
     private ImageView imageView;
+    private ImageView faceImageView;
     private ProgressBar progressBar;
     private PreviewView previewView;
     private ImageCapture imageCapture;
@@ -68,18 +80,20 @@ public class OcrActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocr);
 
-        // UI 컴포넌트 초기화
+        // UI 구성 요소 초기화
         Button captureButton = findViewById(R.id.captureButton);
         Button recaptureButton = findViewById(R.id.recaptureButton);
         resultTextView = findViewById(R.id.resultTextView);
+        faceResultTextView = findViewById(R.id.faceResultTextView); // 얼굴 결과 TextView 초기화
         imageView = findViewById(R.id.imageView);
+        faceImageView = findViewById(R.id.faceImageView);
         progressBar = findViewById(R.id.progressBar);
         previewView = findViewById(R.id.previewView);
 
-        // 카메라 실행자를 초기화
+        // 카메라 실행기 초기화
         cameraExecutor = Executors.newSingleThreadExecutor();
 
-        // 화면 크기에 맞춰 UI 컴포넌트 크기 조정
+        // 화면 크기에 맞게 레이아웃 조정
         adjustLayoutForScreenSize();
 
         // 카메라 권한 확인
@@ -107,7 +121,7 @@ public class OcrActivity extends AppCompatActivity {
         int viewWidth = screenWidth / 2;
         int viewHeight = (viewWidth * 9) / 16;
 
-        // PreviewView와 ImageView의 너비와 높이를 16:9 비율로 설정
+        // PreviewView 및 ImageView의 너비와 높이 설정
         ViewGroup.LayoutParams previewLayoutParams = previewView.getLayoutParams();
         previewLayoutParams.width = viewWidth;
         previewLayoutParams.height = viewHeight;
@@ -117,14 +131,20 @@ public class OcrActivity extends AppCompatActivity {
         imageViewLayoutParams.width = viewWidth;
         imageViewLayoutParams.height = viewHeight;
         imageView.setLayoutParams(imageViewLayoutParams);
+
+        // 얼굴 인식 결과 이미지뷰 설정
+        ViewGroup.LayoutParams faceImageViewLayoutParams = faceImageView.getLayoutParams();
+        faceImageViewLayoutParams.width = viewWidth;
+        faceImageViewLayoutParams.height = viewHeight;
+        faceImageView.setLayoutParams(faceImageViewLayoutParams);
     }
 
-    // 필요한 모든 권한이 부여되었는지 확인
+    // 모든 권한이 부여되었는지 확인
     private boolean allPermissionsGranted() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
-    // 카메라 시작 및 생명 주기에 바인드
+    // 카메라 시작 및 생명주기에 바인딩
     private void startCamera() {
         ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(() -> {
@@ -137,7 +157,7 @@ public class OcrActivity extends AppCompatActivity {
         }, ContextCompat.getMainExecutor(this));
     }
 
-    // 프리뷰와 이미지 캡처를 카메라 생명주기에 바인딩
+    // 카메라 생명주기에 미리보기 및 이미지 캡처 바인딩
     private void bindPreview(ProcessCameraProvider cameraProvider) {
         previewView.post(() -> {
             int previewWidth = previewView.getMeasuredWidth();
@@ -148,10 +168,9 @@ public class OcrActivity extends AppCompatActivity {
                     .build();
             preview.setSurfaceProvider(previewView.getSurfaceProvider());
 
-            // 디바이스의 디스플레이 회전에 맞게 타겟 회전을 설정
             imageCapture = new ImageCapture.Builder()
                     .setTargetResolution(new Size(previewWidth, previewHeight))
-                    .setTargetRotation(previewView.getDisplay().getRotation()) // 회전을 디바이스에 맞춤
+                    .setTargetRotation(previewView.getDisplay().getRotation())
                     .build();
 
             CameraSelector cameraSelector = new CameraSelector.Builder()
@@ -163,7 +182,7 @@ public class OcrActivity extends AppCompatActivity {
         });
     }
 
-    // 사진을 캡처하고 저장
+    // 사진 캡처 및 저장
     private void takePhoto() {
         if (imageCapture == null) return;
 
@@ -178,30 +197,30 @@ public class OcrActivity extends AppCompatActivity {
                     updateImageView(Uri.fromFile(photoFile));
                     cameraProvider.unbindAll();
                 });
-                Log.d("OcrActivity", "Photo saved at: " + photoFile.getAbsolutePath());
+                Log.d("OcrActivity", "사진 저장 위치: " + photoFile.getAbsolutePath());
                 processImage(Uri.fromFile(photoFile));
             }
 
             @Override
             public void onError(@NonNull ImageCaptureException exception) {
-                runOnUiThread(() -> Toast.makeText(OcrActivity.this, "사진 저장 실패", Toast.LENGTH_SHORT).show());
-                Log.e("OcrActivity", "Photo capture failed", exception);
+                runOnUiThread(() -> Toast.makeText(OcrActivity.this, "사진 캡처 실패", Toast.LENGTH_SHORT).show());
+                Log.e("OcrActivity", "사진 캡처 실패", exception);
             }
         });
     }
 
-    // 캡처된 사진을 ImageView에 업데이트
+    // 캡처한 사진으로 ImageView 업데이트
     private void updateImageView(Uri photoUri) {
         try {
             Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(photoUri));
-            imageView.setImageBitmap(bitmap); // 이미지 회전 없이 설정
+            imageView.setImageBitmap(bitmap);
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(OcrActivity.this, "이미지 로드 실패", Toast.LENGTH_SHORT).show();
         }
     }
 
-    // 캡처된 이미지를 처리하고 OCR 수행
+    // 캡처한 이미지를 처리하고 OCR 수행
     private void processImage(Uri imageUri) {
         try {
             InputImage image = InputImage.fromFilePath(this, imageUri);
@@ -210,120 +229,206 @@ public class OcrActivity extends AppCompatActivity {
             recognizer.process(image)
                     .addOnSuccessListener(text -> {
                         String recognizedText = text.getText();
-                        Log.d("OcrActivity", "Recognized text: " + recognizedText);
+                        Log.d("OcrActivity", "인식된 텍스트: " + recognizedText);
 
-                        // 생년월일 및 면허증 패턴 정의
-                        String dobPattern = "\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b" +
-                                "|\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b" +
-                                "|\\b(\\d{6})\\b";  // 필요한 경우 더 많은 패턴 추가
-
-                        String licenseNumberPattern = "\\b\\d{2}-\\d{2}-\\d{6}-\\d{2}\\b";
-
-                        if (containsLicenseNumber(recognizedText, licenseNumberPattern)) {
-                            // 자동차운전면허증일 경우 생년월일 제외
-                            String dob = extractDOBFromLicense(recognizedText);
-                            if (dob != null) {
-                                boolean isAdult = !isMinor(dob);
-                                runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
-                                sendResult(isAdult);
-                            } else {
-                                runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
-                                sendResult(false);
-                            }
+                        // 생년월일 추출
+                        String dob = findDateOfBirth(recognizedText);
+                        if (dob != null) {
+                            boolean isAdult = !isMinor(dob);
+                            runOnUiThread(() -> {
+                                resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다.");
+                                faceResultTextView.setVisibility(View.VISIBLE); // 얼굴 결과 TextView 보이기
+                            });
+                            sendResult(isAdult);
+                            // 얼굴 이미지 처리
+                            processFaceImage(); // 얼굴 이미지 비교 처리
                         } else {
-                            // 면허증이 아닌 경우 생년월일 추출
-                            String dob = findDateOfBirth(recognizedText);
-                            if (dob != null) {
-                                boolean isAdult = !isMinor(dob);
-                                runOnUiThread(() -> resultTextView.setText(isAdult ? "성인입니다." : "미성년자입니다."));
-                                sendResult(isAdult);
-                            } else {
-                                runOnUiThread(() -> resultTextView.setText("생년월일을 찾을 수 없습니다."));
-                                sendResult(false);
-                            }
+                            runOnUiThread(() -> {
+                                resultTextView.setText("생년월일을 찾을 수 없습니다.");
+                                faceResultTextView.setVisibility(View.GONE); // 얼굴 결과 TextView 숨기기
+                            });
+                            sendResult(false);
                         }
                     })
                     .addOnFailureListener(e -> {
                         Log.e("OcrActivity", "텍스트 인식 실패", e);
                         runOnUiThread(() -> resultTextView.setText("텍스트 인식 실패"));
-                        sendResult(false);
                     });
-
         } catch (IOException e) {
-            Log.e("OcrActivity", "이미지 파일을 읽을 수 없습니다.", e);
+            Log.e("OcrActivity", "이미지 처리 실패", e);
+            runOnUiThread(() -> resultTextView.setText("이미지 처리 실패"));
         }
     }
-
-    // 주민등록번호에서 생년월일 추출
-    private String extractDOBFromLicense(String text) {
-        Pattern pattern = Pattern.compile("(\\d{6})-\\d{7}");
-        Matcher matcher = pattern.matcher(text);
-        if (matcher.find()) {
-            return matcher.group(1); // 6자리 생년월일 반환
-        }
-        return null;
-    }
-
-    // 텍스트에서 생년월일 찾기
+    // 생년월일 찾기
     private String findDateOfBirth(String text) {
-        Pattern pattern = Pattern.compile("\\b(19\\d{2}|20\\d{2})[./-]?(0[1-9]|1[0-2])[./-]?(0[1-9]|[12][0-9]|3[01])\\b" +
-                "|\\b(\\d{4})[년\\s-](0[1-9]|1[0-2])[월\\s-](0[1-9]|[12][0-9]|3[01])[일\\s-]?\\b");
+        // 한국의 생년월일 형식(YYYY.MM.DD 또는 YYYY-MM-DD) 정규 표현식
+        Pattern pattern = Pattern.compile("(\\d{4}[.\\-]\\d{1,2}[.\\-]\\d{1,2})");
         Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {
-            return matcher.group(); // 생년월일 반환
+            return matcher.group(1);
         }
         return null;
     }
 
-    // 텍스트에서 면허증 번호가 포함되어 있는지 확인
-    private boolean containsLicenseNumber(String text, String pattern) {
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(text);
-        return m.find();
-    }
-
-    // 생년월일을 기반으로 성인 여부 확인
+    // 성인 여부 확인
     private boolean isMinor(String dob) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd", Locale.getDefault());
-            Date dateOfBirth = sdf.parse(dob);
-            Calendar cal = Calendar.getInstance();
-            cal.add(Calendar.YEAR, -19);
-            return dateOfBirth.after(cal.getTime());
-        } catch (ParseException e) {
-            Log.e("OcrActivity", "생년월일 파싱 오류", e);
-            return false;
-        }
-    }
-
-    // 결과를 메인 액티비티에 전달
-    private void sendResult(boolean isAdult) {
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra("IS_ADULT", isAdult);
-        setResult(RESULT_OK, resultIntent);
-        finish();
-    }
-
-    // 권한 요청 결과 처리
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == PERMISSION_REQUEST_CODE) {
-            if (allPermissionsGranted()) {
-                startCamera();
-            } else {
-                Toast.makeText(this, "카메라 권한이 필요합니다.", Toast.LENGTH_SHORT).show();
-                finish();
+            Date birthDate = sdf.parse(dob);
+            if (birthDate != null) {
+                Calendar cal = Calendar.getInstance();
+                cal.add(Calendar.YEAR, -19); // 19세 이상 체크
+                return birthDate.after(cal.getTime());
             }
+        } catch (ParseException e) {
+            Log.e("OcrActivity", "생년월일 파싱 실패", e);
         }
+        return true; // 파싱 실패 시 미성년자로 간주
     }
 
-    // 액티비티가 파괴될 때 카메라 리소스 해제
+    // 결과 전송 처리
+    private void sendResult(boolean isAdult) {
+        // 결과를 서버에 전송하거나 처리하는 로직 추가
+        Log.d("OcrActivity", "성인 여부: " + (isAdult ? "성인" : "미성년자"));
+    }
+
+    // 얼굴 캡처 및 비교를 위한 메서드
+    private void processFaceImage() {
+        Uri faceImageUri = Uri.fromFile(photoFile); // 얼굴 이미지를 URI로 가져옴
+        uploadImage(faceImageUri, new ImageUploadCallback() {
+            @Override
+            public void onUploadSuccess(String faceImageUrl) {
+                // 신분증 이미지도 업로드
+                uploadImage(Uri.fromFile(photoFile), new ImageUploadCallback() {
+                    @Override
+                    public void onUploadSuccess(String idImageUrl) {
+                        compareFaces(idImageUrl, faceImageUrl);
+                    }
+
+                    @Override
+                    public void onUploadFailure() {
+                        // 신분증 이미지 업로드 실패 처리
+                    }
+                });
+            }
+
+            @Override
+            public void onUploadFailure() {
+                // 얼굴 이미지 업로드 실패 처리
+            }
+        });
+    }
+
+    // 이미지 업로드 메서드
+    private void uploadImage(Uri imageUri, ImageUploadCallback callback) {
+        String apiKey = "YOUR_API_KEY"; // API 키
+        String apiSecret = "YOUR_API_SECRET"; // API 비밀
+
+        OkHttpClient client = new OkHttpClient();
+        File imageFile = new File(imageUri.getPath());
+
+        // 멀티파트 요청 본문 생성
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("api_key", apiKey)
+                .addFormDataPart("api_secret", apiSecret)
+                .addFormDataPart("image_file", imageFile.getName(),
+                        RequestBody.create(MediaType.parse("image/jpeg"), imageFile))
+                .build();
+
+        // 요청 생성
+        Request request = new Request.Builder()
+                .url("https://api-us.faceplusplus.com/facepp/v3/upload")
+                .post(requestBody)
+                .build();
+
+        // 요청 실행
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onUploadFailure();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (!response.isSuccessful()) {
+                    callback.onUploadFailure();
+                    return;
+                }
+                String responseBody = response.body().string();
+                JsonObject jsonResponse = JsonParser.parseString(responseBody).getAsJsonObject();
+                String imageUrl = jsonResponse.get("url").getAsString(); // URL 가져오기
+                callback.onUploadSuccess(imageUrl);
+            }
+        });
+    }
+
+    // 얼굴 비교 메서드
+    private void compareFaces(String idImageUrl, String faceImageUrl) {
+        String apiKey = "YOUR_API_KEY"; // API 키
+        String apiSecret = "YOUR_API_SECRET"; // API 비밀
+
+        OkHttpClient client = new OkHttpClient();
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("api_key", apiKey)
+                .addFormDataPart("api_secret", apiSecret)
+                .addFormDataPart("image_url1", idImageUrl)
+                .addFormDataPart("image_url2", faceImageUrl)
+                .build();
+
+        Request request = new Request.Builder()
+                .url("https://api-us.faceplusplus.com/facepp/v3/compare")
+                .post(requestBody)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("OcrActivity", "얼굴 비교 실패", e);
+                runOnUiThread(() -> {
+                    faceResultTextView.setText("얼굴 비교 실패");
+                    faceResultTextView.setVisibility(View.VISIBLE);
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (!response.isSuccessful()) {
+                    Log.e("OcrActivity", "얼굴 비교 실패: " + response.message());
+                    runOnUiThread(() -> {
+                        faceResultTextView.setText("얼굴 비교 실패");
+                        faceResultTextView.setVisibility(View.VISIBLE);
+                    });
+                    return;
+                }
+                String responseBody = response.body().string();
+                JsonObject jsonResponse = JsonParser.parseString(responseBody).getAsJsonObject();
+                boolean isMatch = jsonResponse.get("is_match").getAsBoolean();
+
+                runOnUiThread(() -> {
+                    if (isMatch) {
+                        faceImageView.setImageResource(R.drawable.face_match); // 매칭 이미지로 변경
+                        faceResultTextView.setText("얼굴이 일치합니다.");
+                    } else {
+                        faceImageView.setImageResource(R.drawable.face_no_match); // 불일치 이미지로 변경
+                        faceResultTextView.setText("얼굴이 일치하지 않습니다.");
+                    }
+                    faceResultTextView.setVisibility(View.VISIBLE); // 결과 TextView 보이기
+                });
+            }
+        });
+    }
+
+    // 인터페이스 정의
+    interface ImageUploadCallback {
+        void onUploadSuccess(String imageUrl);
+        void onUploadFailure();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (cameraExecutor != null) {
-            cameraExecutor.shutdown();
-        }
+        cameraExecutor.shutdown();
     }
 }

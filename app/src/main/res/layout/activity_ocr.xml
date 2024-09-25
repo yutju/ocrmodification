@@ -5,14 +5,12 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- 상단: 카메라 미리보기와 캡처된 이미지 표시를 수평으로 나란히 배치 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <!-- 카메라 미리보기 -->
         <androidx.camera.view.PreviewView
             android:id="@+id/previewView"
             android:layout_width="0dp"
@@ -20,7 +18,6 @@
             android:layout_weight="1"
             android:background="#E0E0E0"/>
 
-        <!-- 캡처된 이미지 표시 -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
@@ -30,7 +27,6 @@
             android:scaleType="fitCenter"/>
     </LinearLayout>
 
-    <!-- 중간: OCR 결과 텍스트 -->
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
@@ -41,7 +37,23 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dp"/>
 
-    <!-- 하단: 버튼과 진행 상황 표시 -->
+    <!-- 얼굴 촬영을 위한 새로운 ImageView -->
+    <ImageView
+        android:id="@+id/faceImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#E0E0E0"
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
+
+    <!-- 신분증 촬영 확인 버튼 -->
+    <Button
+        android:id="@+id/confirmFaceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네"
+        android:visibility="gone"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +62,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp">
 
-        <!-- 신분증 촬영 버튼 -->
         <Button
             android:id="@+id/captureButton"
             android:layout_width="0dp"
@@ -59,7 +70,6 @@
             android:text="신분증 촬영"
             android:layout_marginEnd="4dp"/>
 
-        <!-- 다시 촬영 버튼 -->
         <Button
             android:id="@+id/recaptureButton"
             android:layout_width="0dp"
@@ -69,11 +79,22 @@
             android:layout_marginStart="4dp"/>
     </LinearLayout>
 
-    <!-- 진행 상황 표시 -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 얼굴 캡처 후 결과를 표시하기 위한 TextView 추가 -->
+    <TextView
+        android:id="@+id/faceResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="얼굴 결과"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:visibility="gone"/>
 </LinearLayout>

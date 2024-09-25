@@ -3049,6 +3049,8 @@ int drawable design_ic_visibility 0x7f070096
 int drawable design_ic_visibility_off 0x7f070097
 int drawable design_password_eye 0x7f070098
 int drawable design_snackbar_background 0x7f070099
+int drawable face_match 0x7f070104
+int drawable face_no_match 0x7f070105
 int drawable googleg_disabled_color_18 0x7f07009a
 int drawable googleg_standard_color_18 0x7f07009b
 int drawable ic_age_restriction 0x7f07009c
@@ -3075,7 +3077,6 @@ int drawable ic_other_sign_in 0x7f0700b0
 int drawable ic_passkey 0x7f0700b1
 int drawable ic_password 0x7f0700b2
 int drawable ic_search_black_24 0x7f0700b3
-int drawable identification 0x7f0700b4
 int drawable indeterminate_static 0x7f0700b5
 int drawable item_background 0x7f0700b6
 int drawable m3_avd_hide_password 0x7f0700b7
@@ -3292,6 +3293,7 @@ int id closest 0x7f080085
 int id collapseActionView 0x7f080086
 int id compatible 0x7f080087
 int id compress 0x7f080088
+int id confirmFaceButton 0x7f080235
 int id confirm_button 0x7f080089
 int id constraint 0x7f08008a
 int id container 0x7f08008b
@@ -3357,6 +3359,8 @@ int id escape 0x7f0800c6
 int id exitUntilCollapsed 0x7f0800c7
 int id expand_activities_button 0x7f0800c8
 int id expanded_menu 0x7f0800c9
+int id faceImageView 0x7f080236
+int id faceResultTextView 0x7f080237
 int id fade 0x7f0800ca
 int id fill 0x7f0800cb
 int id fillCenter 0x7f0800cc
