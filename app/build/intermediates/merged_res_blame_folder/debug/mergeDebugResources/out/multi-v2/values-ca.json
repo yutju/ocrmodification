@@ -4,7 +4,7 @@
             "outputFile": "com.example.myapplication2222.app-mergeDebugResources-47:/values-ca/values-ca.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\3598fe1f9001ee772272b75e89042cb8\\transformed\\appcompat-1.7.0\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\3598fe1f9001ee772272b75e89042cb8\\transformed\\appcompat-1.7.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,41 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\6f6e9fb244bef5050919b0ea16324303\\transformed\\core-1.13.0\\res\\values-ca\\values-ca.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,151,253,352,449,555,660,786",
-                        "endColumns": "95,101,98,96,105,104,125,100",
-                        "endOffsets": "146,248,347,444,550,655,781,882"
-                    },
-                    "to": {
-                        "startLines": "40,41,42,43,44,45,46,140",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3728,3824,3926,4025,4122,4228,4333,13025",
-                        "endColumns": "95,101,98,96,105,104,125,100",
-                        "endOffsets": "3819,3921,4020,4117,4223,4328,4454,13121"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\6924f7f70764e8ac0a5115b6bece5985\\transformed\\jetified-play-services-base-18.5.0\\res\\values-ca\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,294,442,565,670,816,939,1058,1162,1329,1434,1589,1716,1876,2030,2091,2155",
-                        "endColumns": "100,147,122,104,145,122,118,103,166,104,154,126,159,153,60,63,82",
-                        "endOffsets": "293,441,564,669,815,938,1057,1161,1328,1433,1588,1715,1875,2029,2090,2154,2237"
-                    },
-                    "to": {
-                        "startLines": "50,51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4772,4877,5029,5156,5265,5415,5542,5665,5908,6079,6188,6347,6478,6642,6800,6865,6933",
-                        "endColumns": "104,151,126,108,149,126,122,107,170,108,158,130,163,157,64,67,86",
-                        "endOffsets": "4872,5024,5151,5260,5410,5537,5660,5768,6074,6183,6342,6473,6637,6795,6860,6928,7015"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\8691d3b0d027e877a720094d6d5aae75\\transformed\\browser-1.4.0\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\8691d3b0d027e877a720094d6d5aae75\\transformed\\browser-1.4.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -72,24 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\4f38cfb584e2a1945fc6e926c5d0e28b\\transformed\\jetified-credentials-1.2.0-rc01\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\6f6e9fb244bef5050919b0ea16324303\\transformed\\core-1.13.0\\res\\values-ca\\values-ca.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,170",
-                        "endColumns": "114,119",
-                        "endOffsets": "165,285"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,449,555,660,786",
+                        "endColumns": "95,101,98,96,105,104,125,100",
+                        "endOffsets": "146,248,347,444,550,655,781,882"
                     },
                     "to": {
-                        "startLines": "33,34",
-                        "startColumns": "4,4",
-                        "startOffsets": "3049,3164",
-                        "endColumns": "114,119",
-                        "endOffsets": "3159,3279"
+                        "startLines": "40,41,42,43,44,45,46,140",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3728,3824,3926,4025,4122,4228,4333,13025",
+                        "endColumns": "95,101,98,96,105,104,125,100",
+                        "endOffsets": "3819,3921,4020,4117,4223,4328,4454,13121"
                     }
                 },
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\7c6d54d5e963666eddf4401ac05e4373\\transformed\\material-1.12.0\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\7c6d54d5e963666eddf4401ac05e4373\\transformed\\material-1.12.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -108,7 +74,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gsh56\\AndroidStudioProjects\\cart0723.1\\gradle\\wrapper\\wrapper\\dists\\caches\\transforms-4\\6e8d8ec6812231b5fefa65983ad6b21e\\transformed\\jetified-play-services-basement-18.4.0\\res\\values-ca\\values.xml",
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\6924f7f70764e8ac0a5115b6bece5985\\transformed\\jetified-play-services-base-18.5.0\\res\\values-ca\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,294,442,565,670,816,939,1058,1162,1329,1434,1589,1716,1876,2030,2091,2155",
+                        "endColumns": "100,147,122,104,145,122,118,103,166,104,154,126,159,153,60,63,82",
+                        "endOffsets": "293,441,564,669,815,938,1057,1161,1328,1433,1588,1715,1875,2029,2090,2154,2237"
+                    },
+                    "to": {
+                        "startLines": "50,51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4772,4877,5029,5156,5265,5415,5542,5665,5908,6079,6188,6347,6478,6642,6800,6865,6933",
+                        "endColumns": "104,151,126,108,149,126,122,107,170,108,158,130,163,157,64,67,86",
+                        "endOffsets": "4872,5024,5151,5260,5410,5537,5660,5768,6074,6183,6342,6473,6637,6795,6860,6928,7015"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\6e8d8ec6812231b5fefa65983ad6b21e\\transformed\\jetified-play-services-basement-18.4.0\\res\\values-ca\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -122,6 +105,23 @@
                         "startOffsets": "5773",
                         "endColumns": "134",
                         "endOffsets": "5903"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\AndroidStudio111112Projects1112\\kartrider\\.gradle\\caches\\transforms-4\\4f38cfb584e2a1945fc6e926c5d0e28b\\transformed\\jetified-credentials-1.2.0-rc01\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,170",
+                        "endColumns": "114,119",
+                        "endOffsets": "165,285"
+                    },
+                    "to": {
+                        "startLines": "33,34",
+                        "startColumns": "4,4",
+                        "startOffsets": "3049,3164",
+                        "endColumns": "114,119",
+                        "endOffsets": "3159,3279"
                     }
                 }
             ]

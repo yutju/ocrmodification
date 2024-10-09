@@ -45,6 +45,9 @@
         <activity android:name=".OrderSummaryActivity" />
         <activity android:name=".PaymentSuccessActivity" />
         <activity android:name=".InventoryActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
+
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="ocr" />

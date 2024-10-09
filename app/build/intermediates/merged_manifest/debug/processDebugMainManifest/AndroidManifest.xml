@@ -81,6 +81,8 @@
         <activity android:name="com.example.myapplication2222.OrderSummaryActivity" />
         <activity android:name="com.example.myapplication2222.PaymentSuccessActivity" />
         <activity android:name="com.example.myapplication2222.InventoryActivity" />
+        <activity android:name="com.example.myapplication2222.LoginActivity" />
+        <activity android:name="com.example.myapplication2222.SignupActivity" />
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"

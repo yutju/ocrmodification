@@ -15,6 +15,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable item_background
 drawable mart_img_example
+drawable rounded_button
 drawable smartshoppingcart
 id TextView
 id age_restriction_image
@@ -28,11 +29,16 @@ id confirm_button
 id custom_view
 id decreaseButton
 id deleteButton
+id editTextEmail
+id editTextPassword
+id editTextUsername
 id faceImageView
 id faceResultTextView
 id imageView
 id increaseButton
 id inventoryRecyclerView
+id login_button
+id manage_profile_button
 id map_button
 id map_image
 id nameTextView
@@ -59,6 +65,8 @@ id resultTextView
 id searchButton
 id searchEditText
 id searchLabelTextView
+id signup_button
+id signup_text
 id stockTextView
 id stock_button
 id textView
@@ -69,11 +77,13 @@ id total_quantity
 id total_summary
 layout activity_cart
 layout activity_inventory
+layout activity_login
 layout activity_main
 layout activity_map
 layout activity_ocr
 layout activity_order_summary
 layout activity_payment_success
+layout activity_signup
 layout dialog_age_verification
 layout item_inventory
 layout item_kartrider

@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일을 입력하세요"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:minHeight="48dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="15dp"
+        android:hint="비밀번호를 입력하세요"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:layout_marginTop="62dp"
+        android:backgroundTint="#4169E1"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="로그인"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="회원가입"
+        android:textColor="#4169E1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:minHeight="48dp" />
+
+</RelativeLayout>
